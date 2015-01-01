@@ -60,6 +60,7 @@
       <executions>
         <execution>
           <id>attach-javadocs</id>
+          <phase>package</phase>
           <configuration>
             <additionalparam>${javadoc.opts}</additionalparam>
           </configuration>

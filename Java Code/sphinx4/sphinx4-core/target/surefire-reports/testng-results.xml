@@ -2,148 +2,100 @@
 <testng-results skipped="0" failed="0" total="94" passed="94">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="10741" started-at="2015-01-01T08:33:07Z" finished-at="2015-01-01T08:33:17Z">
+  <suite name="Command line suite" duration-ms="17989" started-at="2015-01-01T12:55:07Z" finished-at="2015-01-01T12:55:25Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="10741" started-at="2015-01-01T08:33:07Z" finished-at="2015-01-01T08:33:17Z">
+    <test name="Command line test" duration-ms="17989" started-at="2015-01-01T12:55:07Z" finished-at="2015-01-01T12:55:25Z">
       <class name="edu.cmu.sphinx.frontend.SpeechMarkerTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:SpeechMarkerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:SpeechMarkerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testEndWithoutSilence()[pri:0, instance:SpeechMarkerTest]" name="testEndWithoutSilence" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testEndWithoutSilence()[pri:0, instance:SpeechMarkerTest]" name="testEndWithoutSilence" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEndWithoutSilence -->
       </class> <!-- edu.cmu.sphinx.frontend.SpeechMarkerTest -->
       <class name="edu.cmu.sphinx.fst.ComposeEpsilonTest">
-        <test-method status="PASS" signature="testCompose()[pri:0, instance:edu.cmu.sphinx.fst.ComposeEpsilonTest@506e6d5e]" name="testCompose" duration-ms="16" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testCompose()[pri:0, instance:edu.cmu.sphinx.fst.ComposeEpsilonTest@6108b2d7]" name="testCompose" duration-ms="31" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCompose -->
       </class> <!-- edu.cmu.sphinx.fst.ComposeEpsilonTest -->
       <class name="edu.cmu.sphinx.linguist.language.grammar.FSTGrammarTest">
-        <test-method status="PASS" signature="testForcedAlignerGrammar()[pri:0, instance:edu.cmu.sphinx.linguist.language.grammar.FSTGrammarTest@3498ed]" name="testForcedAlignerGrammar" duration-ms="16" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testForcedAlignerGrammar()[pri:0, instance:edu.cmu.sphinx.linguist.language.grammar.FSTGrammarTest@96532d6]" name="testForcedAlignerGrammar" duration-ms="15" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testForcedAlignerGrammar -->
       </class> <!-- edu.cmu.sphinx.linguist.language.grammar.FSTGrammarTest -->
       <class name="edu.cmu.sphinx.fst.NShortestPathsTest">
-        <test-method status="PASS" signature="testNShortestPaths()[pri:0, instance:edu.cmu.sphinx.fst.NShortestPathsTest@7e0ea639]" name="testNShortestPaths" duration-ms="15" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testNShortestPaths()[pri:0, instance:edu.cmu.sphinx.fst.NShortestPathsTest@5ebec15]" name="testNShortestPaths" duration-ms="32" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNShortestPaths -->
       </class> <!-- edu.cmu.sphinx.fst.NShortestPathsTest -->
-      <class name="edu.cmu.sphinx.fst.DeterminizeTest">
-        <test-method status="PASS" signature="testDeterminize()[pri:0, instance:edu.cmu.sphinx.fst.DeterminizeTest@380fb434]" name="testDeterminize" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testDeterminize -->
-      </class> <!-- edu.cmu.sphinx.fst.DeterminizeTest -->
       <class name="edu.cmu.sphinx.alignment.SpeechAlignerTest">
-        <test-method status="PASS" signature="shouldAlignText()[pri:0, instance:edu.cmu.sphinx.alignment.SpeechAlignerTest@7f690630]" name="shouldAlignText" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="shouldAlignText()[pri:0, instance:edu.cmu.sphinx.alignment.SpeechAlignerTest@506e6d5e]" name="shouldAlignText" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldAlignText -->
       </class> <!-- edu.cmu.sphinx.alignment.SpeechAlignerTest -->
-      <class name="edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest">
-        <test-method status="PASS" signature="testNgram()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest@3b6eb2ec]" name="testNgram" duration-ms="31" started-at="2015-01-01T14:03:08Z" finished-at="2015-01-01T14:03:08Z">
+      <class name="edu.cmu.sphinx.fst.DeterminizeTest">
+        <test-method status="PASS" signature="testDeterminize()[pri:0, instance:edu.cmu.sphinx.fst.DeterminizeTest@566776ad]" name="testDeterminize" duration-ms="15" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNgram -->
-      </class> <!-- edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest -->
+        </test-method> <!-- testDeterminize -->
+      </class> <!-- edu.cmu.sphinx.fst.DeterminizeTest -->
       <class name="edu.cmu.sphinx.linguist.dictionary.DictionaryTest">
-        <test-method status="PASS" signature="testDictionary()[pri:0, instance:edu.cmu.sphinx.linguist.dictionary.DictionaryTest@4411d970]" name="testDictionary" duration-ms="47" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testDictionary()[pri:0, instance:edu.cmu.sphinx.linguist.dictionary.DictionaryTest@21bcffb5]" name="testDictionary" duration-ms="79" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDictionary -->
       </class> <!-- edu.cmu.sphinx.linguist.dictionary.DictionaryTest -->
+      <class name="edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest">
+        <test-method status="PASS" signature="testNgram()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest@13969fbe]" name="testNgram" duration-ms="93" started-at="2015-01-01T18:25:10Z" finished-at="2015-01-01T18:25:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgram -->
+      </class> <!-- edu.cmu.sphinx.linguist.language.ngram.large.LargeNgramTest -->
       <class name="edu.cmu.sphinx.linguist.WordSequenceTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="setUp" is-config="true" duration-ms="31" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="setUp" is-config="true" duration-ms="47" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getOldest()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="getOldest" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getOldest -->
-        <test-method status="PASS" signature="unknownWords()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="unknownWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unknownWords -->
-        <test-method status="PASS" signature="equals()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="equals" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- equals -->
-        <test-method status="PASS" signature="comparison()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="comparison" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="comparison()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="comparison" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- comparison -->
-        <test-method status="PASS" signature="getNewest()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3d24753a]" name="getNewest" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="getOldest()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="getOldest" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getOldest -->
+        <test-method status="PASS" signature="equals()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="equals" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- equals -->
+        <test-method status="PASS" signature="getNewest()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="getNewest" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getNewest -->
+        <test-method status="PASS" signature="unknownWords()[pri:0, instance:edu.cmu.sphinx.linguist.WordSequenceTest@3796751b]" name="unknownWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unknownWords -->
       </class> <!-- edu.cmu.sphinx.linguist.WordSequenceTest -->
       <class name="edu.cmu.sphinx.fst.ImportTest">
-        <test-method status="PASS" signature="testConvert()[pri:0, instance:edu.cmu.sphinx.fst.ImportTest@67b64c45]" name="testConvert" duration-ms="16" started-at="2015-01-01T14:03:08Z" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testConvert()[pri:0, instance:edu.cmu.sphinx.fst.ImportTest@3d8c7aca]" name="testConvert" duration-ms="16" started-at="2015-01-01T18:25:10Z" finished-at="2015-01-01T18:25:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConvert -->
       </class> <!-- edu.cmu.sphinx.fst.ImportTest -->
       <class name="edu.cmu.sphinx.alignment.TextAlignerSmallTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@1a407d53]" name="setUp" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@4411d970]" name="setUp" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@1a407d53]" name="align" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="words" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[foo, baz]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[iterable containing [<2>, <3>]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- align -->
-        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@1a407d53]" name="align" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="words" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[foo, foo]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[iterable containing [<-1>, <-1>]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- align -->
-        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@1a407d53]" name="align" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="words" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[foo, bar, foo, bar, baz, 42]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[iterable containing [<0>, <1>, <2>, <4>, <5>, <6>]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- align -->
-        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@1a407d53]" name="align" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="words" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@4411d970]" name="align" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="words" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -159,183 +111,231 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- align -->
+        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@4411d970]" name="align" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="words" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[foo, baz]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iterable containing [<2>, <3>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- align -->
+        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@4411d970]" name="align" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="words" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[foo, bar, foo, bar, baz, 42]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iterable containing [<0>, <1>, <2>, <4>, <5>, <6>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- align -->
+        <test-method status="PASS" signature="align(java.util.List, org.hamcrest.Matcher)[pri:0, instance:edu.cmu.sphinx.alignment.TextAlignerSmallTest@4411d970]" name="align" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="words" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[foo, foo]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iterable containing [<-1>, <-1>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- align -->
       </class> <!-- edu.cmu.sphinx.alignment.TextAlignerSmallTest -->
       <class name="edu.cmu.sphinx.result.PosteriorTest">
-        <test-method status="PASS" signature="testPosterior()[pri:0, instance:edu.cmu.sphinx.result.PosteriorTest@17c68925]" name="testPosterior" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testPosterior()[pri:0, instance:edu.cmu.sphinx.result.PosteriorTest@19dfb72a]" name="testPosterior" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPosterior -->
       </class> <!-- edu.cmu.sphinx.result.PosteriorTest -->
       <class name="edu.cmu.sphinx.util.props.ConfigurationManagerTest">
-        <test-method status="PASS" signature="testDynamicConfCreation()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testDynamicConfCreation" duration-ms="31" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testDynamicConfCreation()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testDynamicConfCreation" duration-ms="47" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDynamicConfCreation -->
-        <test-method status="PASS" signature="testDynamicConfiguruationChange()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testDynamicConfiguruationChange" duration-ms="62" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testDynamicConfiguruationChange()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testDynamicConfiguruationChange" duration-ms="94" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDynamicConfiguruationChange -->
-        <test-method status="PASS" signature="testGetComponentClass()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testGetComponentClass" duration-ms="16" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testGetComponentClass()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testGetComponentClass" duration-ms="31" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetComponentClass -->
-        <test-method status="PASS" signature="testSerialization()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testSerialization" duration-ms="31" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testSerialization()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testSerialization" duration-ms="62" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSerialization -->
-        <test-method status="PASS" signature="testSerializeDynamicConfiguration()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testSerializeDynamicConfiguration" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testSerializeDynamicConfiguration()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testSerializeDynamicConfiguration" duration-ms="0" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSerializeDynamicConfiguration -->
-        <test-method status="PASS" signature="testXmlExtendedConfiguration()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@19dfb72a]" name="testXmlExtendedConfiguration" duration-ms="16" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testXmlExtendedConfiguration()[pri:0, instance:edu.cmu.sphinx.util.props.ConfigurationManagerTest@edf4efb]" name="testXmlExtendedConfiguration" duration-ms="16" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testXmlExtendedConfiguration -->
       </class> <!-- edu.cmu.sphinx.util.props.ConfigurationManagerTest -->
       <class name="edu.cmu.sphinx.frontend.NonSpeechDataFilterTest">
-        <test-method status="PASS" signature="testOneSpeechRegion()[pri:0, instance:NonSpeechDataFilterTest]" name="testOneSpeechRegion" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testOneSpeechRegion -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testMultipleSpeechRegionWithoutMerging()[pri:0, instance:NonSpeechDataFilterTest]" name="testMultipleSpeechRegionWithoutMerging" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMultipleSpeechRegionWithoutMerging -->
-        <test-method status="PASS" signature="testMultipleEmptyAndNonemptySegments()[pri:0, instance:NonSpeechDataFilterTest]" name="testMultipleEmptyAndNonemptySegments" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testMultipleEmptyAndNonemptySegments()[pri:0, instance:NonSpeechDataFilterTest]" name="testMultipleEmptyAndNonemptySegments" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultipleEmptyAndNonemptySegments -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testOneSpeechRegion()[pri:0, instance:NonSpeechDataFilterTest]" name="testOneSpeechRegion" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOneSpeechRegion -->
+        <test-method status="PASS" signature="testMultipleSpeechRegionWithoutMerging()[pri:0, instance:NonSpeechDataFilterTest]" name="testMultipleSpeechRegionWithoutMerging" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultipleSpeechRegionWithoutMerging -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:NonSpeechDataFilterTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
       </class> <!-- edu.cmu.sphinx.frontend.NonSpeechDataFilterTest -->
       <class name="edu.cmu.sphinx.fst.ConnectTest">
-        <test-method status="PASS" signature="testConnect()[pri:0, instance:edu.cmu.sphinx.fst.ConnectTest@21bcffb5]" name="testConnect" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testConnect()[pri:0, instance:edu.cmu.sphinx.fst.ConnectTest@17f6480]" name="testConnect" duration-ms="15" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConnect -->
       </class> <!-- edu.cmu.sphinx.fst.ConnectTest -->
       <class name="edu.cmu.sphinx.tools.bandwidth.BandDetectorTest">
-        <test-method status="PASS" signature="test()[pri:0, instance:edu.cmu.sphinx.tools.bandwidth.BandDetectorTest@1554909b]" name="test" duration-ms="203" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:edu.cmu.sphinx.tools.bandwidth.BandDetectorTest@7f690630]" name="test" duration-ms="310" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
       </class> <!-- edu.cmu.sphinx.tools.bandwidth.BandDetectorTest -->
       <class name="edu.cmu.sphinx.frontend.AudioDataSourcesTest">
-        <test-method status="PASS" signature="test8KhzSource()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="test8KhzSource" duration-ms="94" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="test8KhzSource()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="test8KhzSource" duration-ms="157" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test8KhzSource -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testConcatDataSource()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="testConcatDataSource" duration-ms="31" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testConcatDataSource()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="testConcatDataSource" duration-ms="47" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testConcatDataSource -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testSimpleFileSources()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="testSimpleFileSources" duration-ms="31" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testSimpleFileSources()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="testSimpleFileSources" duration-ms="62" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSimpleFileSources -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@6aaa5eb0]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.frontend.AudioDataSourcesTest@60f82f98]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
       </class> <!-- edu.cmu.sphinx.frontend.AudioDataSourcesTest -->
       <class name="edu.cmu.sphinx.frontend.DataBlockerTest">
-        <test-method status="PASS" signature="skipLastSamples()[pri:0, instance:DataBlockerTest]" name="skipLastSamples" duration-ms="15" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="skipLastSamples()[pri:0, instance:DataBlockerTest]" name="skipLastSamples" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skipLastSamples -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLongInput()[pri:0, instance:DataBlockerTest]" name="testLongInput" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testLongInput()[pri:0, instance:DataBlockerTest]" name="testLongInput" duration-ms="16" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLongInput -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testUsualInput()[pri:0, instance:DataBlockerTest]" name="testUsualInput" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testUsualInput()[pri:0, instance:DataBlockerTest]" name="testUsualInput" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsualInput -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:DataBlockerTest]" name="setUp" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
       </class> <!-- edu.cmu.sphinx.frontend.DataBlockerTest -->
       <class name="edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest">
-        <test-method status="PASS" signature="setupLogMath()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6bf256fa]" name="setupLogMath" is-config="true" duration-ms="47" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setupLogMath()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6cd8737]" name="setupLogMath" is-config="true" duration-ms="32" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLogMath -->
-        <test-method status="PASS" signature="testClone()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6bf256fa]" name="testClone" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testClone()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6cd8737]" name="testClone" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClone -->
-        <test-method status="PASS" signature="testUnivariateDensity()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6bf256fa]" name="testUnivariateDensity" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUnivariateDensity -->
-        <test-method status="PASS" signature="testUnivariateMeanTransformation()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6bf256fa]" name="testUnivariateMeanTransformation" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testUnivariateMeanTransformation()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6cd8737]" name="testUnivariateMeanTransformation" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUnivariateMeanTransformation -->
+        <test-method status="PASS" signature="testUnivariateDensity()[pri:0, instance:edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest@6cd8737]" name="testUnivariateDensity" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnivariateDensity -->
       </class> <!-- edu.cmu.sphinx.linguist.acoustic.tiedstate.test.MixtureComponentTest -->
       <class name="edu.cmu.sphinx.fst.RmEpsilonTest">
-        <test-method status="PASS" signature="testRmEpsilon()[pri:0, instance:edu.cmu.sphinx.fst.RmEpsilonTest@668bc3d5]" name="testRmEpsilon" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testRmEpsilon()[pri:0, instance:edu.cmu.sphinx.fst.RmEpsilonTest@35f983a6]" name="testRmEpsilon" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRmEpsilon -->
       </class> <!-- edu.cmu.sphinx.fst.RmEpsilonTest -->
       <class name="edu.cmu.sphinx.decoder.search.test.PartitionerTest">
-        <test-method status="PASS" signature="testPartitionOrders()[pri:0, instance:edu.cmu.sphinx.decoder.search.test.PartitionerTest@2acf57e3]" name="testPartitionOrders" duration-ms="94" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testPartitionOrders()[pri:0, instance:edu.cmu.sphinx.decoder.search.test.PartitionerTest@3498ed]" name="testPartitionOrders" duration-ms="140" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPartitionOrders -->
-        <test-method status="PASS" signature="testPartitionSizes()[pri:0, instance:edu.cmu.sphinx.decoder.search.test.PartitionerTest@2acf57e3]" name="testPartitionSizes" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testPartitionSizes()[pri:0, instance:edu.cmu.sphinx.decoder.search.test.PartitionerTest@3498ed]" name="testPartitionSizes" duration-ms="31" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPartitionSizes -->
       </class> <!-- edu.cmu.sphinx.decoder.search.test.PartitionerTest -->
       <class name="edu.cmu.sphinx.fst.ProjectTest">
-        <test-method status="PASS" signature="testProject()[pri:0, instance:edu.cmu.sphinx.fst.ProjectTest@566776ad]" name="testProject" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testProject()[pri:0, instance:edu.cmu.sphinx.fst.ProjectTest@2acf57e3]" name="testProject" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testProject -->
       </class> <!-- edu.cmu.sphinx.fst.ProjectTest -->
       <class name="edu.cmu.sphinx.result.LatticeCompTest">
-        <test-method status="PASS" signature="testLatticeComp()[pri:0, instance:edu.cmu.sphinx.result.LatticeCompTest@6108b2d7]" name="testLatticeComp" duration-ms="8741" started-at="2015-01-01T14:03:08Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testLatticeComp()[pri:0, instance:edu.cmu.sphinx.result.LatticeCompTest@5594a1b5]" name="testLatticeComp" duration-ms="14243" started-at="2015-01-01T18:25:10Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLatticeComp -->
       </class> <!-- edu.cmu.sphinx.result.LatticeCompTest -->
       <class name="edu.cmu.sphinx.linguist.language.grammar.BatchForcedAlignerGrammarTest">
-        <test-method status="PASS" signature="testForcedAlignerGrammar()[pri:0, instance:edu.cmu.sphinx.linguist.language.grammar.BatchForcedAlignerGrammarTest@22f71333]" name="testForcedAlignerGrammar" duration-ms="63" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testForcedAlignerGrammar()[pri:0, instance:edu.cmu.sphinx.linguist.language.grammar.BatchForcedAlignerGrammarTest@2f7a2457]" name="testForcedAlignerGrammar" duration-ms="172" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testForcedAlignerGrammar -->
       </class> <!-- edu.cmu.sphinx.linguist.language.grammar.BatchForcedAlignerGrammarTest -->
       <class name="edu.cmu.sphinx.frontend.FrontendElementTest">
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="187" started-at="2015-01-01T14:03:07Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="285" started-at="2015-01-01T18:25:09Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:09Z">
           <params>
             <param index="0">
               <value>
@@ -351,7 +351,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="156" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="323" started-at="2015-01-01T18:25:09Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:09Z">
           <params>
             <param index="0">
               <value>
@@ -367,7 +367,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="110" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="203" started-at="2015-01-01T18:25:09Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -383,7 +383,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="47" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="141" started-at="2015-01-01T18:25:10Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -399,7 +399,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="47" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="172" started-at="2015-01-01T18:25:10Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -415,7 +415,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="31" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="125" started-at="2015-01-01T18:25:10Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -431,7 +431,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElement -->
-        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@60f82f98]" name="testElement" duration-ms="62" started-at="2015-01-01T14:03:08Z" data-provider="frontendProvider" finished-at="2015-01-01T14:03:08Z">
+        <test-method status="PASS" signature="testElement(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.frontend.FrontendElementTest@22f71333]" name="testElement" duration-ms="203" started-at="2015-01-01T18:25:10Z" data-provider="frontendProvider" finished-at="2015-01-01T18:25:10Z">
           <params>
             <param index="0">
               <value>
@@ -449,41 +449,41 @@
         </test-method> <!-- testElement -->
       </class> <!-- edu.cmu.sphinx.frontend.FrontendElementTest -->
       <class name="edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@6442b0a6]" name="setUp" is-config="true" duration-ms="32" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@1554909b]" name="setUp" is-config="true" duration-ms="31" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="bigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@6442b0a6]" name="bigramModel" duration-ms="46" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="bigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@1554909b]" name="bigramModel" duration-ms="78" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bigramModel -->
-        <test-method status="PASS" signature="trigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@6442b0a6]" name="trigramModel" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- trigramModel -->
-        <test-method status="PASS" signature="unigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@6442b0a6]" name="unigramModel" duration-ms="0" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="unigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@1554909b]" name="unigramModel" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unigramModel -->
-      </class> <!-- edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest -->
-      <class name="edu.cmu.sphinx.util.props.ComponentPropertyTest">
-        <test-method status="PASS" signature="testDefInstance()[pri:0, instance:edu.cmu.sphinx.util.props.ComponentPropertyTest@3796751b]" name="testDefInstance" duration-ms="15" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="trigramModel()[pri:0, instance:edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest@1554909b]" name="trigramModel" duration-ms="0" started-at="2015-01-01T18:25:09Z" finished-at="2015-01-01T18:25:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDefInstance -->
-      </class> <!-- edu.cmu.sphinx.util.props.ComponentPropertyTest -->
+        </test-method> <!-- trigramModel -->
+      </class> <!-- edu.cmu.sphinx.linguist.language.ngram.DynamicTrigramModelTest -->
       <class name="edu.cmu.sphinx.fst.ComposeTest">
-        <test-method status="PASS" signature="testCompose()[pri:0, instance:edu.cmu.sphinx.fst.ComposeTest@6cd8737]" name="testCompose" duration-ms="16" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testCompose()[pri:0, instance:edu.cmu.sphinx.fst.ComposeTest@2d6e8792]" name="testCompose" duration-ms="63" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCompose -->
       </class> <!-- edu.cmu.sphinx.fst.ComposeTest -->
+      <class name="edu.cmu.sphinx.util.props.ComponentPropertyTest">
+        <test-method status="PASS" signature="testDefInstance()[pri:0, instance:edu.cmu.sphinx.util.props.ComponentPropertyTest@5b464ce8]" name="testDefInstance" duration-ms="16" started-at="2015-01-01T18:25:08Z" finished-at="2015-01-01T18:25:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefInstance -->
+      </class> <!-- edu.cmu.sphinx.util.props.ComponentPropertyTest -->
       <class name="edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest">
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="31" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="47" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="15" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="15" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -499,11 +499,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="16" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="16" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -519,7 +519,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="16" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -535,11 +539,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -555,51 +555,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1903]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[one thousand nine hundred three]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[126166]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[one hundred twenty six thousand one hundred sixty six]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -615,15 +579,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1903]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[one thousand nine hundred three]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textToWords -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -639,35 +619,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[May the 4th be with you]]>
+                <![CDATA[126166]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[may the fourth be with you]]>
+                <![CDATA[one hundred twenty six thousand one hundred sixty six]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -683,23 +659,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[12, 35]]>
+                <![CDATA[May the 4th be with you]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[twelve thirty five]]>
+                <![CDATA[may the fourth be with you]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -715,39 +699,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="15" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[120,000]]>
+                <![CDATA[12, 35]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[one hundred twenty thousand]]>
+                <![CDATA[twelve thirty five]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -763,7 +739,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -779,7 +763,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -795,11 +787,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[120,000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[one hundred twenty thousand]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        </test-method> <!-- textToWords -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -815,19 +819,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -843,11 +839,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -863,39 +859,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[don't, doesn't, won't, can't]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[don't doesn't won't can't]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Henry I]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[henry the first]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -911,55 +879,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[I've we've it's]]>
+                <![CDATA[Henry I]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[i've we've it's]]>
+                <![CDATA[henry the first]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Classics of 80s]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[classics of eighties]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -975,39 +919,75 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Mulholland Dr.]]>
+                <![CDATA[don't, doesn't, won't, can't]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[mulholland drive]]>
+                <![CDATA[don't doesn't won't can't]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Classics of 80s]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[classics of eighties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textToWords -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[I've we've it's]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[i've we've it's]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textToWords -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1023,11 +1003,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="15" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mulholland Dr.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mulholland drive]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textToWords -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1043,7 +1043,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1059,19 +1063,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="setupMethod" is-config="true" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupMethod -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1087,7 +1079,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="16" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="setupMethod()[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="setupMethod" is-config="true" duration-ms="15" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1103,7 +1103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textToWords -->
-        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@edf4efb]" name="textToWords" duration-ms="0" started-at="2015-01-01T14:03:17Z" data-provider="data" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="textToWords(java.lang.String, java.lang.String)[pri:0, instance:edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest@1a407d53]" name="textToWords" duration-ms="0" started-at="2015-01-01T18:25:25Z" data-provider="data" finished-at="2015-01-01T18:25:25Z">
           <params>
             <param index="0">
               <value>
@@ -1121,27 +1121,27 @@
         </test-method> <!-- textToWords -->
       </class> <!-- edu.cmu.sphinx.alignment.UsEnglishWordExpanderTest -->
       <class name="edu.cmu.sphinx.fst.ArcSortTest">
-        <test-method status="PASS" signature="testArcSort()[pri:0, instance:edu.cmu.sphinx.fst.ArcSortTest@96532d6]" name="testArcSort" duration-ms="31" started-at="2015-01-01T14:03:07Z" finished-at="2015-01-01T14:03:07Z">
+        <test-method status="PASS" signature="testArcSort()[pri:0, instance:edu.cmu.sphinx.fst.ArcSortTest@6bf256fa]" name="testArcSort" duration-ms="31" started-at="2015-01-01T18:25:07Z" finished-at="2015-01-01T18:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testArcSort -->
       </class> <!-- edu.cmu.sphinx.fst.ArcSortTest -->
       <class name="edu.cmu.sphinx.fst.ReverseTest">
-        <test-method status="PASS" signature="testReverse()[pri:0, instance:edu.cmu.sphinx.fst.ReverseTest@13969fbe]" name="testReverse" duration-ms="15" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testReverse()[pri:0, instance:edu.cmu.sphinx.fst.ReverseTest@57829d67]" name="testReverse" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReverse -->
       </class> <!-- edu.cmu.sphinx.fst.ReverseTest -->
       <class name="edu.cmu.sphinx.util.props.TestConfigurable">
-        <test-method status="PASS" signature="testPropSheetFromConfigurableInstance()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@3d8c7aca]" name="testPropSheetFromConfigurableInstance" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPropSheetFromConfigurableInstance -->
-        <test-method status="PASS" signature="testDynamicConfCreationWithoutDefaultProperty()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@3d8c7aca]" name="testDynamicConfCreationWithoutDefaultProperty" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testDynamicConfCreationWithoutDefaultProperty()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@2812cbfa]" name="testDynamicConfCreationWithoutDefaultProperty" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDynamicConfCreationWithoutDefaultProperty -->
-        <test-method status="PASS" signature="testNullStringProperty()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@3d8c7aca]" name="testNullStringProperty" duration-ms="0" started-at="2015-01-01T14:03:17Z" finished-at="2015-01-01T14:03:17Z">
+        <test-method status="PASS" signature="testPropSheetFromConfigurableInstance()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@2812cbfa]" name="testPropSheetFromConfigurableInstance" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPropSheetFromConfigurableInstance -->
+        <test-method status="PASS" signature="testNullStringProperty()[pri:0, instance:edu.cmu.sphinx.util.props.TestConfigurable@2812cbfa]" name="testNullStringProperty" duration-ms="0" started-at="2015-01-01T18:25:25Z" finished-at="2015-01-01T18:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNullStringProperty -->
