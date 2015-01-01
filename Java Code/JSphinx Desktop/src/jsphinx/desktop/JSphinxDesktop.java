@@ -66,12 +66,10 @@ public class JSphinxDesktop {
     }
     
     private static void printInstructions() {
-	    System.out.println("Sample sentences:\n" +
+	    System.out.println("Sample sentences:\n\n" +
                     "the green one right in the middle\n" +
 		    "the purple one on the lower right side\n" +
 		    "the closest purple one on the far left side\n" +
-		    "the only one left on the left\n\n" +
-		    "Refer to the file hellogram.test for a complete list.\n");
+		    "the only one left on the left\n\n\n");
    }
-    
 }
