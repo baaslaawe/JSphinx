@@ -1,0 +1,4569 @@
+%!PS-Adobe-2.0
+%%Title: darpatalk.mss
+%%DocumentFonts: (atend)
+%%Creator: Richard Stern and Scribe 7(1700)
+%%CreationDate: 23 June 1990 16:55
+%%Pages: (atend)
+%%EndComments
+% PostScript Prelude for Scribe.
+/BS {/SV save def 0.0 792.0 translate .01 -.01 scale} bind def
+/ES {showpage SV restore} bind def
+/SC {setrgbcolor} bind def
+/FMTX matrix def
+/RDF {WFT SLT 0.0 eq 
+  {SSZ 0.0 0.0 SSZ neg 0.0 0.0 FMTX astore}
+  {SSZ 0.0 SLT neg sin SLT cos div SSZ mul SSZ neg 0.0 0.0 FMTX astore}
+  ifelse makefont setfont} bind def
+/SLT 0.0 def
+/SI { /SLT exch cvr def RDF} bind def
+/WFT /Courier findfont def
+/SF { /WFT exch findfont def RDF} bind def
+/SSZ 1000.0 def
+/SS { /SSZ exch 100.0 mul def RDF} bind def
+/AF { /WFT exch findfont def /SSZ exch 100.0 mul def RDF} bind def
+/MT /moveto load def
+/XM {currentpoint exch pop moveto} bind def
+/UL {gsave newpath moveto dup 2.0 div 0.0 exch rmoveto
+   setlinewidth 0.0 rlineto stroke grestore} bind def
+/LH {gsave newpath moveto setlinewidth
+   0.0 rlineto
+   gsave stroke grestore} bind def
+/LV {gsave newpath moveto setlinewidth
+   0.0 exch rlineto
+   gsave stroke grestore} bind def
+/BX {gsave newpath moveto setlinewidth
+   exch
+   dup 0.0 rlineto
+   exch 0.0 exch neg rlineto
+   neg 0.0 rlineto
+   closepath
+   gsave stroke grestore} bind def
+/BX1 {grestore} bind def
+/BX2 {setlinewidth 1 setgray stroke grestore} bind def
+/PB {/PV save def newpath translate
+    100.0 -100.0 scale pop /showpage {} def} bind def
+/PE {PV restore} bind def
+/GB {/PV save def newpath translate rotate
+    div dup scale 100.0 -100.0 scale /showpage {} def} bind def
+/GE {PV restore} bind def
+/FB {dict dup /FontMapDict exch def begin} bind def
+/FM {cvn exch cvn exch def} bind def
+/FE {end /original-findfont /findfont load def  /findfont
+   {dup FontMapDict exch known{FontMapDict exch get} if
+   original-findfont} def} bind def
+/BC {gsave moveto dup 0 exch rlineto exch 0 rlineto neg 0 exch rlineto closepath clip} bind def
+/EC /grestore load def
+/SH /show load def
+/MX {exch show 0.0 rmoveto} bind def
+/W {0 32 4 -1 roll widthshow} bind def
+/WX {0 32 5 -1 roll widthshow 0.0 rmoveto} bind def
+%%EndProlog
+%%Page: 1 1
+BS
+0 SI
+18 /Helvetica-Bold AF
+12748 24470 MT
+(TOWARDS MICROPHONE-INDEPENDENT)SH
+20297 26367 MT
+(SPEECH RECOGNITION)SH
+23648 45195 MT
+(Alejandro Acero)SH
+23449 47092 MT
+(Richard M. Stern)SH
+/Helvetica-Oblique SF
+9991 53417 MT
+(Department of Electrical and Computer Engineering)SH
+17443 55314 MT
+(and School of Computer Science)SH
+19846 57211 MT
+(Carnegie Mellon University)SH
+ES
+%%Page: 2 2
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(BASELINE PERFORMANCE AND GOALS)SH
+45360 50 7920 13034 UL
+18 SS 
+7920 15836 MT
+(Baseline performance)SH
+13294 19066 MT
+(TRAIN)SH
+20321 XM
+(CLSTK)SH
+27599 XM
+(CLSTK)SH
+34678 XM
+(CRPZM)SH
+41956 XM
+(CRPZM)SH
+13743 20963 MT
+(TEST)SH
+20321 XM
+(CLSTK)SH
+27400 XM
+(CRPZM)SH
+34877 XM
+(CLSTK)SH
+41956 XM
+(CRPZM)SH
+36390 50 12405 21719 LH BX1
+-4325 50 19683 21719 LV BX1
+-4325 50 26961 21719 LV BX1
+-4325 50 34239 21719 LV BX1
+-4325 50 41517 21719 LV BX1
+/Helvetica SF
+12804 23391 MT
+(BASE)SH
+20770 XM
+(85.3%)SH
+28048 XM
+(18.6%)SH
+35326 XM
+(36.9%)SH
+42604 XM
+(76.5%)SH
+36390 6742 50 12405 24136 BX BX1
+-2417 50 19683 24136 LV BX1
+-2417 50 26961 24136 LV BX1
+-2417 50 34239 24136 LV BX1
+-2417 50 41517 24136 LV BX1
+7920 29328 MT
+(Immediate challenges:)SH
+/Symbol SF
+11597 31817 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Improve performance for cross conditions)SH
+12925 33714 MT
+(\050robustness\051)SH
+/Symbol SF
+11597 36749 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Improve absolute CRPZM/CRPZM)SH
+12925 38646 MT
+(performance)SH
+7920 43838 MT
+(Ultimate goal:)SH
+/Helvetica-Bold SF
+19424 XM
+(Microphone-independent)SH
+/Helvetica SF
+41426 XM
+(system)SH
+/Symbol SF
+11597 46327 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Works well with a standard microphone and)SH
+12925 48224 MT
+(acceptably with the rest.)SH
+/Symbol SF
+11597 51259 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Does not need data about the new)SH
+12925 53156 MT
+(microphone/environment)SH
+/Symbol SF
+11597 56191 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Works in an uncontrolled environment.)SH
+/Symbol SF
+11597 59226 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(No system does this at the present time)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(2)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 3 3
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(MULTI-STYLE TRAINING)SH
+45360 50 7920 13034 UL
+18 SS 
+16933 17169 MT
+(TRAIN)SH
+26120 XM
+(CLSTK)SH
+33199 XM
+(CRPZM)SH
+40927 XM
+(MULTI)SH
+33432 50 13884 17925 LH BX1
+-2428 50 25482 17925 LV BX1
+-2428 50 32760 17925 LV BX1
+-2428 50 40038 17925 LV BX1
+/Helvetica SF
+14283 19597 MT
+(Test)SH
+/Helvetica-Bold SF
+18284 XM
+(CLSTK)SH
+/Helvetica SF
+26569 XM
+(85.3%)SH
+33847 XM
+(36.9%)SH
+41125 XM
+(78.3%)SH
+33432 50 13884 20353 LH BX1
+14283 22025 MT
+(Test)SH
+/Helvetica-Bold SF
+18284 XM
+(CRPZM)SH
+/Helvetica SF
+26569 XM
+(18.6%)SH
+33847 XM
+(76.5%)SH
+41125 XM
+(69.7%)SH
+33432 7284 50 13884 22781 BX BX1
+-4856 50 25482 22781 LV BX1
+-4856 50 32760 22781 LV BX1
+-4856 50 40038 22781 LV BX1
+/Symbol SF
+11597 25779 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Used in speaker independence, provides)SH
+12925 27676 MT
+(greater robustness \050for "cross" conditions\051,)SH
+12925 29573 MT
+(but limits performance)SH
+/Symbol SF
+11597 32608 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Better performance expected if we had a)SH
+12925 34505 MT
+(model for the degradation)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(3)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 4 4
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(A MODEL OF THE ENVIRONMENT)SH
+45360 50 7920 13034 UL
+18 /Symbol AF
+11597 16428 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Degraded speech is formed by passing)SH
+12925 18325 MT
+("clean" \050reference\051 speech through a filter)SH
+12925 20222 MT
+(and adding independent noise)SH
+/Symbol SF
+11597 23257 MT
+(\267)SH
+/Helvetica-Bold SF
+12925 XM
+(Goal:)SH
+/Helvetica SF
+18025 XM
+(Find the parameters that undo these)SH
+12925 25154 MT
+(transformations)SH
+705 1000 0 12459 75991 GB 
+%%BeginDocument: blockdiag.eps
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: blockdiag.draw
+%%Creator: Draw
+%%CreationDate: Sun Apr  1 16:57:04 1990
+%%For: rms
+%%DocumentFonts: (atend)
+%%%Pages: 0 1
+%%BoundingBox: 2.010000 490.010010 512.989981 699.000000
+%%EndComments
+
+%%BeginFile: /usr/lib/NextStep//printPackage1.0.ps
+%!PSNext-1.0
+%%Title: Printing Package
+%%Copyright 1988, NeXT, Inc.
+%%CreationDate: 23Feb88
+%%PackageName: printPackage0.8.37
+%%PackageDescription: Routines to support printing
+%%EndComments
+
+%debugging aids
+%/clip {gsave 0.9 setgray 0.5 setlinewidth stroke grestore} def
+
+% simulations of DPS ops
+/__NXbdef {1 index where {pop pop pop} {bind def} ifelse} bind def
+/__NXUserObjectList 10 array __NXbdef
+/defineuserobject {
+    exch
+    dup 1 add
+    dup __NXUserObjectList length gt {
+        array dup 0 __NXUserObjectList putinterval
+        /__NXUserObjectList exch def
+    }
+    { pop }
+    ifelse
+    __NXUserObjectList exch 3 -1 roll put
+} __NXbdef
+/execuserobject {
+    __NXUserObjectList exch get exec
+} __NXbdef
+/__NXDoRectOp {
+    1 index type /arraytype eq {
+        exch aload length
+        dup 2 add -1 roll exch
+        4 idiv
+    }
+    { 1 }
+    ifelse
+    {
+        5 1 roll
+        newpath 4 2 roll moveto 1 index 0 rlineto
+                0 exch rlineto neg 0 rlineto closepath
+        dup cvx exec
+    } repeat pop
+} __NXbdef
+/rectclip {/clip __NXDoRectOp newpath} __NXbdef
+/rectfill {gsave /fill __NXDoRectOp grestore} __NXbdef
+/rectstroke {gsave /stroke __NXDoRectOp grestore} __NXbdef
+/arct {arcto pop pop pop pop} __NXbdef
+/setbbox {pop pop pop pop} __NXbdef
+/ucache {} __NXbdef
+/ucachestatus {mark 0 0 0 0 0} __NXbdef
+/setucacheparams {cleartomark} __NXbdef
+/uappend {systemdict begin cvx exec end} __NXbdef
+/ueofill {gsave newpath uappend eofill grestore} __NXbdef
+/ufill {gsave newpath uappend fill grestore} __NXbdef
+/ustroke {
+    gsave newpath
+    dup length 6 eq {
+        exch uappend concat 
+    } {
+        uappend
+    } ifelse
+    stroke grestore
+} __NXbdef
+/__NXustrokepathMatrix dup where {pop pop} {matrix def} ifelse
+/ustrokepath {
+    newpath
+    dup length 6 eq {
+        exch uappend
+        __NXustrokepathMatrix currentmatrix exch concat
+        strokepath setmatrix
+    } {
+        uappend strokepath
+    } ifelse
+} __NXbdef
+/upath {
+    [
+        exch {/ucache cvx} if
+        pathbbox /setbbox cvx
+        {/moveto cvx} {/lineto cvx} {/curveto cvx} {/closepath cvx} pathforall
+    ] cvx
+} __NXbdef
+/setstrokeadjust {pop} __NXbdef
+/currentstrokeadjust {false} __NXbdef
+/selectfont {
+    exch findfont exch
+    dup type /arraytype eq {
+        makefont
+    } {
+        scalefont
+    } ifelse setfont
+} __NXbdef
+/_NXCombineArrays {
+    counttomark dup 2 add index
+    dup length 3 -1 roll {
+        2 index length sub
+        dup 4 1 roll
+        1 index exch 4 -1 roll
+        putinterval exch
+    } repeat
+    pop pop pop
+} __NXbdef
+
+% simulations of NeXT additions to DPS
+/flushgraphics {} def
+/hidecursor {} def
+/obscurecursor {} def
+/revealcursor {} def
+/setcursor {4 {pop} repeat} bind def
+/showcursor {} def
+
+
+%%EndFile
+
+%%EndProlog
+%%BeginSetup
+/oval {
+    translate scale newpath 0.5 0.5 0.5 0 360 arc
+} def /fillandframeoval {
+    oval gsave eofill grestore 0 setgray matrix defaultmatrix setmatrix stroke
+} def /fillandframerectangle {
+    4 copy rectfill 0 setgray rectstroke
+} def /line {
+    moveto rlineto stroke
+} def /setup {
+    setgray setlinewidth setlinecap setlinejoin gsave
+} def /arrow {
+    newpath moveto dup rotate -13 6 rlineto 4 -6 rlineto -4 -6 rlineto closepath gsave 0 setlinejoin stroke grestore fill neg rotate
+} def
+%%EndSetup
+gsave
+2.01 490.01001 510.980011 208.98999 rectclip
+2.01 490.01001 510.980011 208.98999 rectclip
+0 0 0.99 0 setup
+0 0 0.99 0 setup
+140 630 110 60 rectstroke
+grestore
+0 0 0 0 setup
+0 0 0.99 0 setup
+70 0 250 660 line
+0 320 660 arrow
+grestore
+0 0 0.99 0 setup
+40 40 320 640 oval matrix defaultmatrix setmatrix stroke
+grestore
+0 0 0.99 0 setup
+0 20 340 650 line
+grestore
+0 0 0.99 0 setup
+20 0 330 660 line
+grestore
+grestore
+0 0 0.99 0 setup
+70 0 360 660 line
+0 430 660 arrow
+grestore
+0 0 0.99 0 setup
+0 50 340 590 line
+90.002655 340 640 arrow
+grestore
+0 0 0.99 0 setup
+gsave
+/Times-BoldItalic findfont 24 scalefont [1 0 0 -1 0 0] makefont
+65
+exch
+defineuserobject
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1148] concat
+65 execuserobject setfont
+0 setgray
+323 582 moveto (n\(t\)) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1320] concat
+65 execuserobject setfont
+0 setgray
+433 668 moveto (y\(t\)) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1322] concat
+65 execuserobject setfont
+0 setgray
+173 669 moveto (h\(t\)) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1320] concat
+65 execuserobject setfont
+0 setgray
+50 668 moveto (x\(t\)) show
+grestore
+grestore
+0 0 0.99 0 setup
+50 0 90 660 line
+0 140 660 arrow
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1222] concat
+65 execuserobject setfont
+0 setgray
+15 605 moveto ( "Clean") show
+28 633 moveto (speech) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1230] concat
+65 execuserobject setfont
+0 setgray
+401 609 moveto (Degraded) show
+417 637 moveto (speech) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1190] concat
+65 execuserobject setfont
+0 setgray
+159 589 moveto ( Linear) show
+143 617 moveto (Distortion) show
+grestore
+grestore
+0 0 0.99 0 setup
+gsave
+65 execuserobject setfont
+0 setgray
+[1 0 0 -1 0 1048] concat
+65 execuserobject setfont
+0 setgray
+298 518 moveto (Additive) show
+312 546 moveto (Noise) show
+grestore
+grestore
+gsave
+0 0 540 720 rectclip
+[1 0 0 -1 0 720] concat
+grestore
+grestore
+
+%%EndDocument
+ GE 10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(4)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 5 5
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(INDEPENDENT COMPENSATION FOR NOISE)SH
+7920 11323 MT
+(AND FILTERING)SH
+45360 50 7920 15626 UL
+18 SS 
+7920 18428 MT
+(Spectral Equalization)SH
+/Symbol SF
+11597 20917 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(EQUAL. \050Stockham\051)SH
+/Helvetica-Bold SF
+7920 26109 MT
+(Noise suppression techniques)SH
+/Symbol SF
+11597 28598 MT
+(\267)SH
+/Helvetica-Bold SF
+12925 XM
+(PSUB)SH
+/Helvetica SF
+18427 XM
+(- Boll's Power spectral subtraction)SH
+/Symbol SF
+11597 31633 MT
+(\267)SH
+/Helvetica-Bold SF
+12925 XM
+(MSUB)SH
+/Helvetica SF
+18725 XM
+(- Magnitude Spectral Subtraction)SH
+/Symbol SF
+11597 34668 MT
+(\267)SH
+/Helvetica-Bold SF
+12925 XM
+(MMSE1)SH
+/Helvetica SF
+19826 XM
+(- Use a transformation curve that)SH
+12925 36565 MT
+(minimizes squared error between CLSTK)SH
+12925 38462 MT
+(and PZM)SH
+7920 43654 MT
+([ALEX - YOU PROBABLY COULD BE EVEN A LITTLE)SH
+7920 45551 MT
+(MORE VERBOSE HERE.  DO EITHER MSUB OR)SH
+7920 47448 MT
+(MMSE1 RELATE TO BEROUTI?  PORTER AND BOLL?)SH
+7920 49345 MT
+(IF SO, REFERENCE THEM, TOO.])SH
+7920 54537 MT
+([)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(5)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 6 6
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(INDEPENDENT COMPENSATION FOR NOISE)SH
+7920 11323 MT
+(AND FILTERING)SH
+45360 50 7920 15626 UL
+18 SS 
+1000 1000 0 12600 39689 GB 
+%%BeginDocument: snrcurves.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 216
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+41.4 35.2 MT
+56.9 51.7 LT
+72.4 65.4 LT
+88.0 77.3 LT
+103.5 87.9 LT
+119.1 97.7 LT
+134.6 106.8 LT
+150.1 115.3 LT
+165.7 123.4 LT
+181.2 131.2 LT
+196.8 138.7 LT
+212.3 145.9 LT
+227.8 153.0 LT
+243.4 159.9 LT
+258.9 166.6 LT
+274.5 173.2 LT
+290.0 179.7 LT
+305.5 186.2 LT
+321.1 192.5 LT
+336.6 198.8 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+41.4 35.2 1.0000 SNone
+56.9 51.7 1.0000 SNone
+72.4 65.4 1.0000 SNone
+88.0 77.3 1.0000 SNone
+103.5 87.9 1.0000 SNone
+119.1 97.7 1.0000 SNone
+134.6 106.8 1.0000 SNone
+150.1 115.3 1.0000 SNone
+165.7 123.4 1.0000 SNone
+181.2 131.2 1.0000 SNone
+196.8 138.7 1.0000 SNone
+212.3 145.9 1.0000 SNone
+227.8 153.0 1.0000 SNone
+243.4 159.9 1.0000 SNone
+258.9 166.6 1.0000 SNone
+274.5 173.2 1.0000 SNone
+290.0 179.7 1.0000 SNone
+305.5 186.2 1.0000 SNone
+321.1 192.5 1.0000 SNone
+336.6 198.8 1.0000 SNone
+1.000000 setlinewidth
+[9 9] 0 setdash
+41.4 7.0 MT
+56.9 7.0 LT
+72.4 7.0 LT
+88.0 7.0 LT
+103.5 7.0 LT
+119.1 7.0 LT
+134.6 7.0 LT
+150.1 7.0 LT
+165.7 46.9 LT
+181.2 75.6 LT
+196.8 95.6 LT
+212.3 111.3 LT
+227.8 124.5 LT
+243.4 136.1 LT
+258.9 146.5 LT
+274.5 156.1 LT
+290.0 165.1 LT
+305.5 173.5 LT
+321.1 181.5 LT
+336.6 189.2 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+41.4 7.0 1.0000 SNone
+56.9 7.0 1.0000 SNone
+72.4 7.0 1.0000 SNone
+88.0 7.0 1.0000 SNone
+103.5 7.0 1.0000 SNone
+119.1 7.0 1.0000 SNone
+134.6 7.0 1.0000 SNone
+150.1 7.0 1.0000 SNone
+165.7 46.9 1.0000 SNone
+181.2 75.6 1.0000 SNone
+196.8 95.6 1.0000 SNone
+212.3 111.3 1.0000 SNone
+227.8 124.5 1.0000 SNone
+243.4 136.1 1.0000 SNone
+258.9 146.5 1.0000 SNone
+274.5 156.1 1.0000 SNone
+290.0 165.1 1.0000 SNone
+305.5 173.5 1.0000 SNone
+321.1 181.5 1.0000 SNone
+336.6 189.2 1.0000 SNone
+1.000000 setlinewidth
+[2 5 17 5 2 5] 0 setdash
+41.4 9.6 MT
+56.9 18.3 LT
+72.4 31.9 LT
+88.0 51.1 LT
+103.5 73.4 LT
+119.1 93.3 LT
+134.6 108.2 LT
+150.1 119.2 LT
+165.7 127.8 LT
+181.2 135.5 LT
+196.8 142.6 LT
+212.3 149.4 LT
+227.8 156.1 LT
+243.4 162.6 LT
+258.9 169.1 LT
+274.5 175.6 LT
+290.0 182.1 LT
+305.5 188.6 LT
+321.1 195.1 LT
+336.6 202.6 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+41.4 9.6 1.0000 SNone
+56.9 18.3 1.0000 SNone
+72.4 31.9 1.0000 SNone
+88.0 51.1 1.0000 SNone
+103.5 73.4 1.0000 SNone
+119.1 93.3 1.0000 SNone
+134.6 108.2 1.0000 SNone
+150.1 119.2 1.0000 SNone
+165.7 127.8 1.0000 SNone
+181.2 135.5 1.0000 SNone
+196.8 142.6 1.0000 SNone
+212.3 149.4 1.0000 SNone
+227.8 156.1 1.0000 SNone
+243.4 162.6 1.0000 SNone
+258.9 169.1 1.0000 SNone
+274.5 175.6 1.0000 SNone
+290.0 182.1 1.0000 SNone
+305.5 188.6 1.0000 SNone
+321.1 195.1 1.0000 SNone
+336.6 202.6 1.0000 SNone
+1.000000 setlinewidth
+[2 4] 0 setdash
+41.4 7.0 MT
+56.9 59.6 LT
+72.4 79.9 LT
+88.0 93.2 LT
+103.5 103.7 LT
+119.1 112.6 LT
+134.6 120.7 LT
+150.1 128.1 LT
+165.7 135.1 LT
+181.2 141.8 LT
+196.8 148.3 LT
+212.3 154.6 LT
+227.8 160.8 LT
+243.4 166.9 LT
+258.9 173.0 LT
+274.5 178.9 LT
+290.0 184.9 LT
+305.5 190.8 LT
+321.1 196.6 LT
+336.6 202.5 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+41.4 7.0 1.0000 SNone
+56.9 59.6 1.0000 SNone
+72.4 79.9 1.0000 SNone
+88.0 93.2 1.0000 SNone
+103.5 103.7 1.0000 SNone
+119.1 112.6 1.0000 SNone
+134.6 120.7 1.0000 SNone
+150.1 128.1 1.0000 SNone
+165.7 135.1 1.0000 SNone
+181.2 141.8 1.0000 SNone
+196.8 148.3 1.0000 SNone
+212.3 154.6 1.0000 SNone
+227.8 160.8 1.0000 SNone
+243.4 166.9 1.0000 SNone
+258.9 173.0 1.0000 SNone
+274.5 178.9 1.0000 SNone
+290.0 184.9 1.0000 SNone
+305.5 190.8 1.0000 SNone
+321.1 196.6 1.0000 SNone
+336.6 202.5 1.0000 SNone
+41.4 93.5 MT
+352.2 93.5 LT
+stroke
+119.1 93.5 MT
+119.1 97.1 LT
+stroke
+196.8 93.5 MT
+196.8 97.1 LT
+stroke
+274.5 93.5 MT
+274.5 97.1 LT
+stroke
+352.2 93.5 MT
+352.2 97.1 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Input SNR) 251.0 61.9 0 DoLText
+/Helvetica-BoldOblique findfont 7 scalefont setfont
+(i) 318.5 58.4 0 DoLText
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+( \(dB\)) 320.4 61.9 0 DoLText
+(5) 115.3 75.9 0 DoLText
+(10) 189.1 75.9 0 DoLText
+(15) 266.8 75.9 0 DoLText
+(20) 344.5 75.9 0 DoLText
+41.4 7.0 MT
+41.4 208.6 LT
+stroke
+41.4 7.0 MT
+45.0 7.0 LT
+stroke
+41.4 35.8 MT
+45.0 35.8 LT
+stroke
+41.4 64.6 MT
+45.0 64.6 LT
+stroke
+41.4 93.4 MT
+45.0 93.4 LT
+stroke
+41.4 122.2 MT
+45.0 122.2 LT
+stroke
+41.4 151.0 MT
+45.0 151.0 LT
+stroke
+41.4 179.8 MT
+45.0 179.8 LT
+stroke
+41.4 208.6 MT
+45.0 208.6 LT
+stroke
+(Output SNR) 14.0 95.7 90 DoLText
+/Helvetica-BoldOblique findfont 7 scalefont setfont
+(i) 17.5 174.9 90 DoLText
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+( \(dB\)) 14.0 176.8 90 DoLText
+(-15) 17.6 0.0 0 DoLText
+(-10) 17.6 28.8 0 DoLText
+(-5) 25.4 57.6 0 DoLText
+(0) 30.1 86.4 0 DoLText
+(5) 30.1 115.2 0 DoLText
+(10) 22.3 144.0 0 DoLText
+(15) 22.3 172.8 0 DoLText
+(20) 22.3 201.6 0 DoLText
+(0) 45.0 75.9 0 DoLText
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+[] 0 setdash
+1.000000 setlinewidth
+70.4 191.3 MT
+97.4 191.3 LT
+stroke
+(MSUB, High Global SNR) 110.9 187.6 0 DoLText
+[9 9] 0 setdash
+1.000000 setlinewidth
+70.4 175.7 MT
+97.4 175.7 LT
+stroke
+(MSUB, Low Global SNR) 110.9 172.0 0 DoLText
+[2 5 17 5 2 5] 0 setdash
+1.000000 setlinewidth
+70.4 160.1 MT
+97.4 160.1 LT
+stroke
+(MMSE1) 110.9 156.4 0 DoLText
+[2 4] 0 setdash
+1.000000 setlinewidth
+70.4 144.5 MT
+97.4 144.5 LT
+stroke
+(PSUB) 110.9 140.8 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica-BoldOblique
+
+%%EndDocument
+ GE 7920 44881 MT
+(Observations)SH
+/Symbol SF
+11597 47370 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Spectral Subtraction and Spectral)SH
+12925 49267 MT
+(Equalization interact non-linearly so a)SH
+12925 51164 MT
+(simple cascade of these algorithms does)SH
+12925 53061 MT
+(not work)SH
+/Symbol SF
+11597 56096 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(By treating different frequencies)SH
+12925 57993 MT
+(independently we obtain frames that are not)SH
+12925 59890 MT
+(speech-like)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(6)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 7 7
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(PERFORMANCE OF COMPENSATION)SH
+7920 11323 MT
+(SCHEMES)SH
+45360 50 7920 15626 UL
+18 SS 
+7920 18428 MT
+(Training on Close-talking Microphone:)SH
+1250 1000 0 8100 42486 GB 
+%%BeginDocument: compcls1.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 180
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+2.000000 setlinewidth
+[] 0 setdash
+newpath
+94.1 149.5 MT
+143.7 149.5 LT
+193.3 144.6 LT
+242.9 149.5 LT
+292.5 145.4 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 149.5 2.0000 SBox
+143.7 149.5 2.0000 SBox
+193.3 144.6 2.0000 SBox
+242.9 149.5 2.0000 SBox
+292.5 145.4 2.0000 SBox
+1.000000 setlinewidth
+[2 4] 0 setdash
+94.1 149.5 MT
+292.5 149.5 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 149.5 1.0000 SNone
+292.5 149.5 1.0000 SNone
+1.000000 setlinewidth
+[2 4] 0 setdash
+94.1 135.7 MT
+292.5 135.7 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 135.7 1.0000 SNone
+292.5 135.7 1.0000 SNone
+2.000000 setlinewidth
+[9 9] 0 setdash
+94.1 44.8 MT
+143.7 75.7 LT
+193.3 74.0 LT
+242.9 92.0 LT
+292.5 117.3 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 44.8 2.0000 SCircle
+143.7 75.7 2.0000 SCircle
+193.3 74.0 2.0000 SCircle
+242.9 92.0 2.0000 SCircle
+292.5 117.3 2.0000 SCircle
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+/Helvetica findfont 10 scalefont setfont
+(Test CLS) 292.5 158.6 0 DoLText
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+(Test PZM) 292.5 115.4 0 DoLText
+44.5 15.6 MT
+342.1 15.6 LT
+stroke
+94.1 15.6 MT
+94.1 19.2 LT
+stroke
+143.7 15.6 MT
+143.7 19.2 LT
+stroke
+193.3 15.6 MT
+193.3 19.2 LT
+stroke
+242.9 15.6 MT
+242.9 19.2 LT
+stroke
+292.5 15.6 MT
+292.5 19.2 LT
+stroke
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(BASE) 77.5 0.0 0 DoLText
+(EQUAL) 122.8 0.0 0 DoLText
+(PSUB) 176.7 0.0 0 DoLText
+(MMSE1) 221.6 0.0 0 DoLText
+(MSUB) 274.9 0.0 0 DoLText
+44.5 15.6 MT
+44.5 172.6 LT
+stroke
+44.5 47.0 MT
+48.1 47.0 LT
+stroke
+44.5 78.4 MT
+48.1 78.4 LT
+stroke
+44.5 109.8 MT
+48.1 109.8 LT
+stroke
+44.5 141.2 MT
+48.1 141.2 LT
+stroke
+44.5 172.6 MT
+48.1 172.6 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Word Accuracy) 14.0 70.1 90 DoLText
+(20) 25.4 40.0 0 DoLText
+(40) 25.4 71.4 0 DoLText
+(60) 25.4 102.8 0 DoLText
+(80) 25.4 134.2 0 DoLText
+(100) 17.6 165.6 0 DoLText
+(0) 33.2 8.6 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica Helvetica-BoldOblique
+
+%%EndDocument
+ GE 7920 47678 MT
+(Training on Crown PZM Microphone:)SH
+1250 1000 0 8100 71736 GB 
+%%BeginDocument: comppzm1.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 180
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+2.000000 setlinewidth
+[9 9] 0 setdash
+newpath
+94.1 73.5 MT
+143.7 95.5 LT
+193.3 112.9 LT
+242.9 123.4 LT
+292.5 133.5 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 73.5 2.0000 SCircle
+143.7 95.5 2.0000 SCircle
+193.3 112.9 2.0000 SCircle
+242.9 123.4 2.0000 SCircle
+292.5 133.5 2.0000 SCircle
+1.000000 setlinewidth
+[2 4] 0 setdash
+94.1 149.5 MT
+292.5 149.5 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 149.5 1.0000 SNone
+292.5 149.5 1.0000 SNone
+1.000000 setlinewidth
+[2 4] 0 setdash
+94.1 135.7 MT
+292.5 135.7 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 135.7 1.0000 SNone
+292.5 135.7 1.0000 SNone
+2.000000 setlinewidth
+[] 0 setdash
+94.1 135.7 MT
+143.7 135.7 LT
+193.3 117.1 LT
+242.9 127.6 LT
+292.5 129.8 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+94.1 135.7 2.0000 SBox
+143.7 135.7 2.0000 SBox
+193.3 117.1 2.0000 SBox
+242.9 127.6 2.0000 SBox
+292.5 129.8 2.0000 SBox
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+/Helvetica findfont 10 scalefont setfont
+(Test CLS) 292.5 111.5 0 DoLText
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+(Test PZM) 292.5 146.8 0 DoLText
+44.5 15.6 MT
+342.1 15.6 LT
+stroke
+94.1 15.6 MT
+94.1 19.2 LT
+stroke
+143.7 15.6 MT
+143.7 19.2 LT
+stroke
+193.3 15.6 MT
+193.3 19.2 LT
+stroke
+242.9 15.6 MT
+242.9 19.2 LT
+stroke
+292.5 15.6 MT
+292.5 19.2 LT
+stroke
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(BASE) 77.5 0.0 0 DoLText
+(EQUAL) 122.8 0.0 0 DoLText
+(PSUB) 176.7 0.0 0 DoLText
+(MMSE1) 221.6 0.0 0 DoLText
+(MSUB) 274.9 0.0 0 DoLText
+44.5 15.6 MT
+44.5 172.6 LT
+stroke
+44.5 47.0 MT
+48.1 47.0 LT
+stroke
+44.5 78.4 MT
+48.1 78.4 LT
+stroke
+44.5 109.8 MT
+48.1 109.8 LT
+stroke
+44.5 141.2 MT
+48.1 141.2 LT
+stroke
+44.5 172.6 MT
+48.1 172.6 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Word Accuracy) 14.0 70.1 90 DoLText
+(20) 25.4 40.0 0 DoLText
+(40) 25.4 71.4 0 DoLText
+(60) 25.4 102.8 0 DoLText
+(80) 25.4 134.2 0 DoLText
+(100) 17.6 165.6 0 DoLText
+(0) 33.2 8.6 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica Helvetica-BoldOblique
+
+%%EndDocument
+ GE 10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30322 74451 MT
+(7)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 8 8
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(SDCN ALGORITHM)SH
+45360 50 7920 13034 UL
+18 SS 
+7920 15836 MT
+(SNR-Dependent Cepstral Normalization)SH
+7920 22925 MT
+(w)SH
+/Helvetica SF
+9820 XM
+(is chosen to minimize the mean-squared average)SH
+7920 24822 MT
+(difference between CLSTK and CRPZM cepstra for each)SH
+7920 26719 MT
+(SNR)SH
+7920 31911 MT
+(Interpretation of)SH
+/Helvetica-Bold SF
+21026 XM
+(w)SH
+/Helvetica SF
+(:)SH
+/Symbol SF
+11597 34400 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Equalization at high SNR)SH
+/Symbol SF
+11597 37435 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Noise subtraction at low SNR)SH
+/Helvetica-Bold SF
+13294 40665 MT
+(TRAIN)SH
+20681 XM
+(CLSTK)SH
+27959 XM
+(CLSTK)SH
+35038 XM
+(CRPZM)SH
+42316 XM
+(CRPZM)SH
+13743 42562 MT
+(TEST)SH
+20681 XM
+(CLSTK)SH
+29060 XM
+(PZM)SH
+35237 XM
+(CLSTK)SH
+42316 XM
+(CRPZM)SH
+37110 50 12045 43318 LH BX1
+-4325 50 20043 43318 LV BX1
+-4325 50 27321 43318 LV BX1
+-4325 50 34599 43318 LV BX1
+-4325 50 41877 43318 LV BX1
+/Helvetica SF
+12444 44990 MT
+(BASE)SH
+21130 XM
+(85.3%)SH
+28408 XM
+(18.6%)SH
+35686 XM
+(36.9%)SH
+42964 XM
+(76.5%)SH
+37110 50 12045 45735 LH BX1
+12444 47407 MT
+(MMSEN)SH
+21130 XM
+(85.3%)SH
+28408 XM
+(66.4%)SH
+35686 XM
+(75.5%)SH
+42964 XM
+(72.3%)SH
+37110 50 12045 48152 LH BX1
+12444 49824 MT
+(SDCN)SH
+21130 XM
+(85.3%)SH
+28408 XM
+(67.2%)SH
+35686 XM
+(76.4%)SH
+42964 XM
+(75.5%)SH
+37110 11576 50 12045 50569 BX BX1
+-7251 50 20043 50569 LV BX1
+-7251 50 27321 50569 LV BX1
+-7251 50 34599 50569 LV BX1
+-7251 50 41877 50569 LV BX1
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(8)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 9 9
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(SDCN ALGORITHM)SH
+45360 50 7920 13034 UL
+18 SS 
+7920 15836 MT
+(Advantages)SH
+/Symbol SF
+11597 18325 MT
+(\267)SH
+/Helvetica-Oblique SF
+12925 XM
+(Joint)SH
+/Helvetica SF
+17227 XM
+(Compensation for noise and spectral)SH
+12925 20222 MT
+(tilt)SH
+/Symbol SF
+11597 23257 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Very easy to implement, only)SH
+/Times-Italic SF
+36533 XM
+(c)SH
+/Helvetica SF
+38232 XM
+(and)SH
+/Times-Italic SF
+41735 XM
+(c)SH
+/Helvetica SF
+43434 XM
+(need)SH
+8 /Times-Roman AF
+37332 23602 MT
+(0)SH
+42534 XM
+(1)SH
+18 /Helvetica AF
+12925 25154 MT
+(to be normalized.)SH
+/Helvetica-Bold SF
+7920 30346 MT
+(Disadvantages)SH
+/Symbol SF
+11597 32835 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(For every new microphone/environment, a)SH
+12925 34732 MT
+(new stereo database is needed to estimate)SH
+12925 36629 MT
+(the corresponding)SH
+/Helvetica-Bold SF
+27833 XM
+(w)SH
+/Helvetica SF
+29733 XM
+(vectors, hence)SH
+/Symbol SF
+11597 39664 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Not microphone independent)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30322 74451 MT
+(9)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 10 10
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(CDCN ALGORITHM)SH
+45360 50 7920 13034 UL
+18 SS 
+7920 15836 MT
+(Codeword-dependent Cepstral Normalization)SH
+7920 21028 MT
+(Estimation process:)SH
+/Helvetica SF
+11925 23389 MT
+(1.)SH
+13926 XM
+(ML estimate of)SH
+/Helvetica-Bold SF
+26229 XM
+(q)SH
+/Helvetica SF
+27829 XM
+(and)SH
+/Helvetica-Bold SF
+31332 XM
+(n)SH
+/Helvetica SF
+(. Find the)SH
+13926 25286 MT
+(parameters of the transformation that)SH
+13926 27183 MT
+(maximize the probability or alternatively)SH
+13926 29080 MT
+(minimize the overall VQ distortion. Use of)SH
+13926 30977 MT
+(the EM algorithm for convergence)SH
+11925 35909 MT
+(2.)SH
+13926 XM
+(MMSE estimate of every cepstrum vector)SH
+13926 37806 MT
+(given)SH
+/Helvetica-Bold SF
+18729 XM
+(q)SH
+/Helvetica SF
+20329 XM
+(and)SH
+/Helvetica-Bold SF
+23832 XM
+(n)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(10)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 11 11
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(PERFORMANCE OF COMPENSATION)SH
+7920 11323 MT
+(SCHEMES)SH
+45360 50 7920 15626 UL
+18 SS 
+7920 18428 MT
+(Training on Close-talking Microphone:)SH
+1250 1000 0 8100 42486 GB 
+%%BeginDocument: compcls2.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 180
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+113.1 134.5 MT
+189.5 148.1 LT
+265.9 148.1 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 134.5 2.0000 SBox
+189.5 148.1 2.0000 SBox
+265.9 148.1 2.0000 SBox
+1.000000 setlinewidth
+[2 4] 0 setdash
+113.1 148.1 MT
+265.9 148.1 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 148.1 1.0000 SNone
+265.9 148.1 1.0000 SNone
+1.000000 setlinewidth
+[2 4] 0 setdash
+113.1 102.0 MT
+265.9 102.0 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 102.0 1.0000 SNone
+265.9 102.0 1.0000 SNone
+1.000000 setlinewidth
+[9 9] 0 setdash
+113.1 40.7 MT
+189.5 53.3 LT
+265.9 93.6 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 40.7 2.0000 SCircle
+189.5 53.3 2.0000 SCircle
+265.9 93.6 2.0000 SCircle
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+/Helvetica findfont 10 scalefont setfont
+(Test CLS) 265.9 162.7 0 DoLText
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+(Test PZM) 265.9 110.3 0 DoLText
+36.7 15.6 MT
+342.3 15.6 LT
+stroke
+113.1 15.6 MT
+113.1 19.2 LT
+stroke
+189.5 15.6 MT
+189.5 19.2 LT
+stroke
+265.9 15.6 MT
+265.9 19.2 LT
+stroke
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(MSUB) 95.5 0.0 0 DoLText
+(SDCN) 172.6 0.0 0 DoLText
+(CDCN) 248.6 0.0 0 DoLText
+36.7 15.6 MT
+36.7 172.8 LT
+stroke
+36.7 41.8 MT
+40.3 41.8 LT
+stroke
+36.7 68.0 MT
+40.3 68.0 LT
+stroke
+36.7 94.2 MT
+40.3 94.2 LT
+stroke
+36.7 120.4 MT
+40.3 120.4 LT
+stroke
+36.7 146.6 MT
+40.3 146.6 LT
+stroke
+36.7 172.8 MT
+40.3 172.8 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Word Accuracy) 14.0 70.3 90 DoLText
+(65) 17.6 34.8 0 DoLText
+(70) 17.6 61.0 0 DoLText
+(75) 17.6 87.2 0 DoLText
+(80) 17.6 113.4 0 DoLText
+(85) 17.6 139.6 0 DoLText
+(90) 17.6 165.8 0 DoLText
+(60) 17.6 8.6 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica Helvetica-BoldOblique
+
+%%EndDocument
+ GE 7920 47678 MT
+(Training on Crown PZM Microphone:)SH
+1250 1000 0 8100 71736 GB 
+%%BeginDocument: comppzm2.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 180
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[9 9] 0 setdash
+newpath
+113.1 94.7 MT
+189.5 101.5 LT
+265.9 87.3 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 94.7 2.0000 SCircle
+189.5 101.5 2.0000 SCircle
+265.9 87.3 2.0000 SCircle
+1.000000 setlinewidth
+[2 4] 0 setdash
+113.1 148.1 MT
+265.9 148.1 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 148.1 1.0000 SNone
+265.9 148.1 1.0000 SNone
+1.000000 setlinewidth
+[2 4] 0 setdash
+113.1 102.0 MT
+265.9 102.0 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 102.0 1.0000 SNone
+265.9 102.0 1.0000 SNone
+1.000000 setlinewidth
+[] 0 setdash
+113.1 82.6 MT
+189.5 96.8 LT
+265.9 109.3 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+113.1 82.6 2.0000 SBox
+189.5 96.8 2.0000 SBox
+265.9 109.3 2.0000 SBox
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+/Helvetica findfont 10 scalefont setfont
+(Test CLS) 265.9 57.9 0 DoLText
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+(Test PZM) 265.9 123.4 0 DoLText
+36.7 15.6 MT
+342.3 15.6 LT
+stroke
+113.1 15.6 MT
+113.1 19.2 LT
+stroke
+189.5 15.6 MT
+189.5 19.2 LT
+stroke
+265.9 15.6 MT
+265.9 19.2 LT
+stroke
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(MSUB) 95.5 0.0 0 DoLText
+(SDCN) 172.6 0.0 0 DoLText
+(CDCN) 248.6 0.0 0 DoLText
+36.7 15.6 MT
+36.7 172.8 LT
+stroke
+36.7 41.8 MT
+40.3 41.8 LT
+stroke
+36.7 68.0 MT
+40.3 68.0 LT
+stroke
+36.7 94.2 MT
+40.3 94.2 LT
+stroke
+36.7 120.4 MT
+40.3 120.4 LT
+stroke
+36.7 146.6 MT
+40.3 146.6 LT
+stroke
+36.7 172.8 MT
+40.3 172.8 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Word Accuracy) 14.0 70.3 90 DoLText
+(65) 17.6 34.8 0 DoLText
+(70) 17.6 61.0 0 DoLText
+(75) 17.6 87.2 0 DoLText
+(80) 17.6 113.4 0 DoLText
+(85) 17.6 139.6 0 DoLText
+(90) 17.6 165.8 0 DoLText
+(60) 17.6 8.6 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica Helvetica-BoldOblique
+
+%%EndDocument
+ GE 10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(11)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 12 12
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(BASELINE SPECTRA)SH
+45360 50 7920 13034 UL
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(12)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 13 13
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(SDCN SPECTRA)SH
+45360 50 7920 13034 UL
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(13)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 14 14
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(CDCN SPECTRA)SH
+45360 50 7920 13034 UL
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(14)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 15 15
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(SPECTRAL TILT COMPARISON)SH
+45360 50 7920 13034 UL
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE 30044 74451 MT
+(15)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 16 16
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(CROSS MICROPHONE RECOGNITION)SH
+45360 50 7920 13034 UL
+18 /Helvetica AF
+7920 15836 MT
+(Performance using different microphones.  In each case)SH
+7920 17733 MT
+(S)SH
+16 SS 
+(PHINX)SH
+18 SS 
+14510 XM
+(had been trained with the CLSTK microphone)SH
+/Helvetica-Bold SF
+26159 20963 MT
+(CLSTK)SH
+35336 XM
+(CRPCC160)SH
+29754 50 15723 21719 LH BX1
+-2428 50 23721 21719 LV BX1
+-2428 50 34599 21719 LV BX1
+/Helvetica SF
+16122 23391 MT
+(BASE)SH
+26608 XM
+(82.4%)SH
+37486 XM
+(70.2%)SH
+29754 50 15723 24136 LH BX1
+16122 25808 MT
+(CDCN)SH
+26608 XM
+(81.0%)SH
+37486 XM
+(78.5%)SH
+29754 7262 50 15723 26553 BX BX1
+-4834 50 23721 26553 LV BX1
+-4834 50 34599 26553 LV BX1
+/Helvetica-Bold SF
+26159 29783 MT
+(CLSTK)SH
+35537 XM
+(CRPZM6sf)SH
+29754 50 15723 30539 LH BX1
+-2428 50 23721 30539 LV BX1
+-2428 50 34599 30539 LV BX1
+/Helvetica SF
+16122 32211 MT
+(BASE)SH
+26608 XM
+(84.8%)SH
+37486 XM
+(41.8%)SH
+29754 50 15723 32956 LH BX1
+16122 34628 MT
+(CDCN)SH
+26608 XM
+(83.3%)SH
+37486 XM
+(73.9%)SH
+29754 7262 50 15723 35373 BX BX1
+-4834 50 23721 35373 LV BX1
+-4834 50 34599 35373 LV BX1
+/Helvetica-Bold SF
+26159 38603 MT
+(CLSTK)SH
+36035 XM
+(SENN518)SH
+29754 50 15723 39359 LH BX1
+-2428 50 23721 39359 LV BX1
+-2428 50 34599 39359 LV BX1
+/Helvetica SF
+16122 41031 MT
+(BASE)SH
+26608 XM
+(87.2%)SH
+37486 XM
+(84.5%)SH
+29754 50 15723 41776 LH BX1
+16122 43448 MT
+(CDCN)SH
+26608 XM
+(82.2%)SH
+37486 XM
+(83.3%)SH
+29754 7262 50 15723 44193 BX BX1
+-4834 50 23721 44193 LV BX1
+-4834 50 34599 44193 LV BX1
+/Helvetica-Bold SF
+26159 47423 MT
+(CLSTK)SH
+35186 XM
+(SENNME80)SH
+29754 50 15723 48179 LH BX1
+-2428 50 23721 48179 LV BX1
+-2428 50 34599 48179 LV BX1
+/Helvetica SF
+16122 49851 MT
+(BASE)SH
+26608 XM
+(83.7%)SH
+37486 XM
+(71.4%)SH
+29754 50 15723 50596 LH BX1
+16122 52268 MT
+(CDCN)SH
+26608 XM
+(81.5%)SH
+37486 XM
+(80.7%)SH
+29754 7262 50 15723 53013 BX BX1
+-4834 50 23721 53013 LV BX1
+-4834 50 34599 53013 LV BX1
+/Helvetica-Bold SF
+25860 56243 MT
+(HMEFM)SH
+35336 XM
+(CRPCC160)SH
+29754 50 15723 56999 LH BX1
+-2428 50 23721 56999 LV BX1
+-2428 50 34599 56999 LV BX1
+/Helvetica SF
+16122 58671 MT
+(BASE)SH
+26608 XM
+(55.9%)SH
+37486 XM
+(56.3%)SH
+29754 50 15723 59416 LH BX1
+16122 61088 MT
+(CDCN)SH
+26608 XM
+(81.7%)SH
+37486 XM
+(72.2%)SH
+29754 7262 50 15723 61833 BX BX1
+-4834 50 23721 61833 LV BX1
+-4834 50 34599 61833 LV BX1
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30044 74451 MT
+(16)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Page: 17 17
+BS
+0 SI
+21 /Helvetica-Bold AF
+7920 8731 MT
+(SUMMARY)SH
+45360 50 7920 13034 UL
+18 /Symbol AF
+11597 16428 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(Desk-top microphones like the Crown)SH
+12925 18325 MT
+(PZM6fs increase the recognition error rate)SH
+12925 20222 MT
+(by allowing weak phonetic events to)SH
+12925 22119 MT
+(become confused with silences)SH
+/Symbol SF
+11597 25154 MT
+(\267)SH
+/Helvetica-Bold SF
+12925 XM
+(Microphone-independent)SH
+/Helvetica SF
+34927 XM
+(systems can be)SH
+12925 27051 MT
+(built by estimating the parameters of the)SH
+12925 28948 MT
+(transformation: noise and spectral tilt)SH
+/Symbol SF
+11597 31983 MT
+(\267)SH
+/Helvetica SF
+12925 XM
+(A framework for speech normalization in the)SH
+/Helvetica-Oblique SF
+12925 33880 MT
+(cepstral domain)SH
+/Helvetica SF
+26130 XM
+(has been introduced)SH
+10 SS 
+1 1 0 7920 74451 GB 
+%%BeginDocument: cmulogo.ps
+%!PS-Adove-2.0
+%%Title: CMULogo.PS
+%%Creator: Dale Moore CMU-CS/RI 
+%%CreationDate: 14-APR-1987
+%%DocumentFonts: Times-Roman
+
+20 dict begin
+
+/inch { 72 mul } def
+
+/cmulogosquare          % stack: ---
+{
+    % do a square at 0 0
+    %
+    % do a border
+    0.75 setlinewidth
+    0 0 moveto
+    0 1 inch lineto
+    1 inch 1 inch lineto
+    1 inch 0 lineto
+    closepath
+    stroke
+
+%    % the gray inside the square
+%    /fstr 256 string def
+%    0 1 255 { fstr exch dup put } for
+%    1 inch 1 inch scale
+%    256 1 inch 8 [256 0 0 -72 0 72] {fstr} image
+} bind def
+
+/cmulogo        % stack x y ---
+{
+    % do a 1 inch cmu logo at x y
+    gsave
+        % move the coordinate system to x y
+        translate
+        % First the tilted square
+        gsave
+            14 rotate
+            cmulogosquare
+        grestore
+
+        % now the Carnegie-Mellon
+        /Times-Bold findfont 21 scalefont setfont
+        0.22 inch 0.73 inch moveto
+        (Carnegie) show
+        0.22 inch 0.45 inch moveto
+        (Mellon) show
+    grestore
+} bind def
+
+% Main procedure
+
+0.5 0.5 scale
+
+0.2 inch -0.6 inch cmulogo
+end
+
+%%EndDocument
+ GE /Helvetica-Bold SF
+30044 74451 MT
+(17)SH
+39666 XM
+(School of Computer Science)SH
+46445 75600 MT
+(Speech Group)SH
+ES
+%%Trailer
+%%Pages: 17
+%%DocumentFonts: Helvetica Helvetica-Bold Helvetica-Oblique Symbol Times-Roman Times-Italic

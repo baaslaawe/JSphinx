@@ -1,0 +1,4818 @@
+%!PS-Adobe-2.0
+%%Title: blind.mss
+%%DocumentFonts: (atend)
+%%Creator: Richard Stern and Scribe 7(1700)
+%%CreationDate: 10 December 1991 18:38
+%%Pages: (atend)
+%%EndComments
+% PostScript Prelude for Scribe.
+/BS {/SV save def 0.0 792.0 translate .01 -.01 scale} bind def
+/ES {showpage SV restore} bind def
+/SC {setrgbcolor} bind def
+/FMTX matrix def
+/RDF {WFT SLT 0.0 eq 
+  {SSZ 0.0 0.0 SSZ neg 0.0 0.0 FMTX astore}
+  {SSZ 0.0 SLT neg sin SLT cos div SSZ mul SSZ neg 0.0 0.0 FMTX astore}
+  ifelse makefont setfont} bind def
+/SLT 0.0 def
+/SI { /SLT exch cvr def RDF} bind def
+/WFT /Courier findfont def
+/SF { /WFT exch findfont def RDF} bind def
+/SSZ 1000.0 def
+/SS { /SSZ exch 100.0 mul def RDF} bind def
+/AF { /WFT exch findfont def /SSZ exch 100.0 mul def RDF} bind def
+/MT /moveto load def
+/XM {currentpoint exch pop moveto} bind def
+/UL {gsave newpath moveto dup 2.0 div 0.0 exch rmoveto
+   setlinewidth 0.0 rlineto stroke grestore} bind def
+/LH {gsave newpath moveto setlinewidth
+   0.0 rlineto
+   gsave stroke grestore} bind def
+/LV {gsave newpath moveto setlinewidth
+   0.0 exch rlineto
+   gsave stroke grestore} bind def
+/BX {gsave newpath moveto setlinewidth
+   exch
+   dup 0.0 rlineto
+   exch 0.0 exch neg rlineto
+   neg 0.0 rlineto
+   closepath
+   gsave stroke grestore} bind def
+/BX1 {grestore} bind def
+/BX2 {setlinewidth 1 setgray stroke grestore} bind def
+/PB {/PV save def newpath translate
+    100.0 -100.0 scale pop /showpage {} def} bind def
+/PE {PV restore} bind def
+/GB {/PV save def newpath translate rotate
+    div dup scale 100.0 -100.0 scale /showpage {} def} bind def
+/GE {PV restore} bind def
+/FB {dict dup /FontMapDict exch def begin} bind def
+/FM {cvn exch cvn exch def} bind def
+/FE {end /original-findfont /findfont load def  /findfont
+   {dup FontMapDict exch known{FontMapDict exch get} if
+   original-findfont} def} bind def
+/BC {gsave moveto dup 0 exch rlineto exch 0 rlineto neg 0 exch rlineto closepath clip} bind def
+/EC /grestore load def
+/SH /show load def
+/MX {exch show 0.0 rmoveto} bind def
+/W {0 32 4 -1 roll widthshow} bind def
+/WX {0 32 5 -1 roll widthshow 0.0 rmoveto} bind def
+%%EndProlog
+%%Page: 0 1
+BS
+0 SI
+14 /Times-Bold AF
+13841 9038 MT
+(EFFICIENT JOINT COMPENSATION OF SPEECH)SH
+7733 10716 MT
+(FOR THE EFFECTS OF ADDITIVE NOISE AND LINEAR FILTERING)SH
+9 /Times-Italic AF
+23031 12764 MT
+(1)SH
+31332 XM
+(2)SH
+41864 XM
+(1)SH
+11 SS 
+17806 13124 MT
+(Fu-Hua Liu)SH
+23481 XM
+(, Alejandro Acero)SH
+31782 XM
+(, and Richard M. Stern)SH
+9 /Times-Roman AF
+5866 14738 MT
+(1)SH
+37477 XM
+(2)SH
+11 SS 
+6316 15101 MT
+(Department of Electrical and Computer Engineering)SH
+37927 XM
+(Apple Computer, Inc.)SH
+11313 16297 MT
+(School of Computer Science)SH
+40251 XM
+(MS 76-7F)SH
+11451 17493 MT
+(Carnegie Mellon University)SH
+37397 XM
+(20525 Mariani Avenue)SH
+12869 18689 MT
+(Pittsburgh, PA 15213)SH
+37746 XM
+(Cupertino, CA 95014)SH
+9 SS 
+31140 22823 MT
+(speech samples from both the)
+99 W( training and testing environments)100 W
+11 /Times-Bold AF
+14087 22943 MT
+(ABSTRACT)SH
+9 /Times-Roman AF
+31140 23838 MT
+(at each SNR of speech in the testing environment.  At)
+4 W( high SNRs,)3 W
+5184 24534 MT
+(As automatic speech recognition systems)
+150 W( are finding their way)149 W
+31140 24853 MT
+(this correction vector)
+188 W( primarily compensates for differences in)189 W
+5184 25549 MT
+(into practical applications it is)
+124 W( becoming increasingly clear that)125 W
+31140 25868 MT
+(spectral tilt between the training and testing environments \050in a)119 W
+5184 26564 MT
+(they must be able to accommodate a)
+180 W( variety of acoustical en-)179 W
+31140 26883 MT
+(manner similar to the blind deconvolution procedure first)453 W
+5184 27579 MT
+(vironments. This)
+592 W( paper describes two algorithms that provide)184 W
+31140 27898 MT
+(proposed by)
+93 W( Stockham)92 W
+/Times-Italic SF
+39892 XM
+(et al.)92 W
+/Times-Roman SF
+42009 XM
+([4]\051, while at low SNRs the vector)92 W
+5184 28594 MT
+(robustness for automatic speech recognition systems in)
+56 W( a fashion)55 W
+31140 28913 MT
+(provides a form)
+92 W( of noise subtraction \050in a manner similar to the)93 W
+5184 29609 MT
+(that is suitable for real-time)
+274 W( environmental normalization for)275 W
+31140 29928 MT
+(spectral subtraction algorithm)
+218 W( first proposed by Boll)
+217 W( [5]\051.)
+SH( The)217 W
+5184 30624 MT
+(workstations of)
+38 W( moderate size.  The first algorithm is a modifica-)37 W
+31140 30943 MT
+(SDCN algorithm is simple and effective, but)
+277 W( for every new)278 W
+5184 31639 MT
+(tion of the previously-described SDCN and)
+92 W( FCDCN algorithms,)93 W
+31140 31958 MT
+(acoustical environment encountered it must)
+100 W( be calibrated with a)99 W
+5184 32654 MT
+(except that unlike)
+118 W( these algorithms it provides computationally-)117 W
+31140 32973 MT
+(new stereo database that contains samples of speech simul-)312 W
+5184 33669 MT
+(efficient environmental normalization)16 W
+/Times-Italic SF
+19107 XM
+(without)SH
+/Times-Roman SF
+22048 XM
+(prior knowledge of)16 W
+31140 33988 MT
+(taneously recorded in the training and testing)
+111 W( environments.  In)110 W
+5184 34684 MT
+(the acoustical characteristics)
+219 W( of the environment in which the)218 W
+31140 35003 MT
+(many situations such a database is impractical or)
+140 W( unobtainable,)141 W
+5184 35699 MT
+(system will be operated.  The second algorithm is a)
+47 W( modification)48 W
+31140 36018 MT
+(and SDCN is clearly not able to)
+55 W( model a non-stationary environ-)54 W
+5184 36714 MT
+(of the more complex CDCN algorithm that)
+60 W( enables it to perform)59 W
+31140 37033 MT
+(ment since only long-term averages are used.)SH
+5184 37729 MT
+(environmental compensation in better)
+110 W( than real time.  We com-)111 W
+31140 38657 MT
+(The second compensation algorithm,)580 W
+/Times-Italic SF
+46986 XM
+(Codeword-Dependent)SH
+/Times-Roman SF
+5184 38744 MT
+(pare the recognition accuracy, computational)
+258 W( complexity, and)257 W
+/Times-Italic SF
+31140 39672 MT
+(Cepstral Normalization)7 W
+/Times-Roman SF
+39904 XM
+(\050CDCN\051, uses EM)
+7 W( techniques to compute)6 W
+5184 39759 MT
+(amount of training data needed)
+164 W( to adapt to new acoustical en-)165 W
+31140 40687 MT
+(ML estimates of the parameters characterizing the)
+110 W( contributions)111 W
+5184 40774 MT
+(vironments using these algorithms with)
+50 W( several different types of)49 W
+31140 41702 MT
+(of additive noise and linear filtering that)
+50 W( when applied in inverse)49 W
+5184 41789 MT
+(headset-mounted and desktop microphones.)SH
+31140 42717 MT
+(fashion to the cepstra of)
+134 W( an incoming utterance produce an en-)135 W
+11 /Times-Bold AF
+12132 43500 MT
+(1. INTRODUCTION)SH
+9 /Times-Roman AF
+31140 43732 MT
+(semble of cepstral coefficients that best match)
+55 W( \050in the ML sense\051)54 W
+31140 44747 MT
+(the cepstral coefficients)
+196 W( of the incoming speech in the testing)197 W
+5184 45091 MT
+(Results of several studies have)
+49 W( demonstrated that even automatic)50 W
+31140 45762 MT
+(environment to)
+181 W( the locations of VQ codewords in the training)180 W
+5184 46106 MT
+(speech recognition systems that are)
+64 W( designed to be speaker inde-)63 W
+31140 46777 MT
+(environment. Use)
+423 W( of the)
+99 W( CDCN algorithm improved the recog-)100 W
+5184 47121 MT
+(pendent can perform very poorly)
+154 W( when they are tested using a)155 W
+31140 47792 MT
+(nition accuracy obtained when)
+525 W( training on the CLSTLK)524 W
+5184 48136 MT
+(different type of)
+69 W( microphone or acoustical environment from the)68 W
+31140 48807 MT
+(microphone and)
+107 W( testing with the PZM6FS to the level observed)108 W
+5184 49151 MT
+(one with which they were trained \050)127 W
+/Times-Italic SF
+(e.g.)SH
+/Times-Roman SF
+20021 XM
+([1, 2, 3]\051.)
+SH( For)
+481 W( example,)128 W
+31140 49822 MT
+(when the system is both trained)
+44 W( and tested on the PZM6FS.  The)43 W
+5184 50166 MT
+(the recognition accuracy of)
+8 W( the S)7 W
+7 SS 
+(PHINX)SH
+9 SS 
+19466 XM
+(speech recognition system)7 W
+31140 50837 MT
+(CDCN algorithm has the advantage)
+194 W( that it does not require)195 W
+/Times-Italic SF
+54486 XM
+(a)SH
+/Times-Roman SF
+5184 51181 MT
+(on a speaker-independent alphanumeric task dropped from)
+110 W( 85%)111 W
+/Times-Italic SF
+31140 51852 MT
+(priori)SH
+/Times-Roman SF
+33723 XM
+(knowledge of the testing environment \050in the form)
+258 W( of)257 W
+5184 52196 MT
+(correct to less)
+242 W( than 20% correct when the close-talking Sen-)241 W
+31140 52867 MT
+(stereo training data in the)
+49 W( training and testing environments\051, but)50 W
+5184 53211 MT
+(nheiser HMD-414)
+145 W( microphone \050CLSTLK\051 used in training was)146 W
+31140 53882 MT
+(it is much)
+269 W( more computationally demanding than the SDCN)268 W
+5184 54226 MT
+(replaced by the)
+525 W( omnidirectional Crown PZM6FS desktop)524 W
+31140 54897 MT
+(algorithm. Compared)
+429 W( to the SDCN algorithm,)
+102 W( the CDCN algo-)103 W
+5184 55241 MT
+(microphone \050PZM6FS\051 [1].)SH
+31140 55912 MT
+(rithm uses a greater amount)
+164 W( of structural knowledge about the)163 W
+5184 56865 MT
+(We have found that two)
+144 W( major factors that degrade the perfor-)145 W
+31140 56927 MT
+(nature of the degradations to the)
+15 W( speech signal in order to achieve)16 W
+5184 57880 MT
+(mance of speech recognition systems using desktop)
+46 W( microphones)45 W
+31140 57942 MT
+(good recognition accuracy.  The SDCN algorithm, on the other)119 W
+5184 58895 MT
+(in normal office environments are)
+149 W( additive noise and unknown)150 W
+31140 58957 MT
+(hand, derives its compensation vectors entirely from)
+185 W( empirical)186 W
+5184 59910 MT
+(linear filtering.  We showed)
+114 W( in)
+113 W( [1])
+SH( that simultaneous)113 W
+/Times-Italic SF
+25142 XM
+(joint)SH
+/Times-Roman SF
+27130 XM
+(com-)SH
+31140 59972 MT
+(observations of differences between data obtained from the train-)37 W
+5184 60925 MT
+(pensation for the effects of)
+114 W( additive noise and linear filtering is)115 W
+31140 60987 MT
+(ing and testing environments.)SH
+5184 61940 MT
+(needed to achieve maximal robustness)
+75 W( with respect to acoustical)74 W
+31140 62611 MT
+(More recently we presented, along with several)
+43 W( other algorithms,)44 W
+5184 62955 MT
+(differences between the training and testing environments)
+168 W( of a)169 W
+31140 63626 MT
+(the)SH
+/Times-Italic SF
+32733 XM
+(fixed CDCN)268 W
+/Times-Roman SF
+37918 XM
+(\050FCDCN\051 algorithm)
+267 W( [6].)
+SH( FCDCN)
+759 W( combines)267 W
+5184 63970 MT
+(speech recognition system.  We described in)
+106 W( [1])
+SH( two algorithms)105 W
+31140 64641 MT
+(some of the more attractive)
+169 W( features of the CDCN and SDCN)170 W
+5184 64985 MT
+(that can perform such joint compensation, based on)
+265 W( additive)266 W
+31140 65656 MT
+(algorithms: like)
+703 W( SDCN, the)
+239 W( correction factor equals the dif-)238 W
+5184 66000 MT
+(corrections to the cepstral coefficients of the speech waveform.)SH
+31140 66671 MT
+(ference in cepstra between the training)
+46 W( and testing environments,)47 W
+5184 67624 MT
+(The first)
+440 W( compensation algorithm,)439 W
+/Times-Italic SF
+19416 XM
+(SNR-Dependent Cepstral)439 W
+/Times-Roman SF
+31140 67686 MT
+(but like)
+33 W( CDCN, the correction factor is different for different VQ)32 W
+/Times-Italic SF
+5184 68639 MT
+(Normalization)SH
+/Times-Roman SF
+10901 XM
+(\050SDCN\051, applies an additive correction)
+292 W( in the)293 W
+31140 68701 MT
+(codewords as well.  This)
+104 W( algorithm is also simple and efficient,)105 W
+5184 69654 MT
+(cepstral domain that depends exclusively on the instantaneous)203 W
+31140 69716 MT
+(and it can achieve a level of)
+65 W( recognition accuracy comparable to)64 W
+5184 70669 MT
+(SNR of the signal.  This correction vector equals the)
+187 W( average)188 W
+31140 70731 MT
+(that of CDCN. Unfortunately, FCDCN)
+24 W( \050like SDCN\051 also requires)25 W
+5184 71684 MT
+(difference in cepstra between simultaneous)
+20 W( "stereo" recordings of)19 W
+31140 71746 MT
+(the use of)
+69 W( a training database of simultaneously-recorded speech)68 W
+ES
+%%Page: 1 2
+BS
+0 SI
+9 /Times-Roman AF
+5184 8717 MT
+(samples in the)
+255 W( training and testing environments. Hence, the)256 W
+31140 XM
+(series expansion of ln)581 W
+/Times-Italic SF
+41008 XM
+(P)SH
+/Times-Roman SF
+42063 XM
+(\050)SH
+/Symbol SF
+42513 XM
+(w)SH
+/Times-Roman SF
+43280 XM
+(\051, ln)581 W
+/Times-Italic SF
+45611 XM
+(P)SH
+/Times-Roman SF
+46711 XM
+(\050)SH
+/Symbol SF
+47161 XM
+(w)SH
+/Times-Roman SF
+47928 XM
+(\051, ln)581 W
+/Times-Italic SF
+50259 XM
+(P)SH
+/Times-Roman SF
+51314 XM
+(\050)SH
+/Symbol SF
+51764 XM
+(w)SH
+/Times-Roman SF
+52531 XM
+(\051 and)580 W
+8 /Times-Italic AF
+41558 9062 MT
+(x)SH
+46161 XM
+(n)SH
+50809 XM
+(y)SH
+9 /Times-Roman AF
+5184 9732 MT
+(FCDCN algorithm also cannot adapt to unknown environments.)SH
+8 SS 
+34967 9786 MT
+(2)SH
+9 SS 
+31140 10131 MT
+(ln)SH
+/Symbol SF
+32140 XM
+(|)SH
+/Times-Italic SF
+32470 XM
+(H)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+33570 XM
+(w)SH
+/Times-Roman SF
+34337 XM
+(\051)SH
+/Symbol SF
+34787 XM
+(|)SH
+/Times-Roman SF
+35592 XM
+(respectively, Eq. \0501\051 can be rewritten as)SH
+5184 11356 MT
+(Table 1 compares the)
+179 W( environmental specificity, computational)178 W
+/Times-Bold SF
+33975 11518 MT
+(y)SH
+/Times-Roman SF
+34725 XM
+(=)SH
+/Times-Bold SF
+35533 XM
+(x)SH
+/Times-Roman SF
+36283 XM
+(+)SH
+/Times-Bold SF
+37091 XM
+(q)SH
+/Times-Roman SF
+37891 XM
+(+)SH
+/Times-Bold SF
+38699 XM
+(r)SH
+/Times-Roman SF
+39249 XM
+(\050)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+40374 XM
+(n)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+41249 XM
+(q)SH
+/Times-Roman SF
+(\051)SH
+53886 XM
+(\0502\051)SH
+5184 12371 MT
+(complexity, and recognition accuracy of these algorithms)
+135 W( when)136 W
+31140 12905 MT
+(where the correction vector)SH
+/Times-Bold SF
+41240 XM
+(r)SH
+/Times-Roman SF
+41790 XM
+(\050)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+42915 XM
+(n)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+43790 XM
+(q)SH
+/Times-Roman SF
+(\051 is given by)SH
+5184 13386 MT
+(evaluated on the alphanumeric)
+75 W( database described in)
+74 W( [1].)
+SH( Recog-)74 W
+8 /Times-Italic AF
+44723 14224 MT
+(DFT)SH
+/Times-Roman SF
+46535 XM
+([)SH
+/Times-Bold SF
+(n)SH
+/Symbol SF
+47546 XM
+(-)SH
+/Times-Bold SF
+48285 XM
+(q)SH
+/Symbol SF
+49030 XM
+(-)SH
+/Times-Bold SF
+49769 XM
+(x)SH
+/Times-Roman SF
+(])SH
+9 SS 
+5184 14401 MT
+(nition accuracy is)
+96 W( somewhat greater than the figures reported in)97 W
+/Times-Bold SF
+33975 14569 MT
+(r)SH
+/Times-Roman SF
+34525 XM
+(\050)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+35650 XM
+(n)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+36525 XM
+(q)SH
+/Times-Roman SF
+(\051 =)75 W
+/Times-Italic SF
+38433 XM
+(IDFT)SH
+/Times-Roman SF
+40733 XM
+({ln \0501)
+225 W( +)75 W
+/Times-Italic SF
+44173 XM
+(e)SH
+/Times-Roman SF
+50435 XM
+(\051})SH
+53886 XM
+(\0503\051)SH
+5409 15416 MT
+([1] and)
+60 W( [6])
+SH( because the)
+60 W( current version of S)59 W
+7 SS 
+(PHINX)SH
+9 SS 
+23846 XM
+(incorporates a)59 W
+8 /Symbol AF
+41740 15979 MT
+(\331)SH
+9 /Times-Roman AF
+5184 16431 MT
+(fourth codebook which describes the second-order difference)291 W
+31140 16669 MT
+(We can obtain an estimate)175 W
+/Times-Italic SF
+41740 XM
+(P)SH
+/Times-Roman SF
+42795 XM
+(\050)SH
+/Symbol SF
+43245 XM
+(w)SH
+/Times-Roman SF
+44012 XM
+(\051 of the PSD)175 W
+/Times-Italic SF
+49412 XM
+(P)SH
+/Times-Roman SF
+50467 XM
+(\050)SH
+/Symbol SF
+50917 XM
+(w)SH
+/Times-Roman SF
+51684 XM
+(\051 from a)176 W
+8 /Times-Italic AF
+42290 17014 MT
+(y)SH
+49962 XM
+(y)SH
+9 /Times-Roman AF
+5184 17446 MT
+(cepstrum for each speech frame. In addition,)
+86 W( the current version)85 W
+31140 17806 MT
+(sample function of the process)155 W
+/Times-Italic SF
+43140 XM
+(y)SH
+/Times-Roman SF
+43690 XM
+([)SH
+/Times-Italic SF
+44140 XM
+(m)SH
+/Times-Roman SF
+(] \050)155 W
+/Times-Italic SF
+(i.e.)SH
+/Times-Roman SF
+47249 XM
+(a frame of degraded)154 W
+5184 18461 MT
+(of S)347 W
+7 SS 
+(PHINX)SH
+9 SS 
+9715 XM
+(includes between-word triphones in the phonetic)348 W
+31140 18821 MT
+(speech that is assumed to be locally stationary\051. If)132 W
+/Times-Bold SF
+50528 XM
+(z)SH
+/Times-Roman SF
+51286 XM
+(represents)SH
+5184 19476 MT
+(models [7],)
+SH( while previous evaluations used a)
+39 W( recognition system)38 W
+8 /Symbol AF
+41978 19658 MT
+(\331)SH
+9 /Times-Roman AF
+31140 20348 MT
+(the Fourier expansion of ln)197 W
+/Times-Italic SF
+41978 XM
+(P)SH
+/Times-Roman SF
+43033 XM
+(\050)SH
+/Times-Italic SF
+43483 XM
+(f)SH
+/Times-Roman SF
+(\051, our goal)
+197 W( is to estimate the)196 W
+5184 20491 MT
+(that included only within-word models.)SH
+8 /Times-Italic AF
+42528 20693 MT
+(y)SH
+9 /Times-Roman AF
+31140 21485 MT
+(uncorrupted vectors)234 W
+/Times-Bold SF
+39008 XM
+(X)SH
+/Times-Roman SF
+39958 XM
+(=)SH
+/Times-Bold SF
+40766 XM
+(x)SH
+/Times-Roman SF
+41616 XM
+(,...)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+45098 XM
+(of an utterance)
+234 W( given the)235 W
+8 SS 
+41216 21830 MT
+(0)SH
+/Times-Italic SF
+42966 XM
+(N)SH
+/Symbol SF
+43650 XM
+(-)SH
+/Times-Roman SF
+44239 XM
+(1)SH
+9 /Times-Bold AF
+6525 22469 MT
+(ALGORITHM)SH
+13355 XM
+(ENVIRN.)SH
+19111 XM
+(COM-)SH
+24029 XM
+(ACCU-)SH
+/Times-Roman SF
+31140 22622 MT
+(observations)SH
+/Times-Bold SF
+35915 XM
+(Z)SH
+/Times-Roman SF
+36815 XM
+(=)SH
+/Times-Bold SF
+37623 XM
+(z)SH
+/Times-Roman SF
+38423 XM
+(,...)SH
+/Times-Bold SF
+(z)SH
+/Times-Roman SF
+41396 XM
+(.)SH
+8 SS 
+38023 22967 MT
+(0)SH
+/Times-Italic SF
+39723 XM
+(N)SH
+/Symbol SF
+40407 XM
+(-)SH
+/Times-Roman SF
+40996 XM
+(1)SH
+9 /Times-Bold AF
+13083 23483 MT
+(SPECIFIC?)SH
+18361 XM
+(PLEXITY)SH
+24179 XM
+(RACY)SH
+21912 50 6126 24032 LH BX1
+-2526 50 12684 24032 LV BX1
+-2526 50 17802 24032 LV BX1
+-2526 50 22920 24032 LV BX1
+/Times-Roman SF
+31140 24246 MT
+(In the)
+78 W( original SDCN algorithm, it was assumed that the correc-)77 W
+8155 25009 MT
+(NONE)SH
+14593 XM
+(NO)SH
+19111 XM
+(NONE)SH
+24316 XM
+(31.4%)SH
+31140 25261 MT
+(tion vector depends only on)20 W
+/Times-Bold SF
+41466 XM
+(z)SH
+/Times-Roman SF
+42016 XM
+([0])SH
+/Symbol SF
+43216 XM
+(-)SH
+/Times-Bold SF
+43860 XM
+(n)SH
+/Times-Roman SF
+44510 XM
+([0] \050)21 W
+/Times-Italic SF
+(i.e.)SH
+/Times-Roman SF
+47452 XM
+(that we can apply an)21 W
+21912 50 6126 25566 LH BX1
+31140 26276 MT
+(average correction)
+18 W( to all spectral shapes with the same SNR\051, and)17 W
+8205 26543 MT
+(SDCN)SH
+14393 XM
+(YES)SH
+18336 XM
+(MINIMAL)SH
+24316 XM
+(72.4%)SH
+21912 50 6126 27100 LH BX1
+8 /Symbol AF
+36715 27113 MT
+(\331)SH
+9 /Times-Roman AF
+31140 27803 MT
+(an estimate for)SH
+/Times-Bold SF
+36715 XM
+(x)SH
+/Times-Roman SF
+37390 XM
+(was obtained by the expression)SH
+8155 28077 MT
+(CDCN)SH
+14593 XM
+(NO)SH
+18836 XM
+(MAJOR)SH
+24316 XM
+(75.7%)SH
+21912 50 6126 28634 LH BX1
+8 /Symbol AF
+33975 29213 MT
+(\331)SH
+9 /Times-Roman AF
+7905 29611 MT
+(FCDCN)SH
+14393 XM
+(YES)SH
+18336 XM
+(MINIMAL)SH
+24316 XM
+(78.6%)SH
+/Times-Bold SF
+33975 29903 MT
+(x)SH
+/Times-Roman SF
+34725 XM
+(=)SH
+/Times-Bold SF
+35533 XM
+(z)SH
+/Symbol SF
+36233 XM
+(-)SH
+/Times-Bold SF
+37027 XM
+(w)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(\051)SH
+53886 XM
+(\0504\051)SH
+21912 8662 50 6126 30168 BX BX1
+-6136 50 12684 30168 LV BX1
+-6136 50 17802 30168 LV BX1
+-6136 50 22920 30168 LV BX1
+31140 31290 MT
+(This procedure subtracts from the observed)
+63 W( vector)64 W
+/Times-Bold SF
+49908 XM
+(z)SH
+/Times-Roman SF
+50597 XM
+(a correction)64 W
+/Times-Bold SF
+31140 32305 MT
+(w)SH
+/Times-Roman SF
+32140 XM
+(that depends only on the instantaneous)
+125 W( SNR of the observed)124 W
+/Times-Bold SF
+5184 32651 MT
+(Table 1:)SH
+/Times-Roman SF
+8809 XM
+(Comparison of recognition accuracy of S)37 W
+7 SS 
+(PHINX)SH
+9 SS 
+26218 XM
+(with no)37 W
+31140 33320 MT
+(signal,)SH
+/Times-Bold SF
+33798 XM
+(z)SH
+/Times-Roman SF
+34348 XM
+([0])SH
+/Symbol SF
+35698 XM
+(-)SH
+/Times-Bold SF
+36492 XM
+(n)SH
+/Times-Roman SF
+37142 XM
+([0]. In)
+341 W( the)
+58 W( original SDCN algorithm these com-)59 W
+5184 33665 MT
+(processing and the CDCN, SDCN, and FCDCN algorithms.)
+159 W( In)158 W
+31140 34335 MT
+(pensation vectors)325 W
+/Times-Bold SF
+38290 XM
+(w)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(\051 were)
+325 W( estimated by computing the)324 W
+5184 34679 MT
+(each case the system)
+35 W( was trained using the CLSTLK microphone)36 W
+31140 35350 MT
+(average difference between cepstral vectors)
+24 W( from the training and)25 W
+5184 35693 MT
+(and tested)
+116 W( using the PZM6FS microphone. Training and testing)115 W
+31140 36365 MT
+(testing environments, and they must be "calibrated" by)
+36 W( collecting)35 W
+5184 36707 MT
+(on the CLSTLK produces a recognition)
+13 W( accuracy of 86.9%, while)14 W
+31140 37380 MT
+(long-term statistics from a database containing these)816 W
+5184 37721 MT
+(training and testing on the PZM6FS produces 76.2%)SH
+31140 38395 MT
+(simultaneously-recorded speech samples.)SH
+11 /Times-Bold AF
+31140 40106 MT
+(2.1. The Blind SDCN Algorithm)SH
+9 /Times-Roman AF
+5184 41382 MT
+(The ultimate goal of a robust speech recognition)
+75 W( system is to be)74 W
+31140 41407 MT
+(In the BSDCN algorithm the need for)
+140 W( stereophonic data is cir-)139 W
+5184 42397 MT
+(able to adapt to)
+235 W( new environments with high recognition ac-)236 W
+31140 42422 MT
+(cumvented by lumping all data at each SNR together. A)
+197 W( cor-)198 W
+5184 43412 MT
+(curacy, with low computational complexity, and without)566 W
+31140 43437 MT
+(respondence is established between SNRs in the training and)237 W
+5184 44427 MT
+(environment-specific training.)
+70 W( The)
+367 W( CDCN, SDCN, and FCDCN)71 W
+31140 44452 MT
+(testing environments by)
+288 W( use of traditional nonlinear warping)289 W
+5184 45442 MT
+(algorithms all)
+86 W( fall short in at least one of these attributes, as the)85 W
+31140 45467 MT
+(techniques [8])
+SH( on histograms of SNRs from each)
+261 W( of the two)260 W
+5184 46457 MT
+(SDCN and FCDCN algorithms require)
+384 W( environment-specific)385 W
+31140 46482 MT
+(environments. The)
+467 W( histograms of SNR values are first normal-)122 W
+5184 47472 MT
+(training and the CDCN algorithm is more)
+81 W( computationally com-)80 W
+31140 47497 MT
+(ized for equal area,)
+14 W( to avoid having the mapping be dominated by)13 W
+5184 48487 MT
+(plex. In)
+281 W( this paper we describe a new algorithm, the)29 W
+/Times-Italic SF
+24576 XM
+(blind SDCN)29 W
+/Times-Roman SF
+31140 48512 MT
+(the environment from which more data had been collected.)
+72 W( The)370 W
+/Times-Italic SF
+5184 49502 MT
+(algorithm)SH
+/Times-Roman SF
+9196 XM
+(\050BSDCN\051, which performs a cepstral)
+237 W( normalization)236 W
+31140 49527 MT
+(minimum and maximum slopes of the warping)
+15 W( path are limited to)14 W
+5184 50517 MT
+(very similar to that of the SDCN algorithm, except)127 W
+/Times-Italic SF
+24827 XM
+(without)SH
+/Times-Roman SF
+27880 XM
+(the)SH
+31140 50542 MT
+(0.2 dB/dB and 5 dB/dB,)
+49 W( respectively, and the warping procedure)50 W
+5184 51532 MT
+(need for specfic)200 W
+/Times-Italic SF
+11759 XM
+(a priori)200 W
+/Times-Roman SF
+15159 XM
+(training to)
+200 W( each new microphone or)199 W
+31140 51557 MT
+(seeks to minimize)
+142 W( the Euclidean distance between the two his-)141 W
+5184 52547 MT
+(acoustical environment.)
+33 W( We)
+293 W( then describe a new implementation)34 W
+31140 52572 MT
+(tograms.)SH
+5184 53562 MT
+(of the CDCN algorithm that permits the)
+81 W( environmental compen-)80 W
+31140 54196 MT
+(The SNR-warping procedure is illustrated in schematic)
+131 W( form in)130 W
+5184 54577 MT
+(sation to take)
+371 W( place in real time, while the environmental)372 W
+31140 55211 MT
+(Fig. 1. The left)
+201 W( and lower panels of Fig. 1 show typical his-)202 W
+5184 55592 MT
+(parameters used to perform)
+3 W( the compensation are computed in the)2 W
+31140 56226 MT
+(tograms of SNRs of speech)
+214 W( collected using the PZM6FS and)213 W
+5184 56607 MT
+(background during time intervals between utterances.  We)
+90 W( com-)91 W
+31140 57241 MT
+(CLSTLK microphones, respectively.  The central panel of Fig.)
+27 W( 1)280 W
+5184 57622 MT
+(pare the performance of the BSDCN algorithm)
+150 W( and that of the)149 W
+31140 58256 MT
+(shows the warping path used to match)
+285 W( SNRs from the two)284 W
+5184 58637 MT
+("real-time" implementation of)
+132 W( the CDCN algorithm in terms of)133 W
+31140 59271 MT
+(microphones. As)
+509 W( can be seen in Fig. 1, the mode in the SNR)142 W
+5184 59652 MT
+(recognition accuracy and)
+275 W( the amount of environment-specific)274 W
+31140 60286 MT
+(histogram for the)
+442 W( CLSTLK microphone at 26 dB is ap-)441 W
+5184 60667 MT
+(testing data needed to perform the compensation effectively.)SH
+31140 61301 MT
+(proximately matched to the mode)
+104 W( in the SNR histogram for the)105 W
+31140 62316 MT
+(PZM6FS microphone which actually occurs at 9 dB.)SH
+11 /Times-Bold AF
+9686 62378 MT
+(2. THE BSDCN ALGORITHM)SH
+9 /Times-Roman AF
+31140 63940 MT
+(Since the alignment obtained by dynamically warping)
+181 W( the his-)180 W
+5184 63969 MT
+(As in our previous work)
+124 W( on environmental compensation)
+125 W( [1, 6],)SH
+31140 64955 MT
+(tograms of the training)
+1 W( and the testing data is not perfect, we have)2 W
+5184 64984 MT
+(we assume that the speech signal)235 W
+/Times-Italic SF
+18694 XM
+(x)SH
+/Times-Roman SF
+19244 XM
+([)SH
+/Times-Italic SF
+(m)SH
+/Times-Roman SF
+(] is passed through an)234 W
+31140 65970 MT
+(found that it is beneficial to smooth)
+80 W( the correction vectors using)79 W
+5184 65999 MT
+(unknown linear filter)185 W
+/Times-Italic SF
+13564 XM
+(h)SH
+/Times-Roman SF
+14164 XM
+([)SH
+/Times-Italic SF
+(m)SH
+/Times-Roman SF
+(] whose output is then corrupted by)186 W
+31140 66985 MT
+(the simple function)SH
+5184 67014 MT
+(uncorrelated additive noise)209 W
+/Times-Italic SF
+15786 XM
+(n)SH
+/Times-Roman SF
+16386 XM
+([)SH
+/Times-Italic SF
+(m)SH
+/Times-Roman SF
+(]. We)
+643 W( characterize the)
+209 W( power)208 W
+5184 68029 MT
+(spectral density \050PSD\051 of the processes involved as)SH
+34125 68475 MT
+(Smoothed)SH
+/Times-Bold SF
+38150 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(\051)SH
+/Symbol SF
+40950 XM
+(=)SH
+/Times-Roman SF
+41594 XM
+(.40)SH
+/Times-Bold SF
+42869 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(\051)
+150 MX(+)
+150 MX(.24)SH
+/Times-Bold SF
+47602 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(+1\051)
+150 MX(+)SH
+8 SS 
+17548 69348 MT
+(2)SH
+9 SS 
+34425 69489 MT
+(+)
+150 MX(.24)SH
+/Times-Bold SF
+36358 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Symbol SF
+(-)SH
+/Times-Roman SF
+(1\051)
+150 MX(+)
+150 MX(.06)SH
+/Times-Bold SF
+42035 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Times-Roman SF
+(+2\051)
+150 MX(+)
+150 MX(.06)SH
+/Times-Bold SF
+47726 XM
+(v)SH
+/Times-Roman SF
+(\050)SH
+/Times-Italic SF
+(SNR)SH
+/Symbol SF
+(-)SH
+/Times-Roman SF
+(2\051)SH
+/Times-Italic SF
+8019 69693 MT
+(P)SH
+/Times-Roman SF
+9074 XM
+(\050)SH
+/Symbol SF
+9524 XM
+(w)SH
+/Times-Roman SF
+10291 XM
+(\051 =)75 W
+/Times-Italic SF
+11699 XM
+(P)SH
+/Times-Roman SF
+12754 XM
+(\050)SH
+/Symbol SF
+13204 XM
+(w)SH
+/Times-Roman SF
+13971 XM
+(\051)SH
+/Symbol SF
+14571 XM
+(|)SH
+/Times-Italic SF
+14901 XM
+(H)SH
+/Times-Roman SF
+15701 XM
+(\050)SH
+/Symbol SF
+16151 XM
+(w)SH
+/Times-Roman SF
+16918 XM
+(\051)SH
+/Symbol SF
+17368 XM
+(|)SH
+/Times-Roman SF
+18248 XM
+(+)SH
+/Times-Italic SF
+19056 XM
+(P)SH
+/Times-Roman SF
+20006 XM
+(\050)SH
+/Symbol SF
+20456 XM
+(w)SH
+/Times-Roman SF
+21223 XM
+(\051)SH
+27930 XM
+(\0501\051)SH
+8 /Times-Italic AF
+8569 70038 MT
+(y)SH
+12249 XM
+(x)SH
+19606 XM
+(n)SH
+9 /Times-Roman AF
+31140 70876 MT
+(where)SH
+/Times-Bold SF
+33594 XM
+(v)SH
+/Times-Roman SF
+34298 XM
+(refers to an)
+29 W( arbitrary cepstral vector from either environ-)30 W
+5184 71317 MT
+(If we let the cepstral vectors)86 W
+/Times-Bold SF
+16100 XM
+(x)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+17086 XM
+(n)SH
+/Times-Roman SF
+(,)SH
+/Times-Bold SF
+18122 XM
+(y)SH
+/Times-Roman SF
+18883 XM
+(and)SH
+/Times-Bold SF
+20494 XM
+(q)SH
+/Times-Roman SF
+21306 XM
+(represent the Fourier)87 W
+31140 71891 MT
+(ment, and)
+21 W( SNR is in dB.  Applying the above smoothing function)20 W
+ES
+%%Page: 2 3
+BS
+0 SI
+9 /Times-Roman AF
+31140 8717 MT
+(speech samples were used from those used)
+105 W( to compile Tables 1)104 W
+31140 9732 MT
+(and 2.\051  The system was trained with speech from the CLSTLK)86 W
+31140 10747 MT
+(microphone in all cases. We)
+89 W( found again that accuracy obtained)88 W
+31140 11762 MT
+(using the environment-independent BSDCN algorithm was com-)66 W
+31140 12777 MT
+(parable to that)
+143 W( of the environment-dependent SDCN algorithm.)142 W
+31140 13792 MT
+(The environment-dependent FCDCN algorithm produces)
+94 W( greater)95 W
+31140 14807 MT
+(recognition accuracy, especially for microphones such as)
+271 W( the)270 W
+31140 15822 MT
+(PZM6FS, which provides a lower)
+159 W( intrinsic SNR. This is to be)160 W
+31140 16837 MT
+(expected, since the)
+17 W( value of the optimal cepstral correction vector)16 W
+31140 17852 MT
+(varies much more)
+92 W( from one VQ codeword to the next when the)93 W
+31140 18867 MT
+(SNR is low.)
+264 W( We)
+752 W( are currently working to develop a)263 W
+/Times-Italic SF
+52986 XM
+(Blind)SH
+31140 19882 MT
+(FCDCN)SH
+/Times-Roman SF
+34378 XM
+(algorithm \050BFCDCN\051 that is similar)
+13 W( in philosophy to the)14 W
+31140 20897 MT
+(BSDCN algorithm, but)
+67 W( that can also exploit the additional infor-)66 W
+31140 21912 MT
+(mation that is made available by allowing)
+102 W( for the compensation)103 W
+586 1000 0 -1064 51874 GB 
+%%BeginDocument: histoall.eps
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: histoall.diagram  -  /ODWorkDisk/talks/ica92
+%%Creator: Diagram
+%%CreationDate: Tue Dec 10 18:28:22 1991
+%%For: rms
+%%DocumentFonts: (atend)
+%%%Pages: 0 -1
+%%BoundingBox: 110 507 509 747
+%%EndComments
+
+%%BeginDocument: /usr/lib/NextStep/printPackage.ps
+%!PS-Adobe-2.0
+%%Title: Printing Package
+%%EndComments
+%Version: 2.0
+%Copyright: 1988, NeXT, Inc.
+
+/__NXdef{1 index where{pop pop pop}{def}ifelse}bind def
+/__NXbdef{1 index where{pop pop pop}{bind def}ifelse}bind def
+/UserObjects 10 array __NXdef
+/defineuserobject{
+        exch dup 1 add dup UserObjects length gt{
+                array dup 0 UserObjects putinterval
+                /UserObjects exch def
+        }{pop}ifelse UserObjects exch 3 -1 roll put
+}__NXbdef
+/undefineuserobject{UserObjects exch null put}__NXbdef
+/execuserobject{UserObjects exch get exec}__NXbdef
+/__NXRectPath{4 2 roll moveto 1 index 0 rlineto
+0 exch rlineto neg 0 rlineto closepath}__NXbdef
+/__NXProcessRectArgs{
+        1 index type /arraytype eq{
+                exch 0 4 2 index length 1 sub{
+                        dup 3 add 1 exch{1 index exch get exch}for
+                        5 1 roll 5 index exec
+                }for pop pop
+        }{exec}ifelse
+}__NXbdef
+/rectfill{gsave newpath {__NXRectPath fill} __NXProcessRectArgs grestore}__NXbdef
+/rectclip{newpath {__NXRectPath} __NXProcessRectArgs clip newpath}__NXbdef
+/rectstroke{
+        gsave newpath dup type /arraytype eq{dup length 6 eq}{false}ifelse{
+                {gsave __NXRectPath null concat stroke grestore}
+                dup length array cvx copy dup 2 4 -1 roll put __NXProcessRectArgs
+        }{{__NXRectPath stroke} __NXProcessRectArgs}ifelse grestore
+}__NXbdef
+/xyshow{
+        0 1 3 index length 1 sub{
+                currentpoint 4 index 3 index 1 getinterval show
+                3 index 3 index 2 mul 1 add get add exch
+                3 index 3 index 2 mul get add exch moveto pop
+        }for pop pop
+}__NXbdef
+/xshow{
+        0 1 3 index length 1 sub{
+                currentpoint 4 index 3 index 1 getinterval show
+                exch 3 index 3 index get add exch moveto pop
+        }for pop pop
+}__NXbdef
+/yshow{
+        0 1 3 index length 1 sub{
+                currentpoint 4 index 3 index 1 getinterval show
+                3 index 3 index get add moveto pop
+        }for pop pop
+}__NXbdef
+/arct{arcto pop pop pop pop}__NXbdef
+/setbbox{pop pop pop pop}__NXbdef
+/ucache{}__NXbdef
+/ucachestatus{mark 0 0 0 0 0}__NXbdef
+/setucacheparams{cleartomark}__NXbdef
+/uappend{systemdict begin cvx exec end}__NXbdef
+/ueofill{gsave newpath uappend eofill grestore}__NXbdef
+/ufill{gsave newpath uappend fill grestore}__NXbdef
+/ustroke{
+        gsave newpath dup length 6 eq
+        {exch uappend concat}{uappend}ifelse
+        stroke grestore
+}__NXbdef
+/__NXustrokepathMatrix dup where {pop pop}{matrix def}ifelse
+/ustrokepath{
+        newpath dup length 6 eq{
+                exch uappend __NXustrokepathMatrix currentmatrix exch concat
+                strokepath setmatrix
+        }{uappend strokepath}ifelse
+} __NXbdef
+/upath{
+        [exch {/ucache cvx}if pathbbox /setbbox cvx
+         {/moveto cvx}{/lineto cvx}{/curveto cvx}{/closepath cvx}pathforall]cvx
+} __NXbdef
+/setstrokeadjust{pop}__NXbdef
+/currentstrokeadjust{false}__NXbdef
+/selectfont{exch findfont exch
+dup type /arraytype eq {makefont}{scalefont}ifelse setfont}__NXbdef
+/_NXCombineArrays{
+        counttomark dup 2 add index dup length 3 -1 roll {
+                2 index length sub dup 4 1 roll 1 index exch 4 -1 roll putinterval exch
+        }repeat pop pop pop
+}__NXbdef
+/setcmykcolor{
+        1.0 exch sub dup dup 6 -1 roll
+        sub dup 0 lt{pop 0}if 5 1 roll
+        4 -1 roll sub dup 0 lt{pop 0}if 3 1 roll
+        exch sub dup 0 lt{pop 0}if setrgbcolor
+}__NXbdef
+/currentcmykcolor{currentrgbcolor 3{1.0 exch sub 3 1 roll}repeat 0}__NXbdef
+/flushgraphics{}def
+/setwindowtype{pop pop}def
+/currentwindowtype{pop 0}def
+/setalpha{pop}def
+/currentalpha{1.0}def
+/hidecursor{}def
+/obscurecursor{}def
+/revealcursor{}def
+/setcursor{4 {pop}repeat}bind def
+/showcursor{}def
+/NextStepEncoding where not{
+/NextStepEncoding StandardEncoding 256 array copy def
+0 [129/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/Ccedilla/Egrave
+/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/Ugrave/Uacute
+/Ucircumflex/Udieresis/Yacute/Thorn/mu/multiply/divide/copyright
+176/registered 181/brokenbar 190/logicalnot 192/onesuperior 201/twosuperior
+204/threesuperior 209/plusminus/onequarter/onehalf/threequarters/agrave
+/aacute/acircumflex/atilde/adieresis/aring/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave 226/iacute 228/icircumflex/idieresis/eth
+/ntilde 236/ograve/oacute/ocircumflex/otilde/odieresis 242/ugrave/uacute
+/ucircumflex 246/udieresis/yacute 252/thorn/ydieresis]
+{dup type /nametype eq
+ {NextStepEncoding 2 index 2 index put pop 1 add}{exch pop}ifelse
+}forall pop
+/NextStepEncoding NextStepEncoding readonly def   
+/_NXfstr 128 string dup 0 (_NX) putinterval def   
+/findfont{
+ % Because we can never let NextStepEncoding get into
+ % SharedFontDirectory, we cannot reencode a font to NextStepEncoding
+ % if we are in shared mode.  So if currentshared is true,
+ % we call the normal findfont and return that
+ /currentshared where {pop currentshared} {false} ifelse
+ {//findfont exec}
+ {dup _NXfstr 3 125 getinterval cvs length 3 add _NXfstr 0 3 -1 roll
+  getinterval cvn exch FontDirectory 2 index known 
+  {pop FontDirectory exch get}
+  {//findfont exec dup /Encoding get StandardEncoding eq
+   {    dup length dict exch
+        {1 index /FID ne {2 index 3 1 roll put}{pop pop}ifelse}forall
+         dup /Encoding NextStepEncoding put definefont
+        }{exch pop} ifelse
+   }ifelse
+ }ifelse
+}bind def
+}{pop}ifelse
+/_NXProcArray 5 array __NXdef
+/_NXChannels 0 __NXdef
+/_NXTotalBytes 0 __NXdef
+/_NXDoImageOp{
+        1 index{dup}{1}ifelse /_NXChannels exch store
+        _NXChannels 2 add 2 roll _NXProcArray 0 _NXChannels getinterval astore pop
+        5 index 4 index mul 2 index{1 sub 8 idiv 1 add mul}{mul 1 sub 8 idiv 1 add}ifelse
+        4 index mul /_NXTotalBytes exch store pop exch pop
+        gsave matrix invertmatrix concat 0.5 setgray 0 0 4 2 roll rectfill grestore
+        {       0 1 _NXChannels 1 sub{
+                        _NXProcArray exch get exec
+                        length _NXTotalBytes exch sub /_NXTotalBytes exch store}for
+                _NXTotalBytes 0 le{exit}if
+        }loop /_NXProcArray 5 array def
+}__NXbdef
+/colorimage{_NXDoImageOp}__NXbdef
+/alphaimage{1 add _NXDoImageOp}def
+%%EndDocument
+
+gsave
+-20 -28 translate
+ /__NXbasematrix matrix currentmatrix def
+grestore
+%%EndProlog
+%%BeginSetup
+/DIAGRAMline {
+    moveto rlineto stroke
+} def /DIAGRAMarrow {
+    [] 0 setdash newpath moveto dup rotate 0 currentlinewidth sub 1.2 mul 0 rmoveto -9 3 rlineto 2 -3 rlineto -2 -3 rlineto closepath gsave 0 setlinejoin stroke grestore fill neg rotate
+} def /DIAGRAMpreparelines {
+    /DIAGRAMlinetype exch def setlinewidth setrgbcolor 2 setlinejoin DIAGRAMlinetype 0 eq {
+        [] 0 setdash
+    } if DIAGRAMlinetype 1 eq {
+        [ 5 currentlinewidth add dup ] 0 currentlinewidth add setdash
+    } if DIAGRAMlinetype 2 eq {
+        [ 0 currentlinewidth add 5 currentlinewidth add ] 0 currentlinewidth add setdash
+    } if DIAGRAMlinetype 3 eq {
+        [ 5 currentlinewidth add 4 currentlinewidth add 0 currentlinewidth add 4 currentlinewidth add ] 0 currentlinewidth add setdash
+    } if
+} def
+%%EndSetup
+110 507 399 240 rectclip
+gsave
+179.000000 563.000000 transform
+gsave __NXbasematrix setmatrix itransform translate
+0 0 324 178 rectclip
+1 0.988889 scale
+
+/__NXEPSSave save def /showpage {} def 0 setgray 0 setlinecap 1 setlinewidth
+0 setlinejoin 10 setmiterlimit [] 0 setdash newpath count /__NXEPSOpCount exch def /__NXEPSDictCount countdictstack def
+%%BeginDocument: 
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 324 180
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+36.7 31.6 MT
+42.2 37.2 LT
+47.8 42.8 LT
+64.5 48.5 LT
+81.3 54.1 LT
+98.0 59.7 LT
+114.8 65.4 LT
+131.5 71.0 LT
+148.2 76.7 LT
+165.0 82.3 LT
+176.1 87.9 LT
+181.7 93.6 LT
+187.3 99.2 LT
+192.9 104.9 LT
+198.5 110.5 LT
+204.0 116.1 LT
+209.6 121.8 LT
+215.2 127.4 LT
+226.4 133.1 LT
+237.5 138.7 LT
+248.7 144.3 LT
+254.3 150.0 LT
+259.8 155.6 LT
+276.6 161.3 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+36.7 31.6 1.0000 SNone
+42.2 37.2 1.0000 SNone
+47.8 42.8 1.0000 SNone
+64.5 48.5 1.0000 SNone
+81.3 54.1 1.0000 SNone
+98.0 59.7 1.0000 SNone
+114.8 65.4 1.0000 SNone
+131.5 71.0 1.0000 SNone
+148.2 76.7 1.0000 SNone
+165.0 82.3 1.0000 SNone
+176.1 87.9 1.0000 SNone
+181.7 93.6 1.0000 SNone
+187.3 99.2 1.0000 SNone
+192.9 104.9 1.0000 SNone
+198.5 110.5 1.0000 SNone
+204.0 116.1 1.0000 SNone
+209.6 121.8 1.0000 SNone
+215.2 127.4 1.0000 SNone
+226.4 133.1 1.0000 SNone
+237.5 138.7 1.0000 SNone
+248.7 144.3 1.0000 SNone
+254.3 150.0 1.0000 SNone
+259.8 155.6 1.0000 SNone
+276.6 161.3 1.0000 SNone
+36.7 31.6 MT
+315.7 31.6 LT
+stroke
+92.5 31.6 MT
+92.5 35.2 LT
+stroke
+148.3 31.6 MT
+148.3 35.2 LT
+stroke
+204.1 31.6 MT
+204.1 35.2 LT
+stroke
+259.9 31.6 MT
+259.9 35.2 LT
+stroke
+315.7 31.6 MT
+315.7 35.2 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(CLSTLK SNR \(dB\)) 195.3 0.0 0 DoLText
+(10) 84.8 14.0 0 DoLText
+(20) 140.6 14.0 0 DoLText
+(30) 196.4 14.0 0 DoLText
+(40) 252.2 14.0 0 DoLText
+(50) 308.0 14.0 0 DoLText
+36.7 31.6 MT
+36.7 172.6 LT
+stroke
+36.7 59.8 MT
+40.3 59.8 LT
+stroke
+36.7 88.0 MT
+40.3 88.0 LT
+stroke
+36.7 116.2 MT
+40.3 116.2 LT
+stroke
+36.7 144.4 MT
+40.3 144.4 LT
+stroke
+36.7 172.6 MT
+40.3 172.6 LT
+stroke
+(CRPZM SNR \(dB\)) 14.0 57.6 90 DoLText
+(5) 25.4 52.8 0 DoLText
+(10) 17.6 81.0 0 DoLText
+(15) 17.6 109.2 0 DoLText
+(20) 17.6 137.4 0 DoLText
+(25) 17.6 165.6 0 DoLText
+(0) 25.4 14.0 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica-BoldOblique
+
+%%EndDocument
+count __NXEPSOpCount sub {pop} repeat countdictstack __NXEPSDictCount sub {end} repeat __NXEPSSave restore
+grestore
+202.000000 512.000000 transform
+gsave __NXbasematrix setmatrix itransform translate
+0 0 302 73 rectclip
+1.048611 1.013889 scale
+
+/__NXEPSSave save def /showpage {} def 0 setgray 0 setlinecap 1 setlinewidth
+0 setlinejoin 10 setmiterlimit [] 0 setdash newpath count /__NXEPSOpCount exch def /__NXEPSDictCount countdictstack def
+%%BeginDocument: 
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 288 72
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+14.9 61.6 MT
+20.2 39.2 LT
+25.5 30.1 LT
+30.8 25.4 LT
+36.1 24.3 LT
+41.4 23.7 LT
+46.7 23.2 LT
+52.0 22.9 LT
+57.3 22.7 LT
+62.6 22.6 LT
+67.9 22.6 LT
+73.2 22.6 LT
+78.5 22.8 LT
+83.8 23.0 LT
+89.1 23.2 LT
+94.4 23.5 LT
+99.7 23.9 LT
+105.0 24.3 LT
+110.3 24.8 LT
+115.6 25.4 LT
+120.9 26.0 LT
+126.2 26.6 LT
+131.5 27.1 LT
+136.8 27.4 LT
+142.1 27.7 LT
+147.4 27.9 LT
+152.7 28.1 LT
+158.0 28.1 LT
+163.3 28.0 LT
+168.6 27.8 LT
+173.9 27.5 LT
+179.2 27.1 LT
+184.5 26.8 LT
+189.8 26.4 LT
+195.1 26.0 LT
+200.4 25.4 LT
+205.7 24.8 LT
+211.0 24.1 LT
+216.3 23.4 LT
+221.6 22.8 LT
+226.9 22.1 LT
+232.2 21.5 LT
+237.5 20.8 LT
+242.8 20.3 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+14.9 61.6 1.0000 SNone
+20.2 39.2 1.0000 SNone
+25.5 30.1 1.0000 SNone
+30.8 25.4 1.0000 SNone
+36.1 24.3 1.0000 SNone
+41.4 23.7 1.0000 SNone
+46.7 23.2 1.0000 SNone
+52.0 22.9 1.0000 SNone
+57.3 22.7 1.0000 SNone
+62.6 22.6 1.0000 SNone
+67.9 22.6 1.0000 SNone
+73.2 22.6 1.0000 SNone
+78.5 22.8 1.0000 SNone
+83.8 23.0 1.0000 SNone
+89.1 23.2 1.0000 SNone
+94.4 23.5 1.0000 SNone
+99.7 23.9 1.0000 SNone
+105.0 24.3 1.0000 SNone
+110.3 24.8 1.0000 SNone
+115.6 25.4 1.0000 SNone
+120.9 26.0 1.0000 SNone
+126.2 26.6 1.0000 SNone
+131.5 27.1 1.0000 SNone
+136.8 27.4 1.0000 SNone
+142.1 27.7 1.0000 SNone
+147.4 27.9 1.0000 SNone
+152.7 28.1 1.0000 SNone
+158.0 28.1 1.0000 SNone
+163.3 28.0 1.0000 SNone
+168.6 27.8 1.0000 SNone
+173.9 27.5 1.0000 SNone
+179.2 27.1 1.0000 SNone
+184.5 26.8 1.0000 SNone
+189.8 26.4 1.0000 SNone
+195.1 26.0 1.0000 SNone
+200.4 25.4 1.0000 SNone
+205.7 24.8 1.0000 SNone
+211.0 24.1 1.0000 SNone
+216.3 23.4 1.0000 SNone
+221.6 22.8 1.0000 SNone
+226.9 22.1 1.0000 SNone
+232.2 21.5 1.0000 SNone
+237.5 20.8 1.0000 SNone
+242.8 20.3 1.0000 SNone
+14.9 17.6 MT
+279.9 17.6 LT
+stroke
+67.9 17.6 MT
+67.9 21.2 LT
+stroke
+120.9 17.6 MT
+120.9 21.2 LT
+stroke
+173.9 17.6 MT
+173.9 21.2 LT
+stroke
+226.9 17.6 MT
+226.9 21.2 LT
+stroke
+279.9 17.6 MT
+279.9 21.2 LT
+stroke
+14.9 17.6 MT
+14.9 64.8 LT
+stroke
+restore
+%%Trailer
+restore
+%%DocumentFonts:
+
+%%EndDocument
+count __NXEPSOpCount sub {pop} repeat countdictstack __NXEPSDictCount sub {end} repeat __NXEPSSave restore
+grestore
+115.000000 577.000000 transform
+gsave __NXbasematrix setmatrix itransform translate
+0 0 75 165 rectclip
+1.041667 1.145833 scale
+
+/__NXEPSSave save def /showpage {} def 0 setgray 0 setlinecap 1 setlinewidth
+0 setlinejoin 10 setmiterlimit [] 0 setdash newpath count /__NXEPSOpCount exch def /__NXEPSDictCount countdictstack def
+%%BeginDocument: 
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 72 144
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+72.0 0 translate
+90 rotate
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+14.9 63.7 MT
+19.7 40.9 LT
+24.5 31.6 LT
+29.4 27.2 LT
+34.2 26.7 LT
+39.0 27.0 LT
+43.9 27.4 LT
+48.7 27.8 LT
+53.6 28.0 LT
+58.4 27.8 LT
+63.2 27.2 LT
+68.1 26.4 LT
+72.9 25.6 LT
+77.8 24.7 LT
+82.6 23.9 LT
+87.4 23.2 LT
+92.3 22.5 LT
+97.1 21.9 LT
+102.0 21.4 LT
+106.8 20.8 LT
+111.6 20.3 LT
+116.5 19.9 LT
+121.3 19.5 LT
+126.2 19.2 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+14.9 63.7 1.0000 SNone
+19.7 40.9 1.0000 SNone
+24.5 31.6 1.0000 SNone
+29.4 27.2 1.0000 SNone
+34.2 26.7 1.0000 SNone
+39.0 27.0 1.0000 SNone
+43.9 27.4 1.0000 SNone
+48.7 27.8 1.0000 SNone
+53.6 28.0 1.0000 SNone
+58.4 27.8 1.0000 SNone
+63.2 27.2 1.0000 SNone
+68.1 26.4 1.0000 SNone
+72.9 25.6 1.0000 SNone
+77.8 24.7 1.0000 SNone
+82.6 23.9 1.0000 SNone
+87.4 23.2 1.0000 SNone
+92.3 22.5 1.0000 SNone
+97.1 21.9 1.0000 SNone
+102.0 21.4 1.0000 SNone
+106.8 20.8 1.0000 SNone
+111.6 20.3 1.0000 SNone
+116.5 19.9 1.0000 SNone
+121.3 19.5 1.0000 SNone
+126.2 19.2 1.0000 SNone
+14.9 17.6 MT
+135.9 17.6 LT
+stroke
+39.1 17.6 MT
+39.1 21.2 LT
+stroke
+63.3 17.6 MT
+63.3 21.2 LT
+stroke
+87.5 17.6 MT
+87.5 21.2 LT
+stroke
+111.7 17.6 MT
+111.7 21.2 LT
+stroke
+135.9 17.6 MT
+135.9 21.2 LT
+stroke
+14.9 17.6 MT
+14.9 64.5 LT
+stroke
+restore
+%%Trailer
+restore
+%%DocumentFonts:
+
+%%EndDocument
+count __NXEPSOpCount sub {pop} repeat countdictstack __NXEPSDictCount sub {end} repeat __NXEPSSave restore
+grestore
+gsave
+0 0 0 1 2 DIAGRAMpreparelines
+gsave
+newpath
+systemdict
+begin
+162 651 360 652 setbbox
+360 651 moveto
+162 652 lineto
+end
+stroke
+grestore
+[] 0 setdash
+grestore
+gsave
+0 0 0 1 2 DIAGRAMpreparelines
+gsave
+newpath
+systemdict
+begin
+360 540 360 651 setbbox
+360 540 moveto
+360 651 lineto
+end
+stroke
+grestore
+[] 0 setdash
+grestore
+grestore
+gsave
+0 0 576 756 rectclip
+[1 0 0 -1 0 756] concat
+grestore
+%%Trailer
+
+%%EndDocument
+ GE 31140 22927 MT
+(vectors to vary for different)
+123 W( VQ codewords at each SNR, as in)122 W
+31140 23942 MT
+(FCDCN.)SH
+/Times-Bold SF
+5184 24647 MT
+(Figure 1:)SH
+/Times-Roman SF
+9159 XM
+(Nonlinear mapping of SNRs)
+256 W( for the CLSTLK and)257 W
+5184 25661 MT
+(PZM6FS microphones)
+56 W( based on histograms of SNR values.  The)55 W
+5184 26675 MT
+(unlabeled graphs along the horizontal and vertical axes indicate)112 W
+5184 27689 MT
+(the relative likelihood of observing various SNRs for)
+197 W( the two)196 W
+5184 28703 MT
+(microphones. The)
+435 W( central panel indicates the warping path)
+105 W( that)106 W
+5184 29717 MT
+(best matches the two functions.)SH
+5184 32363 MT
+(to cepstra from both the training and testing data, we)
+287 W( have)288 W
+5184 33378 MT
+(reduced recognition error rate by an average of about 10 percent.)SH
+5184 35002 MT
+(Once a correspondence is established between the)
+136 W( SNRs in the)135 W
+5184 36017 MT
+(training and testing environments, correction)
+199 W( vectors are com-)200 W
+5184 37032 MT
+(puted as the difference between average cepstra)
+20 W( for every SNR in)19 W
+5184 38047 MT
+(the testing)
+7 W( environment and its corresponding SNR in the training)8 W
+650 1000 0 31338 38996 GB 
+%%BeginDocument: compare.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 216
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+97.1 155.7 MT
+157.5 159.3 LT
+217.9 159.3 LT
+278.3 207.2 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+97.1 155.7 2.0000 SCircle
+157.5 159.3 2.0000 SCircle
+217.9 159.3 2.0000 SCircle
+278.3 207.2 2.0000 SCircle
+1.000000 setlinewidth
+[] 0 setdash
+97.1 84.8 MT
+157.5 127.3 LT
+217.9 139.8 LT
+278.3 189.4 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+97.1 84.8 2.0000 SBox
+157.5 127.3 2.0000 SBox
+217.9 139.8 2.0000 SBox
+278.3 189.4 2.0000 SBox
+1.000000 setlinewidth
+[] 0 setdash
+97.1 84.8 MT
+157.5 139.8 LT
+217.9 127.3 LT
+278.3 201.9 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+97.1 84.8 2.0000 STriangle
+157.5 139.8 2.0000 STriangle
+217.9 127.3 2.0000 STriangle
+278.3 201.9 2.0000 STriangle
+36.7 31.6 MT
+338.7 31.6 LT
+stroke
+97.1 31.6 MT
+97.1 35.2 LT
+stroke
+157.5 31.6 MT
+157.5 35.2 LT
+stroke
+217.9 31.6 MT
+217.9 35.2 LT
+stroke
+278.3 31.6 MT
+278.3 35.2 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Testing Microphone) 206.0 0.0 0 DoLText
+(PZM6FS) 69.6 14.0 0 DoLText
+(PCC160) 131.1 14.0 0 DoLText
+(ME80) 199.7 14.0 0 DoLText
+(SE518) 257.4 14.0 0 DoLText
+36.7 31.6 MT
+36.7 209.0 LT
+stroke
+36.7 120.3 MT
+40.3 120.3 LT
+stroke
+36.7 209.0 MT
+40.3 209.0 LT
+stroke
+(Recognition Accuracy \(%\)) 14.0 35.8 90 DoLText
+(80) 17.6 113.3 0 DoLText
+(85) 17.6 202.0 0 DoLText
+(75) 17.6 24.6 0 DoLText
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+[] 0 setdash
+1.000000 setlinewidth
+231.4 91.0 MT
+258.4 91.0 LT
+stroke
+231.4 91.0 0.6500 SCircle
+258.4 91.0 0.6500 SCircle
+(FCDCN) 271.9 87.3 0 DoLText
+[] 0 setdash
+1.000000 setlinewidth
+231.4 75.4 MT
+258.4 75.4 LT
+stroke
+231.4 75.4 0.6500 SBox
+258.4 75.4 0.6500 SBox
+(SDCN) 271.9 71.7 0 DoLText
+[] 0 setdash
+1.000000 setlinewidth
+231.4 59.8 MT
+258.4 59.8 LT
+stroke
+231.4 59.8 0.6500 STriangle
+258.4 59.8 0.6500 STriangle
+(BSDCN) 271.9 56.1 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica-BoldOblique
+
+%%EndDocument
+ GE 5184 39062 MT
+(environment.)SH
+11 /Times-Bold AF
+5184 40773 MT
+(2.2. Experimental Results)SH
+9 SS 
+31140 41479 MT
+(Figure 2:)SH
+/Times-Roman SF
+35115 XM
+(Comparison of recognition accuracy)
+15 W( for S)16 W
+7 SS 
+(PHINX)SH
+9 SS 
+52695 XM
+(on the)16 W
+5184 42074 MT
+(Table 2 compares the recognition accuracy obtained when the)187 W
+31140 42493 MT
+(alphanumeric task using four microphones and the)
+106 W( BSDCN and)105 W
+5184 43089 MT
+(BSDCN algorithm is)
+188 W( evaluated using the alphanumeric census)189 W
+31140 43507 MT
+(FCDCN algorithms.)
+82 W( The)
+391 W( system was trained using speech from)83 W
+5184 44104 MT
+(database described in)
+394 W( [1].)
+SH( We)
+1011 W( note that the environment-)393 W
+31140 44521 MT
+(the CLSTLK microphone.)SH
+5184 45119 MT
+(independent BSDCN algorithm achieves a)
+174 W( level of recognition)175 W
+5184 46134 MT
+(accuracy when trained on the)
+14 W( CLSTLK microphone and tested on)13 W
+5184 47149 MT
+(the PZM6FS microphone that is)
+299 W( approximately equal to the)300 W
+11 /Times-Bold AF
+31715 47287 MT
+(3. REAL-TIME IMPLEMENTATION OF THE)SH
+9 /Times-Roman AF
+5184 48164 MT
+(recognition accuracy)
+325 W( achieved by the environment-dependent)324 W
+11 /Times-Bold AF
+37767 48455 MT
+(CDCN ALGORITHM)SH
+9 /Times-Roman AF
+5184 49179 MT
+(SDCN algorithm on the same task.)SH
+31140 50046 MT
+(We have also produced a real-time implementation of the)
+8 W( original)7 W
+31140 51061 MT
+(CDCN algorithm. As described in)
+21 W( [1],)
+SH( the)
+21 W( CDCN algorithm com-)22 W
+/Times-Bold SF
+7934 51156 MT
+(TEST)SH
+14177 XM
+(CLSTLK)SH
+22250 XM
+(PZM6FS)SH
+21834 50 6165 51705 LH BX1
+-1512 50 12003 51705 LV BX1
+-1512 50 20001 51705 LV BX1
+/Times-Roman SF
+31140 52076 MT
+(pensates for unknown additive noise and linear)
+20 W( filtering by use of)19 W
+/Times-Bold SF
+6564 52682 MT
+(BASE)SH
+/Times-Roman SF
+14839 XM
+(86.9%)SH
+22837 XM
+(31.4%)SH
+31140 53091 MT
+(a parametric model of environmental distortion, rather than)
+165 W( by)166 W
+21834 50 6165 53239 LH BX1
+31140 54106 MT
+(direct estimation of cepstral vectors, as is)
+95 W( done with the SDCN,)94 W
+/Times-Bold SF
+6564 54216 MT
+(BSDCN)SH
+/Times-Roman SF
+15214 XM
+(86.4)SH
+22837 XM
+(70.0%)SH
+21834 50 6165 54773 LH BX1
+31140 55121 MT
+(FCDCN, and similar algorithms.)
+49 W( Although)
+324 W( the CDCN algorithm)50 W
+/Times-Bold SF
+6564 55750 MT
+(SDCN)SH
+/Times-Roman SF
+15227 XM
+(N/A)SH
+22837 XM
+(72.4%)SH
+31140 56136 MT
+(is intrinsically more)
+19 W( computationally costly than either the SDCN)18 W
+21834 50 6165 56307 LH BX1
+31140 57151 MT
+(or FCDCN algorithms, we integrated a version)
+77 W( of this algorithm)78 W
+/Times-Bold SF
+6564 57284 MT
+(CDCN)SH
+/Times-Roman SF
+14839 XM
+(85.7%)SH
+22837 XM
+(75.7%)SH
+21834 50 6165 57841 LH BX1
+31140 58166 MT
+(into a real-time spoken language system)
+28 W( [9])
+SH( without any apparent)27 W
+/Times-Bold SF
+6564 58818 MT
+(FCDCN)SH
+/Times-Roman SF
+15227 XM
+(N/A)SH
+22837 XM
+(78.6%)SH
+31140 59181 MT
+(additional processing time to the user.  This was accomplished)
+32 W( in)33 W
+21834 9182 50 6165 59375 BX BX1
+-7670 50 12003 59375 LV BX1
+-7670 50 20001 59375 LV BX1
+31140 60196 MT
+(two ways.)
+44 W( First,)
+312 W( the compensation and normalization parameters)43 W
+/Times-Bold SF
+5184 60843 MT
+(Table 2:)SH
+/Times-Roman SF
+8809 XM
+(Performance of)
+70 W( the BSDCN  algorithm compared with)71 W
+/Times-Bold SF
+31140 61211 MT
+(n)SH
+/Times-Roman SF
+31953 XM
+(and)SH
+/Times-Bold SF
+33566 XM
+(q)SH
+/Times-Roman SF
+34379 XM
+(are computed in the background during)
+88 W( the silent inter-)89 W
+5184 61857 MT
+(the baseline,)
+481 W( SDCN,)
+128 W( and CDCN algorithms, using testing data)127 W
+31140 62226 MT
+(vals between the speaker's utterances.  \050This computation)428 W
+5184 62871 MT
+(from two microphones. The)
+227 W( system was trained using speech)228 W
+31140 63241 MT
+(presently takes approximately)
+130 W( 15 seconds on a 15-MIPS NeXT)131 W
+5184 63885 MT
+(from the CLSTLK microphone.)SH
+31140 64256 MT
+(workstation.\051 Second, compensation of the)
+182 W( incoming speech is)181 W
+31140 65271 MT
+(expedited by normalizing only the first several cepstral coef-)237 W
+31140 66286 MT
+(ficients rather than the entire vector, and)
+111 W( by computing cepstral)110 W
+5184 66531 MT
+(Figure 2 compares the recognition)
+150 W( accuracy obtained using the)149 W
+31140 67301 MT
+(distances only for those codewords)
+129 W( that are most similar to the)130 W
+5184 67546 MT
+(BSDCN, SDCN, and FCDCN algorithms for four)
+110 W( microphones:)111 W
+31140 68316 MT
+(incoming speech)
+216 W( vector.  The actual cepstral compensation is)215 W
+5184 68561 MT
+(the omnidirectional desktop PZM6FS, the)
+157 W( Crown PCC160 car-)156 W
+31140 69331 MT
+(presently accomplished in)
+430 W( better than real time using the)431 W
+5184 69576 MT
+(dioid desktop microphone \050PCC160\051, the Sennheiser)
+142 W( ME80 su-)143 W
+31140 70346 MT
+(Motorola 56001 DSP chip on the NeXT workstation.)SH
+5184 70591 MT
+(percardioid electret microphone \050ME80\051, and)
+57 W( the Sennheiser 518)56 W
+5184 71606 MT
+(handheld dynamic cardioid microphone)
+328 W( \050SE518\051.  \050Different)329 W
+31140 71970 MT
+(Figure 3 shows how the)
+214 W( recognition accuracy of the BSDCN)213 W
+ES
+%%Page: 3 4
+BS
+0 SI
+9 /Times-Roman AF
+5184 8717 MT
+(algorithm and the real-time implementation)
+124 W( of the CDCN algo-)125 W
+31140 XM
+(vironments on a frame-by-frame basis.  The second)
+190 W( algorithm)191 W
+5184 9732 MT
+(rithm depend on the amount)
+50 W( of environment-specific speech data)49 W
+31140 XM
+(discussed was an)
+169 W( implementation of the more complex CDCN)168 W
+5184 10747 MT
+(available for adaptation.  The recognition accuracy of the real-)144 W
+31140 XM
+(algorithm, which estimates compensation parameters in the back-)28 W
+5184 11762 MT
+(time CDCN algorithm)
+142 W( converges with only about 2 seconds of)141 W
+31140 XM
+(ground on an ongoing basis, and then)
+111 W( applies the compensation)110 W
+5184 12777 MT
+(adapting speech,)
+32 W( while the BSDCN algorithm requires at least 60)33 W
+31140 XM
+(vectors in better than real time.  The BSDCN algorithm)
+4 W( is simpler)5 W
+5184 13792 MT
+(seconds of adapting speech to reach asymptotic levels)
+97 W( of recog-)96 W
+31140 XM
+(and provides good speech recognition accuracy, even when)
+134 W( the)133 W
+5184 14807 MT
+(nition accuracy. This is)
+135 W( consistent with intuition, as the CDCN)136 W
+31140 XM
+(acoustical characteristics of the)
+31 W( training and testing environments)32 W
+5184 15822 MT
+(algorithm imposes more structure on the compensation process)153 W
+31140 XM
+(are quite different.)
+191 W( The)
+605 W( "real-time" CDCN algorithm is more)190 W
+5184 16837 MT
+(\050from knowledge of how speech is likely to be degraded\051,)
+77 W( while)78 W
+31140 XM
+(computationally complex, but it is able to exploit)82 W
+/Times-Italic SF
+49721 XM
+(a priori)82 W
+/Times-Roman SF
+52886 XM
+(struc-)SH
+5184 17852 MT
+(the BSDCN algorithm is entirely data driven.)SH
+31140 XM
+(tural knowledge about the nature of the acoustical)
+47 W( degradation to)46 W
+31140 18867 MT
+(estimate compensation parameters on the basis of)
+52 W( far less speech)53 W
+31140 19882 MT
+(from the unknown testing environment.)SH
+11 /Times-Bold AF
+36926 21593 MT
+(ACKNOWEDGEMENTS)SH
+9 /Times-Roman AF
+31140 23184 MT
+(This research was sponsored by the Defense)
+56 W( Advanced Research)55 W
+31140 24199 MT
+(Projects Agency \050DOD\051, ARPA Order No. 5167, under)
+90 W( contract)91 W
+31140 25214 MT
+(number N00039-85-C-0163.  The views and)
+214 W( conclusions con-)213 W
+31140 26229 MT
+(tained in this document are those of the authors and should)
+12 W( not be)13 W
+31140 27244 MT
+(interpreted as representing the official policies,)
+114 W( either expressed)113 W
+31140 28259 MT
+(or implied, of the)
+102 W( Defense Advanced Research Projects Agency)103 W
+31140 29274 MT
+(or the US Government. We)
+175 W( thank Hsiao-Wuen Hon, Xuedong)174 W
+31140 30289 MT
+(Huang, Kai-Fu Lee, Raj Reddy, Eric Thayer, Bob Weide, and)
+22 W( the)23 W
+31140 31304 MT
+(rest of the speech group for their contributions to this work.)SH
+650 1000 0 5382 32906 GB 
+%%BeginDocument: convcdcn.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 216
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+68.5 56.4 MT
+100.4 127.2 LT
+132.3 140.5 LT
+164.2 171.5 LT
+196.1 177.7 LT
+355.6 179.5 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+68.5 56.4 2.0000 SCircle
+100.4 127.2 2.0000 SCircle
+132.3 140.5 2.0000 SCircle
+164.2 171.5 2.0000 SCircle
+196.1 177.7 2.0000 SCircle
+355.6 179.5 2.0000 SCircle
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(CDCN Algorithm) 244.0 196.7 0 DoLText
+36.7 31.6 MT
+355.7 31.6 LT
+stroke
+100.5 31.6 MT
+100.5 35.2 LT
+stroke
+164.3 31.6 MT
+164.3 35.2 LT
+stroke
+228.1 31.6 MT
+228.1 35.2 LT
+stroke
+291.9 31.6 MT
+291.9 35.2 LT
+stroke
+355.7 31.6 MT
+355.7 35.2 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Amount of Speech \(sec\)) 195.7 0.0 0 DoLText
+(1) 96.7 14.0 0 DoLText
+(2) 160.5 14.0 0 DoLText
+(3) 224.3 14.0 0 DoLText
+(4) 288.1 14.0 0 DoLText
+(5) 351.9 14.0 0 DoLText
+36.7 31.6 MT
+36.7 208.8 LT
+stroke
+36.7 75.9 MT
+40.3 75.9 LT
+stroke
+36.7 120.2 MT
+40.3 120.2 LT
+stroke
+36.7 164.5 MT
+40.3 164.5 LT
+stroke
+36.7 208.8 MT
+40.3 208.8 LT
+stroke
+(Accuracy \(%\)) 14.0 120.3 90 DoLText
+(65) 17.6 68.9 0 DoLText
+(70) 17.6 113.2 0 DoLText
+(75) 17.6 157.5 0 DoLText
+(80) 17.6 201.8 0 DoLText
+(60) 17.6 24.6 0 DoLText
+(0) 32.9 14.0 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica-BoldOblique
+
+%%EndDocument
+ GE 31140 32935 MT
+(1.)SH
+33840 XM
+(Acero, A. and Stern, R. M., ``Environmental)
+96 W( Robustness)95 W
+33840 33949 MT
+(in Automatic Speech Recognition'',)284 W
+/Times-Italic SF
+48201 XM
+(ICASSP-90)SH
+/Times-Roman SF
+(, April)285 W
+33840 34963 MT
+(1990, pp. 849-852.)SH
+31140 36594 MT
+(2.)SH
+33840 XM
+(Erell, A. and)
+243 W( Weintraub, M., ``Estimation Using Log-)242 W
+33840 37608 MT
+(Spectral-Distance Criterion for)
+486 W( Noise-Robust Speech)487 W
+33840 38622 MT
+(Recognition'',)SH
+/Times-Italic SF
+39290 XM
+(ICASSP-90)SH
+/Times-Roman SF
+(, April 1990, pp. 853-856.)SH
+31140 40253 MT
+(3.)SH
+33840 XM
+(Juang, B. H., ``Speech Recognition)
+82 W( in Adverse Envoron-)81 W
+33840 41267 MT
+(ments'',)SH
+/Times-Italic SF
+37431 XM
+(Comp. Speech and Lang.)391 W
+/Times-Roman SF
+(, Vol.)
+SH( 5,)
+391 W( 1991,)
+SH( pp.)391 W
+33840 42281 MT
+(275-294.)SH
+31140 43912 MT
+(4.)SH
+33840 XM
+(T. G.)
+181 W( Stockham, T. M. Cannon and R. B. Ingebretsen,)180 W
+33840 44926 MT
+(``Blind Deconvolution Through Digital Signal)
+214 W( Process-)215 W
+33840 45940 MT
+(ing'',)SH
+/Times-Italic SF
+36040 XM
+(Proc. IEEE)SH
+/Times-Roman SF
+(, Vol. 63, 1975, pp. 678-692.)SH
+31140 47571 MT
+(5.)SH
+33840 XM
+(Boll, S. F.)
+142 W( , ``Suppression of Acoustic Noise in Speech)141 W
+650 1000 0 5382 47797 GB 
+%%BeginDocument: convbsdcn.ps
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts: (atend)
+%%Creator: PLOT X1.0c
+%%%Pages: 0
+%%BoundingBox: 0 0 360 216
+%%EndComments
+/MT {moveto} bind def
+/LT {lineto} bind def
+/sethsbcolor {setgray pop pop} bind def
+/x2sqrt3 2 sqrt 3 mul def
+%
+% () x y o DoLText
+%
+%  Left justified text.
+/DoLText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoRText
+%
+%  Right justified text.
+/DoRText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% () x y o DoCText
+%
+%  Center justified text.
+/DoCText {
+    gsave
+    3 1 roll
+    translate
+    rotate
+    dup stringwidth pop 2 div neg 0 translate
+    newpath
+    0 0 moveto
+    show
+    grestore
+} def
+%
+% Symbol Definitions
+%
+%
+/SymbolStart {
+    gsave
+    [] 0 setdash
+    3 1 roll
+    translate
+    dup dup scale
+    1 exch div setlinewidth
+    newpath
+} def
+/SBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SBullet {
+    SymbolStart
+    0 0 3 0 360 arc fill
+    grestore
+} def
+/SCircle {
+    SymbolStart
+    0 0 3 0 360 arc stroke
+    grestore
+} def
+/SCross {
+    SymbolStart
+    -3 -3 moveto
+    3 3 lineto stroke
+    -3 3 moveto
+    3 -3 lineto stroke
+    grestore
+} def
+/SCustom {
+    pop pop pop
+} def
+/SDel {
+    SymbolStart
+    x2sqrt3 2 moveto
+    x2sqrt3 neg 2 lineto
+    0 -4 lineto
+    closepath stroke
+    grestore
+} def
+/SPlus {
+    SymbolStart
+    -3 0 moveto
+    3 0 lineto stroke
+    0 -3 moveto
+    0 3 lineto stroke
+    grestore
+} def
+/SDiamond {
+    SymbolStart
+    45 rotate
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    stroke
+    grestore
+} def
+/SEllipse {
+    SymbolStart
+    2 1 scale
+    0 0 3 0 360 arc
+    closepath
+    stroke
+    grestore
+} def
+/SNone {
+    pop pop pop
+} def
+/SNumber {
+    SymbolStart
+    grestore
+} def
+/SSolidBox {
+    SymbolStart
+    -3 -3 moveto
+    3 -3 lineto
+    3 3 lineto
+    -3 3 lineto
+    closepath
+    fill
+    grestore
+} def
+/StarSide 6 36 cos div dup 36 sin mul sub 36 sin mul 36 cos div def
+/SStar {
+    SymbolStart
+    0 3 translate
+    -108 rotate
+    0 0 moveto
+    5 {
+        StarSide 0 translate
+        0 0 lineto
+        -72 rotate
+        StarSide 0 translate
+        0 0 lineto
+        144 rotate
+    } repeat
+    closepath
+    stroke
+    grestore
+} def
+/STriangle {
+    SymbolStart
+    x2sqrt3 -2 moveto
+    x2sqrt3 neg -2 lineto
+    0 4 lineto
+    closepath stroke
+    grestore
+} def
+%
+% ci w h o x y bar
+%
+/bar {
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+%
+    newpath
+    2 copy pop 0 moveto
+    2 copy lineto
+    2 copy exch neg exch lineto
+    2 copy pop neg 0 lineto
+    closepath stroke            % ci w/2 h
+%
+    3 -1 roll dup 0 ne {        % w/2 h ci
+        3 copy pop moveto       % w/2 h ci
+        3 copy add lineto
+        3 copy add exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        3 copy pop moveto       % w/2 h ci
+        3 copy sub lineto
+        3 copy sub exch neg exch lineto
+        3 copy pop exch neg exch lineto
+        stroke
+        currentlinewidth 2 mul setlinewidth
+        pop 2 copy moveto
+        exch neg exch lineto stroke
+    } {pop pop pop } ifelse
+%
+    grestore
+} def
+%
+% a linesfill
+% 
+/linesfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 5 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lines2fill
+% 
+/lines2fill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 8 ksp {     % v
+        newpath
+        dup ksp exch moveto
+        dup ksp neg exch lineto stroke
+        2 add
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+%
+% a lineswfill
+% 
+/lineswfill {
+    gsave
+    clip
+    initmatrix
+    MFactor MFactor scale
+    0.5 setlinewidth
+    rotate
+    1 dict begin
+    /ksp 1000 MFactor div def
+    ksp neg 10 ksp {    % v
+        newpath
+        dup ksp exch moveto
+        ksp neg exch lineto stroke
+    } for
+    end
+    grestore
+    newpath
+} def
+/crosshatch {
+    dup gsave linesfill grestore
+    90 add linesfill
+} def
+%
+% ci w h o x y {pg2} {pg1} linefillbar
+%
+/fillbar {
+    2 dict begin
+    /pg1 exch def
+    /pg2 exch def    
+    6 copy                      % save bar parameters
+    gsave
+    translate
+    rotate
+%
+    exch 2 div exch             % ci w/2 h
+    3 -1 roll                   % w/2 h ci
+%
+    newpath
+%
+    3 copy pop pop neg 0 moveto
+    3 copy sub exch neg exch lineto
+    3 copy sub lineto
+    3 copy pop pop 0 lineto
+    closepath pg1
+%
+    3 copy sub exch neg exch moveto
+    3 copy add exch neg exch lineto
+    3 copy add lineto
+    3 copy sub lineto
+    closepath pg2
+%
+    grestore
+    pop pop pop
+    bar
+    end
+} def
+%%EndProlog
+save    % Start Page
+save
+0.0 0.0 translate
+1.000000 1.000000 scale
+/MFactor 1.000000 def
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+1.000000 setlinewidth
+[] 0 setdash
+newpath
+44.5 31.6 MT
+51.7 89.1 LT
+77.5 119.3 LT
+109.4 163.6 LT
+240.0 176.9 LT
+348.2 175.1 LT
+stroke
+1.000000 setlinewidth
+[] 0 setdash
+51.7 89.1 2.0000 SBox
+77.5 119.3 2.0000 SBox
+109.4 163.6 2.0000 SBox
+240.0 176.9 2.0000 SBox
+/Helvetica-BoldOblique findfont 12 scalefont setfont
+(BSDCN Algorithm) 239.1 196.7 0 DoLText
+36.7 31.6 MT
+348.2 31.6 LT
+stroke
+99.0 31.6 MT
+99.0 35.2 LT
+stroke
+161.3 31.6 MT
+161.3 35.2 LT
+stroke
+223.6 31.6 MT
+223.6 35.2 LT
+stroke
+285.9 31.6 MT
+285.9 35.2 LT
+stroke
+348.2 31.6 MT
+348.2 35.2 LT
+stroke
+/Helvetica-BoldOblique findfont 14 scalefont setfont
+(Amount of Speech \(sec\)) 188.2 0.0 0 DoLText
+(50) 91.3 14.0 0 DoLText
+(100) 149.7 14.0 0 DoLText
+(150) 212.0 14.0 0 DoLText
+(200) 274.3 14.0 0 DoLText
+(250) 336.6 14.0 0 DoLText
+36.7 31.6 MT
+36.7 208.8 LT
+stroke
+36.7 75.9 MT
+40.3 75.9 LT
+stroke
+36.7 120.2 MT
+40.3 120.2 LT
+stroke
+36.7 164.5 MT
+40.3 164.5 LT
+stroke
+36.7 208.8 MT
+40.3 208.8 LT
+stroke
+(Accuracy \(%\)) 14.0 120.3 90 DoLText
+(60) 17.6 68.9 0 DoLText
+(65) 17.6 113.2 0 DoLText
+(70) 17.6 157.5 0 DoLText
+(75) 17.6 201.8 0 DoLText
+(55) 17.6 24.6 0 DoLText
+(0) 32.9 14.0 0 DoLText
+restore
+%%Trailer
+restore
+%%DocumentFonts: Helvetica-BoldOblique
+
+%%EndDocument
+ GE 33840 48585 MT
+(Using Spectral Subtraction'',)274 W
+/Times-Italic SF
+45412 XM
+(ASSP)SH
+/Times-Roman SF
+(, Vol.)
+SH( 27,)
+274 W( 1979,)
+SH( pp.)275 W
+33840 49599 MT
+(113-120.)SH
+/Times-Bold SF
+5184 50280 MT
+(Figure 3:)SH
+/Times-Roman SF
+9159 XM
+(Dependence of recognition accuracy of the)
+14 W( CDCN and)13 W
+31140 51230 MT
+(6.)SH
+33840 XM
+(Acero, A. and)
+44 W( Stern, R. M., ``Robust Speech Recognition)43 W
+5184 51294 MT
+(BSDCN algorithms on the amount)
+144 W( of speech in the testing en-)145 W
+33840 52244 MT
+(by Normalization of the Acoustic Space'',)216 W
+/Times-Italic SF
+50611 XM
+(ICASSP-91)SH
+/Times-Roman SF
+(,)SH
+5184 52308 MT
+(vironment available)
+6 W( for adaptation.  The system was trained using)5 W
+33840 53258 MT
+(May 1991, pp. 893-896.)SH
+5184 53322 MT
+(the CLSTLK microphone and tested using the PZM6FS.)SH
+31140 54889 MT
+(7.)SH
+33840 XM
+(Hwang, M.Y., Hon,)
+225 W( H.W., Lee, K.F., ``Between-Word)224 W
+33840 55903 MT
+(Coarticulation Modeling for Continuous Speech)
+184 W( Recog-)185 W
+11 /Times-Bold AF
+13600 56088 MT
+(4. SUMMARY)SH
+9 /Times-Roman AF
+33840 56917 MT
+(nition'', Technical)
+190 W( Report, Carnegie Mellon University,)189 W
+5184 57679 MT
+(We described two algorithms for robust speech recognition that)112 W
+33840 57931 MT
+(April 1989.)SH
+5184 58694 MT
+(compensate incoming)
+31 W( speech for the effects of additive noise and)30 W
+31140 59562 MT
+(8.)SH
+33840 XM
+(Sakoe, H., Chiba, S., ``Dynamic)
+49 W( Programming Algorithm)50 W
+5184 59709 MT
+(linear filtering.  The first algorithm,)417 W
+/Times-Italic SF
+20787 XM
+(Blind SNR-dependent)418 W
+/Times-Roman SF
+33840 60576 MT
+(Optimization for)
+450 W( Spoken Word Recognition'',)449 W
+/Times-Italic SF
+52986 XM
+(IEEE)SH
+5184 60724 MT
+(cepstral normalization)
+446 W( \050BSDCN)445 W
+/Times-Roman SF
+(\051, differs from previous al-)445 W
+/Times-Italic SF
+33840 61590 MT
+(Transactions on Acoustics, Speech, and)
+854 W( Signal)855 W
+/Times-Roman SF
+5184 61739 MT
+(gorithms we have discussed in that it provides)
+91 W( good recognition)92 W
+/Times-Italic SF
+33840 62604 MT
+(Processing)SH
+/Times-Roman SF
+(, Vol. 26, 1978, pp. 43-49.)SH
+5184 62754 MT
+(accuracy using an extremely simple compensation algorithm, and)28 W
+5184 63769 MT
+(without the)
+245 W( need for simultaneously-recorded training data in)246 W
+31140 64235 MT
+(9.)SH
+33840 XM
+(Ward, W.,)
+340 W( ``Understanding Spontaneous Speech: The)339 W
+5184 64784 MT
+(which speech is)
+192 W( matched between the training and testing en-)191 W
+33840 65249 MT
+(Phoenix System'',)SH
+/Times-Italic SF
+40715 XM
+(ICASSP-91)SH
+/Times-Roman SF
+(, April 1991.)SH
+ES
+%%Trailer
+%%Pages: 4
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic Symbol

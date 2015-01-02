@@ -1,0 +1,4432 @@
+%!PS-Adobe-2.0
+%%Title: paper91.mss
+%%DocumentFonts: (atend)
+%%Creator: Richard Stern and Scribe 7(1700)
+%%CreationDate: 19 January 1991 11:07
+%%Pages: (atend)
+%%EndComments
+% PostScript Prelude for Scribe.
+/BS {/SV save def 0.0 792.0 translate .01 -.01 scale} bind def
+/ES {showpage SV restore} bind def
+/SC {setrgbcolor} bind def
+/FMTX matrix def
+/RDF {WFT SLT 0.0 eq 
+  {SSZ 0.0 0.0 SSZ neg 0.0 0.0 FMTX astore}
+  {SSZ 0.0 SLT neg sin SLT cos div SSZ mul SSZ neg 0.0 0.0 FMTX astore}
+  ifelse makefont setfont} bind def
+/SLT 0.0 def
+/SI { /SLT exch cvr def RDF} bind def
+/WFT /Courier findfont def
+/SF { /WFT exch findfont def RDF} bind def
+/SSZ 1000.0 def
+/SS { /SSZ exch 100.0 mul def RDF} bind def
+/AF { /WFT exch findfont def /SSZ exch 100.0 mul def RDF} bind def
+/MT /moveto load def
+/XM {currentpoint exch pop moveto} bind def
+/UL {gsave newpath moveto dup 2.0 div 0.0 exch rmoveto
+   setlinewidth 0.0 rlineto stroke grestore} bind def
+/LH {gsave newpath moveto setlinewidth
+   0.0 rlineto
+   gsave stroke grestore} bind def
+/LV {gsave newpath moveto setlinewidth
+   0.0 exch rlineto
+   gsave stroke grestore} bind def
+/BX {gsave newpath moveto setlinewidth
+   exch
+   dup 0.0 rlineto
+   exch 0.0 exch neg rlineto
+   neg 0.0 rlineto
+   closepath
+   gsave stroke grestore} bind def
+/BX1 {grestore} bind def
+/BX2 {setlinewidth 1 setgray stroke grestore} bind def
+/PB {/PV save def newpath translate
+    100.0 -100.0 scale pop /showpage {} def} bind def
+/PE {PV restore} bind def
+/GB {/PV save def newpath translate rotate
+    div dup scale 100.0 -100.0 scale /showpage {} def} bind def
+/GE {PV restore} bind def
+/FB {dict dup /FontMapDict exch def begin} bind def
+/FM {cvn exch cvn exch def} bind def
+/FE {end /original-findfont /findfont load def  /findfont
+   {dup FontMapDict exch known{FontMapDict exch get} if
+   original-findfont} def} bind def
+/BC {gsave moveto dup 0 exch rlineto exch 0 rlineto neg 0 exch rlineto closepath clip} bind def
+/EC /grestore load def
+/SH /show load def
+/MX {exch show 0.0 rmoveto} bind def
+/W {0 32 4 -1 roll widthshow} bind def
+/WX {0 32 5 -1 roll widthshow 0.0 rmoveto} bind def
+%%EndProlog
+%%Page: 0 1
+BS
+0 SI
+14 /Times-Bold AF
+13629 7202 MT
+(Speaker Adaptation in Continuous Speech Recognition)SH
+17170 8880 MT
+(via Estimation of Correlated Mean Vectors)SH
+9 /Times-Italic AF
+28614 12285 MT
+(1)SH
+11 SS 
+21249 12645 MT
+(William A. Rozzi)SH
+29339 XM
+(and Richard M. Stern)SH
+/Times-Roman SF
+18529 15435 MT
+(Department of Electrical and Computer Engineering)SH
+22820 16830 MT
+(and School of Computer Science)SH
+23889 18225 MT
+(Carnegie Mellon University)SH
+23077 19620 MT
+(Pittsburgh, Pennsylvania 15213)SH
+9 SS 
+31140 22674 MT
+(This work was motivated in)
+14 W( part to develop an estimation method)15 W
+11 /Times-Bold AF
+15036 22794 MT
+(Abstract)SH
+9 /Times-Roman AF
+31140 23779 MT
+(which was more computationally efficient than,)
+103 W( yet retained the)102 W
+8 SS 
+5184 24511 MT
+(This paper)
+116 W( describes recent attempts to improve the recognition perfor-)115 W
+9 SS 
+31140 24884 MT
+(desirable properties of, the)
+456 W( optimal extended maximum)457 W
+/Times-Italic SF
+54486 XM
+(a)SH
+8 /Times-Roman AF
+5184 25507 MT
+(mance of a)
+296 W( semi-continuous version of the CMU SPHINX system)297 W
+9 /Times-Italic AF
+31140 25989 MT
+(posteriori)SH
+/Times-Roman SF
+34976 XM
+(\050EMAP\051 procedure [Lasry84] which was successful in)60 W
+8 SS 
+5184 26503 MT
+([Huang89, KFLee90] \050hereafter)175 W
+6 SS 
+16102 XM
+(SPHINX-SC)SH
+8 SS 
+(\051 through the)
+175 W( use of speaker)174 W
+9 SS 
+31140 27094 MT
+(providing speaker)
+95 W( adaptation in the FEATURE [Stern87] recog-)96 W
+8 SS 
+5184 27499 MT
+(adaptation. Our)
+522 W( approach to speaker adaptation is to use)
+161 W( multivariate)162 W
+9 SS 
+31140 28199 MT
+(nition system.  The work was also motivated by a desire to)
+31 W( better)30 W
+8 SS 
+5184 28495 MT
+(parameter estimation procedures to update the mean values of the)
+97 W( com-)96 W
+9 SS 
+31140 29304 MT
+(understand the relationships between adaptive)
+424 W( filtering and)425 W
+8 SS 
+5184 29491 MT
+(ponent densities which comprise the system's codebook, given the)312 W
+9 SS 
+31140 30409 MT
+(parameter estimation.)
+208 W( We)
+639 W( first focus on the derivation of an)207 W
+8 SS 
+5184 30487 MT
+(speaker-specific observations.  While the optimal Bayesian estimation)189 W
+5184 31483 MT
+(procedure exploits the correlation between features to obtain fast)
+46 W( conver-)47 W
+9 SS 
+31140 31514 MT
+(algorithm for sub-optimal multivariate parameter)
+424 W( estimation)425 W
+8 SS 
+5184 32479 MT
+(gence, it incurs a large computational)
+143 W( expense.  We have developed a)142 W
+9 SS 
+31140 32619 MT
+(which retains the fast convergence property of the optimal es-)169 W
+8 SS 
+5184 33475 MT
+(least mean square \050LMS\051 algorithm which produces a faster rate of)239 W
+9 SS 
+31140 33724 MT
+(timate, and a discussion of some of its properties.)
+229 W( We)
+684 W( then)230 W
+8 SS 
+5184 34471 MT
+(convergence than the Bayesian estimator, at the)
+246 W( expense of a finite)245 W
+9 SS 
+31140 34829 MT
+(investigate the effectiveness of these estimators)
+239 W( for codebook)238 W
+8 SS 
+5184 35467 MT
+(misadjustment. This estimate is similar in form to an)
+143 W( LMS transversal)144 W
+9 SS 
+31140 35934 MT
+(adaptation in)85 W
+7 SS 
+36210 XM
+(SPHINX-SC)SH
+9 SS 
+(. We)
+395 W( also suggest a distance metric that)86 W
+8 SS 
+5184 36463 MT
+(filter, and is computationally more efficient than the Bayesian estimate.)SH
+9 SS 
+31140 37039 MT
+(can be applied to each speaker's)
+75 W( adapted codebook to determine)74 W
+8 SS 
+5184 37857 MT
+(We discuss the general limitations of the Bayesian, LMS,)
+61 W( and maximum)60 W
+9 SS 
+31140 38144 MT
+(whether he or she a likely candidate for codebook adaptation.)SH
+8 SS 
+5184 38853 MT
+(likelihood estimation procedures in the)
+65 W( context of speaker adaptation for)66 W
+5184 39849 MT
+(the)SH
+6 SS 
+6526 XM
+(SPHINX-SC)SH
+8 SS 
+9992 XM
+(system. We compare)165 W
+6 SS 
+17371 XM
+(SPHINX-SC)SH
+8 SS 
+20836 XM
+(performance using these)164 W
+11 /Times-Bold AF
+31140 40465 MT
+(2. Mean Vector Estimation Methods)SH
+8 /Times-Roman AF
+5184 40845 MT
+(codebook mean vector adaptation methods with the system using no)218 W
+5184 41841 MT
+(adaptation. Results)
+468 W( show an overall reduction of 2.0 to 3.4%)
+134 W( in word)133 W
+9 SS 
+31140 41874 MT
+(Consider a)
+45 W( pattern-classification problem with C decision classes)46 W
+8 SS 
+5184 42837 MT
+(error rate due to adaptation)
+130 W( for a set of 11 speakers from the DARPA)131 W
+9 SS 
+31140 42979 MT
+(and D features, or a C-component mixture in D dimensions.)
+52 W( Let)328 W
+7 SS 
+42087 43757 MT
+(th)SH
+8 SS 
+5184 43833 MT
+(resource management task.)
+264 W( Using)
+727 W( a distance metric applied to the)263 W
+9 SS 
+31140 44084 MT
+(the set of input data for)
+110 W( the j)111 W
+42968 XM
+(class be {)111 W
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+47842 XM
+(,)SH
+/Times-Bold SF
+48292 XM
+(x)SH
+/Times-Roman SF
+49462 XM
+(,...,)SH
+/Times-Bold SF
+50812 XM
+(x)SH
+/Times-Roman SF
+52121 XM
+(}. It)
+447 W( is)111 W
+7 SS 
+47122 44411 MT
+(j,1)SH
+48742 XM
+(j,2)SH
+51262 XM
+(j,n)SH
+5 SS 
+51982 44702 MT
+(j)SH
+8 SS 
+5184 44829 MT
+(adapted codebooks, word)
+75 W( error rate was reduced on average by 15% for)76 W
+9 SS 
+31140 45429 MT
+(assumed that)
+26 W( the random vector)25 W
+/Times-Bold SF
+42941 XM
+(x)SH
+/Times-Roman SF
+43836 XM
+(is normally distributed about a)25 W
+7 SS 
+43391 45756 MT
+(j)SH
+8 SS 
+5184 45825 MT
+(those speakers automatically identified as good candidates for adaptation.)SH
+9 SS 
+31140 46534 MT
+(mean vector)810 W
+/Symbol SF
+37410 XM
+(m)SH
+/Times-Roman SF
+39158 XM
+(with a covariance matrix)810 W
+/Symbol SF
+51548 XM
+(S)SH
+/Times-Roman SF
+52276 XM
+(, [)810 W
+/Times-Italic SF
+(i.e.)SH
+7 /Times-Roman AF
+37928 46861 MT
+(j)SH
+52081 XM
+(j)SH
+9 SS 
+31140 47734 MT
+(p\050)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+32535 XM
+(|)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+33428 XM
+(\051)SH
+/Symbol SF
+33953 XM
+(\273)SH
+/Times-Roman SF
+34672 XM
+(N\050)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+36335 XM
+(,)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+37288 XM
+(\051], and that all data samples)
+225 W( are independent.)224 W
+7 SS 
+32340 48061 MT
+(j)SH
+33233 XM
+(j)SH
+36140 XM
+(j)SH
+37093 XM
+(j)SH
+11 /Times-Bold AF
+5184 48146 MT
+(1. Introduction)SH
+7 /Times-Roman AF
+46818 48694 MT
+(T)SH
+48564 XM
+(T)SH
+51327 XM
+(T)SH
+52055 XM
+(T)SH
+9 SS 
+31140 49021 MT
+(Define the overall mean vector as)189 W
+/Symbol SF
+44624 XM
+(m)SH
+/Times-Roman SF
+(=[)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+47246 XM
+(,)SH
+/Symbol SF
+47696 XM
+(m)SH
+/Times-Roman SF
+48992 XM
+(,...,)SH
+/Symbol SF
+50342 XM
+(m)SH
+/Times-Roman SF
+51755 XM
+(])SH
+52483 XM
+(. The)603 W
+7 SS 
+46468 49348 MT
+(1)SH
+48214 XM
+(2)SH
+50860 XM
+(C)SH
+9 SS 
+5184 49555 MT
+(Estimation of mean vectors is an essential)
+45 W( procedure in the train-)44 W
+31140 50126 MT
+(CD-dimensional vector to be estimated is assumed to be)
+8 W( normally)7 W
+5184 50660 MT
+(ing of hidden)
+113 W( Markov model-based speech recognition systems.)114 W
+31140 51231 MT
+(distributed around the)
+309 W( known mean vector)310 W
+/Symbol SF
+48448 XM
+(m)SH
+/Times-Roman SF
+49851 XM
+(with CDxCD)310 W
+7 SS 
+48966 51558 MT
+(o)SH
+9 SS 
+5184 51765 MT
+(Normal mixture densities are often used to)
+236 W( model the states')235 W
+31140 52431 MT
+(covariance matrix)245 W
+/Symbol SF
+38330 XM
+(S)SH
+/Times-Roman SF
+39213 XM
+(, so p\050)245 W
+/Symbol SF
+(m)SH
+/Times-Roman SF
+(\051)SH
+/Symbol SF
+42971 XM
+(\273)SH
+/Times-Roman SF
+43690 XM
+(N\050)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+45508 XM
+(,)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+46616 XM
+(\051. Denote)
+713 W( the set of)244 W
+7 SS 
+38863 52758 MT
+(o)SH
+45158 XM
+(o)SH
+46266 XM
+(o)SH
+9 SS 
+5184 52870 MT
+(output probability distributions.  In these cases,)
+52 W( we are presented)53 W
+31140 53536 MT
+(observations as)34 W
+/Symbol SF
+36958 XM
+(c)SH
+/Times-Roman SF
+(={)SH
+/Times-Bold SF
+(x)SH
+/Times-Roman SF
+39717 XM
+(,...,)SH
+/Times-Bold SF
+41067 XM
+(x)SH
+/Times-Roman SF
+42642 XM
+(,)SH
+/Times-Bold SF
+43092 XM
+(x)SH
+/Times-Roman SF
+44417 XM
+(,...,)SH
+/Times-Bold SF
+45767 XM
+(x)SH
+/Times-Roman SF
+47342 XM
+(,)SH
+/Times-Bold SF
+47792 XM
+(x)SH
+/Times-Roman SF
+49234 XM
+(,...,)SH
+/Times-Bold SF
+50584 XM
+(x)SH
+/Times-Roman SF
+52360 XM
+(}. The)294 W
+7 SS 
+38842 53863 MT
+(1,1)SH
+41517 XM
+(1,n)SH
+43542 XM
+(2,1)SH
+46217 XM
+(2,n)SH
+48242 XM
+(C,1)SH
+51034 XM
+(C,n)SH
+9 SS 
+5184 53975 MT
+(with the problem of accurately estimating the parameters of)
+108 W( the)107 W
+5 SS 
+42392 54154 MT
+(1)SH
+47092 XM
+(2)SH
+52026 XM
+(C)SH
+9 SS 
+31140 54881 MT
+(parameter estimation problem considered here is to produce reli-)62 W
+5184 55080 MT
+(assumed densities.  Also, we)
+254 W( can adjust the system to more)255 W
+31140 55986 MT
+(able estimates of)
+44 W( the parameter)45 W
+/Symbol SF
+42788 XM
+(m)SH
+/Times-Roman SF
+43576 XM
+(given the information provided)45 W
+5184 56185 MT
+(closely match new speakers by)
+25 W( modifying these parameters given)24 W
+31140 57091 MT
+(by the samples in)SH
+/Symbol SF
+37640 XM
+(c)SH
+/Times-Roman SF
+(.)SH
+5184 57290 MT
+(speaker-specific observations.)
+11 W( The)
+249 W( standard maximum likelihood)12 W
+5184 58395 MT
+(\050ML\051 methods ignore information which)
+50 W( is present in knowledge)49 W
+10 /Times-Bold AF
+31140 59078 MT
+(2.1. Extended Maximum)SH
+/Times-BoldItalic SF
+41890 XM
+(A Posteriori)SH
+/Times-Bold SF
+47113 XM
+(Estimation)SH
+9 /Times-Roman AF
+5184 59500 MT
+(of the correlation between system parameters when)
+43 W( estimating or)44 W
+31140 60487 MT
+(Bayesian techniques)
+11 W( treat unknown parameters as random vectors)10 W
+5184 60605 MT
+(updating these parameters.  This paper explores the)
+172 W( effects on)171 W
+31140 61592 MT
+(with a known)22 W
+/Times-Italic SF
+36331 XM
+(a priori)22 W
+/Times-Roman SF
+39375 XM
+(distribution, and maximize the)22 W
+/Times-Italic SF
+50688 XM
+(a posteriori)23 W
+/Times-Roman SF
+5184 61710 MT
+(recognition performance when)
+157 W( correlation information is incor-)158 W
+31140 62697 MT
+(probability of the parameters given)
+26 W( the observations, p\050)25 W
+/Symbol SF
+(m)SH
+/Times-Roman SF
+(|)SH
+/Symbol SF
+(c)SH
+/Times-Roman SF
+(\051. Set-)275 W
+5184 62815 MT
+(porated into the)
+119 W( parameter estimation process.  Specifically, we)118 W
+31140 63802 MT
+(ting the gradient with respect to)173 W
+/Symbol SF
+43828 XM
+(m)SH
+/Times-Roman SF
+44744 XM
+(of the natural logarithm of)173 W
+5184 63920 MT
+(investigate speaker adaptation)
+5 W( in a semi-continuous version of the)6 W
+31140 64907 MT
+(p\050)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+(|)SH
+/Symbol SF
+(c)SH
+/Times-Roman SF
+(\051 equal to zero yields the EMAP estimate of)
+70 W( the mean)69 W
+/Symbol SF
+53374 XM
+(m)SH
+/Times-Roman SF
+54186 XM
+(as)SH
+5184 65025 MT
+(CMU SPHINX system [Huang89, KFLee90] through)
+137 W( modifica-)136 W
+31140 66012 MT
+(in [Lasry84]:)SH
+5184 66130 MT
+(tion of the codebook mean vectors.)SH
+10800 50 5184 68012 UL
+7 SS 
+6084 69513 MT
+(1)SH
+9 SS 
+6434 69840 MT
+(Currently with Ameritech Services Science and Technology.)SH
+ES
+%%Page: 1 2
+BS
+0 SI
+9 /Times-Roman AF
+31140 6881 MT
+([VanTrees68]. To)
+609 W( demonstrate this equivalence,)192 W
+/Symbol SF
+50092 XM
+(F)SH
+/Times-Roman SF
+51818 XM
+(and)SH
+/Symbol SF
+53535 XM
+(F)SH
+8 SS 
+8784 6904 MT
+(\331)SH
+7 SS 
+15348 6922 MT
+(-)SH
+/Times-Roman SF
+(1)SH
+/Symbol SF
+21515 XM
+(-)SH
+/Times-Roman SF
+(1)SH
+50779 7208 MT
+(aa)SH
+54222 XM
+(a)SH
+/Symbol SF
+(m)SH
+9 SS 
+8784 7249 MT
+(m)SH
+/Times-Roman SF
+11133 XM
+(=)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Times-Bold SF
+(N)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+15048 XM
+(\051)SH
+/Symbol SF
+16082 XM
+(m)SH
+/Times-Roman SF
+16950 XM
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+18341 XM
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Times-Bold SF
+(N)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+21215 XM
+(\051)SH
+/Times-Bold SF
+22249 XM
+(Na)SH
+/Times-Roman SF
+27930 XM
+(\0501\051)SH
+7 /Times-Bold AF
+14698 7572 MT
+(o)SH
+16600 XM
+(o)SH
+17991 XM
+(o)SH
+20865 XM
+(o)SH
+/Times-Italic SF
+9266 7576 MT
+(EMAP)SH
+9 /Times-Roman AF
+31140 7986 MT
+(must be)
+50 W( expressed in terms of)49 W
+/Symbol SF
+42385 XM
+(S)SH
+/Times-Roman SF
+(,)SH
+/Symbol SF
+43417 XM
+(S)SH
+/Times-Roman SF
+44300 XM
+(, and)49 W
+/Symbol SF
+46373 XM
+(m)SH
+/Times-Roman SF
+47241 XM
+(. It)
+323 W( is also necessary)49 W
+7 SS 
+43950 8313 MT
+(o)SH
+46891 XM
+(o)SH
+9 SS 
+5184 8636 MT
+(where)SH
+/Times-Bold SF
+7776 XM
+(a)SH
+/Times-Roman SF
+8618 XM
+(is the maximum likelihood estimate of)168 W
+/Symbol SF
+23726 XM
+(m)SH
+/Times-Roman SF
+24637 XM
+(\050the sample)168 W
+31140 9091 MT
+(to add a bias term to the MMSE estimate by appending a constant)8 W
+5184 9741 MT
+(mean\051, and)10 W
+/Times-Bold SF
+9429 XM
+(N)SH
+/Times-Roman SF
+10314 XM
+(and)SH
+/Symbol SF
+11849 XM
+(S)SH
+/Times-Roman SF
+12617 XM
+(are CD-dimensional block)
+10 W( diagonal matrices,)9 W
+7 /Times-Italic AF
+46233 9869 MT
+(T)SH
+9 /Times-Roman AF
+31140 10196 MT
+(to the sample mean vector, i.e.,)123 W
+/Times-Bold SF
+43328 XM
+(a)SH
+/Symbol SF
+(\242)SH
+/Times-Roman SF
+(=[1)SH
+/Times-Bold SF
+45483 XM
+(a)SH
+/Times-Roman SF
+(])SH
+46622 XM
+(, to)
+123 W( represent the con-)122 W
+5184 10846 MT
+(with n)SH
+/Times-Bold SF
+7654 XM
+(I)SH
+/Times-Roman SF
+8229 XM
+(and)SH
+/Symbol SF
+9754 XM
+(S)SH
+/Times-Roman SF
+10482 XM
+(, respectively, as the DxD diagonal blocks.)SH
+7 SS 
+7459 11173 MT
+(j)SH
+10287 XM
+(j)SH
+9 SS 
+31140 11301 MT
+(tribution of the)63 W
+/Symbol SF
+36954 XM
+(m)SH
+/Times-Roman SF
+38110 XM
+(term in the EMAP expression.  It can then be)64 W
+7 SS 
+37472 11628 MT
+(o)SH
+39194 12261 MT
+(-1)SH
+42554 XM
+(T)SH
+48530 XM
+(T)SH
+9 SS 
+31140 12588 MT
+(shown that)23 W
+/Symbol SF
+35336 XM
+(F)SH
+/Times-Roman SF
+36645 XM
+(=)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+38036 XM
+(+N)SH
+/Symbol SF
+39777 XM
+(S)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(m)SH
+41686 XM
+(m)SH
+/Times-Roman SF
+42982 XM
+(,)SH
+/Symbol SF
+43455 XM
+(F)SH
+/Times-Roman SF
+44895 XM
+(=)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+46286 XM
+(+)SH
+/Symbol SF
+(m)SH
+47662 XM
+(m)SH
+/Times-Roman SF
+48958 XM
+(, and E{)22 W
+/Times-Bold SF
+(a)SH
+/Times-Roman SF
+(} =)22 W
+/Symbol SF
+53843 XM
+(m)SH
+/Times-Roman SF
+54711 XM
+(.)SH
+5184 12614 MT
+(The EMAP estimate is an unbiased)
+246 W( and consistent estimator,)247 W
+7 SS 
+36023 12915 MT
+(aa)SH
+37686 XM
+(o)SH
+41336 XM
+(o)SH
+42204 XM
+(o)SH
+/Symbol SF
+44142 XM
+(m)SH
+/Times-Bold SF
+(a)SH
+/Times-Roman SF
+45936 XM
+(o)SH
+47312 XM
+(o)SH
+48180 XM
+(o)SH
+54361 XM
+(o)SH
+9 SS 
+31140 13693 MT
+(Substituting these values into the previous equation)
+102 W( and using a)103 W
+5184 13719 MT
+(formed as a linear combination)
+3 W( of the)2 W
+/Times-Italic SF
+18927 XM
+(a priori)2 W
+/Times-Roman SF
+21931 XM
+(mean vector)2 W
+/Symbol SF
+26585 XM
+(m)SH
+/Times-Roman SF
+27680 XM
+(and)SH
+7 SS 
+27103 14046 MT
+(o)SH
+9 SS 
+31140 14798 MT
+(block matrix inversion identity yields:)SH
+5184 14824 MT
+(the sample mean of)
+151 W( the observed data)152 W
+/Times-Bold SF
+20020 XM
+(a)SH
+/Times-Roman SF
+(. When)
+529 W( there are few)152 W
+8 /Symbol AF
+19999 15661 MT
+(\331)SH
+7 /Times-Roman AF
+16304 15679 MT
+(2)SH
+9 SS 
+5184 16006 MT
+(observations or the dogmatism)15 W
+16894 XM
+(is large,)15 W
+/Symbol SF
+19999 XM
+(m)SH
+20481 XM
+(\273m)SH
+/Times-Roman SF
+21843 XM
+(. When)255 W
+/Times-Bold SF
+24939 XM
+(N)SH
+/Times-Roman SF
+25830 XM
+(becomes)SH
+7 /Symbol AF
+34740 16128 MT
+(\331)SH
+43988 XM
+(-)SH
+/Times-Roman SF
+(1)SH
+21493 16333 MT
+(o)SH
+9 /Symbol AF
+34740 16455 MT
+(m)SH
+/Times-Roman SF
+37973 XM
+(=)SH
+/Symbol SF
+38931 XM
+(S)SH
+/Times-Italic SF
+40039 XM
+(N)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Italic SF
+42047 XM
+(N)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\051)SH
+44947 XM
+(\050)SH
+/Times-Bold SF
+(a)SH
+/Symbol SF
+45922 XM
+(- m)SH
+/Times-Roman SF
+47509 XM
+(\051 +)225 W
+/Symbol SF
+49217 XM
+(m)SH
+7 /Times-Roman AF
+35312 16782 MT
+(MMSE)SH
+/Times-Italic SF
+39464 XM
+(o)SH
+41472 XM
+(o)SH
+47159 XM
+(o)SH
+49735 XM
+(o)SH
+8 /Symbol AF
+18095 17126 MT
+(\331)SH
+9 /Times-Roman AF
+5184 17471 MT
+(large \050after many)
+297 W( observations\051,)296 W
+/Symbol SF
+18095 XM
+(m)SH
+18577 XM
+(\273)SH
+/Times-Bold SF
+19296 XM
+(a)SH
+/Times-Roman SF
+(,)SH
+/Times-Italic SF
+20492 XM
+(i.e.)SH
+/Times-Roman SF
+(, the sample mean)296 W
+7 SS 
+46635 17705 MT
+(-1)SH
+51433 XM
+(-1)SH
+9 SS 
+31140 18032 MT
+(It can also be shown that I-)173 W
+/Symbol SF
+(S)SH
+/Times-Roman SF
+42811 XM
+(N\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+44644 XM
+(N+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\051)SH
+47218 XM
+(=)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+49442 XM
+(N+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\051)SH
+52016 XM
+(, so)
+173 W( the)172 W
+7 SS 
+42461 18359 MT
+(o)SH
+44294 XM
+(o)SH
+49092 XM
+(o)SH
+9 SS 
+5184 18576 MT
+(dominates. This)
+742 W( estimate therefore behaves in an intuitively)259 W
+31140 19137 MT
+(coefficients of)95 W
+/Times-Bold SF
+36730 XM
+(a)SH
+/Times-Roman SF
+37500 XM
+(and)SH
+/Symbol SF
+39121 XM
+(m)SH
+/Times-Roman SF
+40310 XM
+(in the MMSE and EMAP estimates are)96 W
+7 SS 
+39639 19464 MT
+(o)SH
+9 SS 
+5184 19681 MT
+(pleasing manner.  One disadvantage of the EMAP estimate in-)144 W
+31140 20242 MT
+(the same.)SH
+5184 20786 MT
+(volves its implementation.  As each new observation arrives,)237 W
+7 SS 
+8358 21564 MT
+(-1)SH
+9 SS 
+5184 21891 MT
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+N)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+8058 XM
+(\051)SH
+9185 XM
+(must be recomputed; in cases where the product of)
+19 W( the)18 W
+10 /Times-Bold AF
+31140 22208 MT
+(2.3. Least Mean Square Estimation)SH
+7 /Times-Roman AF
+7708 22218 MT
+(o)SH
+9 SS 
+5184 22996 MT
+(number of features and classes \050CD\051 is large, this inversion)
+72 W( may)73 W
+31140 23617 MT
+(Conventional LMS adaptive)
+268 W( filtering is derived from MMSE)267 W
+5184 24101 MT
+(be prohibitive.  Also, estimation of the covariance matrix)232 W
+/Symbol SF
+28097 XM
+(S)SH
+7 /Times-Roman AF
+28630 24428 MT
+(o)SH
+9 SS 
+31140 24722 MT
+(parameter estimation by performing the)
+274 W( estimation iteratively)275 W
+5184 25206 MT
+(requires data from)
+146 W( more than CD speakers to avoid singularity)147 W
+31140 25827 MT
+(using a)
+91 W( modified gradient search procedure, and by approximat-)90 W
+5184 26311 MT
+(problems. This)
+669 W( requirement)
+222 W( created difficulties for the CMU)221 W
+31140 26932 MT
+(ing statistical averages used in)
+124 W( the computation by their instan-)125 W
+7 SS 
+5184 27416 MT
+(FEATURE)SH
+9 SS 
+8559 XM
+(system.)SH
+31140 28037 MT
+(taneous values.  The MMSE gradient algorithm is written as)SH
+10 /Times-Bold AF
+5184 29382 MT
+(2.2. Minimum Mean Square Error Estimation)SH
+9 /Symbol AF
+39903 29424 MT
+(b)SH
+494 50 39903 29714 UL
+/Times-Bold SF
+34740 29959 MT
+(H)SH
+/Times-Roman SF
+36578 XM
+(=)SH
+/Times-Bold SF
+(H)SH
+/Symbol SF
+38792 XM
+(- \321)886 W
+/Times-Roman SF
+41862 XM
+([)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(}])SH
+53886 XM
+(\0502\051)SH
+7 /Times-Bold AF
+35440 30282 MT
+(k+1)SH
+37786 XM
+(k)SH
+41039 30286 MT
+(H)SH
+9 /Times-Roman AF
+39925 30528 MT
+(2)SH
+5 /Times-Bold AF
+41584 30574 MT
+(k)SH
+9 /Times-Roman AF
+5184 30791 MT
+(The MMSE)
+7 W( estimate minimizes the expected value of the squared)8 W
+5184 31896 MT
+(error between)
+213 W( the parameter and its estimate.  For the vector)212 W
+31140 31915 MT
+(where)SH
+/Symbol SF
+33701 XM
+(b)SH
+/Times-Roman SF
+34556 XM
+(is the step size or adaptation)
+136 W( constant. The index)135 W
+/Times-Bold SF
+53476 XM
+(k)SH
+/Times-Roman SF
+54336 XM
+(is)SH
+5184 33001 MT
+(parameters considered here, the norm of the error vector will)
+82 W( be)83 W
+31140 33020 MT
+(incremented after each new)
+170 W( sample)171 W
+/Times-Bold SF
+44917 XM
+(x)SH
+/Times-Roman SF
+46152 XM
+(\050from any class\051 is ob-)171 W
+7 /Times-Bold AF
+45367 33343 MT
+(k)SH
+8 /Symbol AF
+26187 33838 MT
+(\331)SH
+7 /Times-Roman AF
+27877 33856 MT
+(T)SH
+9 SS 
+31140 34125 MT
+(tained. Borrowing)
+225 W( from the above derivation of E{)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(},)SH
+5184 34183 MT
+(minimized. Let)
+319 W( the form of the MMSE estimate)
+47 W( of)46 W
+/Symbol SF
+24277 XM
+(m)SH
+/Times-Roman SF
+25066 XM
+(be)SH
+/Symbol SF
+26187 XM
+(m)SH
+/Times-Roman SF
+26669 XM
+(=)SH
+/Times-Bold SF
+(H)SH
+28305 XM
+(a)SH
+/Times-Roman SF
+(,)SH
+5184 35288 MT
+(where)SH
+/Times-Bold SF
+7679 XM
+(a)SH
+/Times-Roman SF
+8424 XM
+(is the sample mean vector as above and)71 W
+/Times-Bold SF
+23442 XM
+(H)SH
+/Times-Roman SF
+24438 XM
+(is a CDxCD)71 W
+/Times-Bold SF
+34740 35512 MT
+(H)SH
+/Times-Roman SF
+37195 XM
+(= [)392 W
+/Times-Italic SF
+(I)SH
+/Symbol SF
+(-bF)SH
+/Times-Roman SF
+41295 XM
+(])SH
+/Times-Bold SF
+(H)SH
+/Times-Roman SF
+42684 XM
+(+)SH
+/Symbol SF
+(bF)SH
+/Times-Roman SF
+53886 XM
+(\0503\051)SH
+7 /Times-Bold AF
+35440 35835 MT
+(k+1)SH
+40595 XM
+(aa)SH
+42295 XM
+(k)SH
+44373 35839 MT
+(a)SH
+/Symbol SF
+(m)SH
+9 /Times-Roman AF
+5184 36393 MT
+(coefficient matrix to be determined.)SH
+31140 37002 MT
+(Substitution of)
+67 W( the stochastic gradient estimate)66 W
+/Symbol SF
+48587 XM
+(\321)SH
+49913 XM
+(e)SH
+/Times-Roman SF
+50599 XM
+(for)SH
+/Symbol SF
+51940 XM
+(\321)SH
+/Times-Roman SF
+53127 XM
+(E{)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(})SH
+7 /Times-Bold AF
+49229 37329 MT
+(H)SH
+52582 XM
+(H)SH
+5 /Times-Roman AF
+49774 37620 MT
+(j)SH
+8 /Symbol AF
+21750 37816 MT
+(\331)SH
+7 /Times-Roman AF
+22592 37834 MT
+(2)SH
+9 SS 
+5184 38161 MT
+(The mean square error vector)214 W
+/Times-Italic SF
+17079 XM
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(}=)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(||m-m)SH
+22232 XM
+(||)SH
+/Times-Roman SF
+22942 XM
+(} is to be min-)214 W
+31140 38347 MT
+(in Equation \0502\051 yields)SH
+5184 39266 MT
+(imized with respect to)SH
+/Times-Bold SF
+13384 XM
+(H)SH
+/Times-Roman SF
+(. Rewriting,)225 W
+7 /Times-Italic AF
+40402 39597 MT
+(T)SH
+44910 XM
+(T)SH
+9 /Times-Bold AF
+34740 39924 MT
+(H)SH
+/Times-Roman SF
+36578 XM
+(=[)SH
+/Times-Bold SF
+(I)SH
+/Symbol SF
+(-b)SH
+/Times-Bold SF
+(a)SH
+39563 XM
+(a)SH
+/Times-Roman SF
+40791 XM
+(])SH
+/Times-Bold SF
+(H)SH
+/Times-Roman SF
+42180 XM
+(+)SH
+/Symbol SF
+(b)SH
+/Times-Bold SF
+(a)SH
+44021 XM
+(d)SH
+/Times-Roman SF
+53886 XM
+(\0504\051)SH
+7 /Times-Bold AF
+35440 40247 MT
+(k+1)SH
+39174 XM
+(k)SH
+40013 XM
+(k)SH
+41791 XM
+(k)SH
+43632 XM
+(k)SH
+44521 XM
+(k)SH
+/Times-Italic SF
+12601 40516 MT
+(T)SH
+16384 XM
+(T)SH
+17473 XM
+(T)SH
+20684 XM
+(T)SH
+22473 XM
+(T)SH
+9 SS 
+8784 40843 MT
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(}=)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(m)SH
+12990 XM
+(m)SH
+/Times-Roman SF
+(})SH
+/Symbol SF
+(-)SH
+/Times-Roman SF
+(2)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(m)SH
+/Times-Bold SF
+16773 XM
+(H)SH
+17862 XM
+(a)SH
+/Times-Roman SF
+(}+)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Times-Bold SF
+(a)SH
+21073 XM
+(HH)SH
+22862 XM
+(a)SH
+/Times-Roman SF
+(})SH
+31140 41311 MT
+(Note that)101 W
+/Times-Bold SF
+34892 XM
+(H)SH
+/Times-Roman SF
+36308 XM
+(is updated through the incorporation of sample)102 W
+/Times-Bold SF
+54097 XM
+(x)SH
+7 SS 
+35592 41634 MT
+(k)SH
+54547 XM
+(k)SH
+9 /Times-Roman AF
+5184 42230 MT
+(Setting the gradient of E{)SH
+/Symbol SF
+(e)SH
+/Times-Roman SF
+(} with respect to)SH
+/Times-Bold SF
+20993 XM
+(H)SH
+/Times-Roman SF
+21918 XM
+(equal to zero yields)SH
+31140 42416 MT
+(into)SH
+/Times-Bold SF
+32837 XM
+(a)SH
+/Times-Roman SF
+33676 XM
+(; this sample may be)
+72 W( the cepstral data from a new speech)71 W
+7 /Times-Bold AF
+33287 42739 MT
+(k)SH
+/Times-Italic SF
+12715 43480 MT
+(T)SH
+13804 XM
+(T)SH
+18802 XM
+(T)SH
+20591 XM
+(T)SH
+9 /Times-Roman AF
+31140 43521 MT
+(frame in an HMM system or an acoustic feature vector)
+229 W( in a)230 W
+/Symbol SF
+8784 43807 MT
+(-)SH
+/Times-Roman SF
+(2)SH
+/Symbol SF
+(\321)SH
+/Times-Roman SF
+10915 XM
+([)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Symbol SF
+(m)SH
+/Times-Bold SF
+13104 XM
+(H)SH
+14193 XM
+(a)SH
+/Times-Roman SF
+(}]+)SH
+/Symbol SF
+(\321)SH
+/Times-Roman SF
+17070 XM
+([)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Times-Bold SF
+(a)SH
+19191 XM
+(HH)SH
+20980 XM
+(a)SH
+/Times-Roman SF
+(}] = 0)392 W
+7 /Times-Bold AF
+10370 44134 MT
+(H)SH
+16525 XM
+(H)SH
+9 /Times-Roman AF
+31140 44626 MT
+(feature-based recognition system.)SH
+5184 45194 MT
+(Taking the gradient inside the expectation)
+13 W( and using the identities)14 W
+7 SS 
+6937 45972 MT
+(T)SH
+10173 XM
+(T)SH
+14104 XM
+(T)SH
+15382 XM
+(T)SH
+18968 XM
+(T)SH
+9 /Symbol AF
+5184 46299 MT
+(\321)SH
+/Times-Bold SF
+6487 XM
+(a)SH
+7365 XM
+(Mb)SH
+/Times-Roman SF
+(=)SH
+/Times-Bold SF
+(ba)SH
+/Times-Roman SF
+10826 XM
+(and)SH
+/Symbol SF
+12351 XM
+(\321)SH
+/Times-Bold SF
+13654 XM
+(a)SH
+14532 XM
+(M)SH
+15810 XM
+(Ma)SH
+/Times-Roman SF
+(=2)SH
+/Times-Bold SF
+(aa)SH
+19396 XM
+(M)SH
+/Times-Roman SF
+20471 XM
+(results in)SH
+31140 46394 MT
+(As with conventional LMS adaptive filtering, it is necessary)
+133 W( to)132 W
+7 /Times-Bold AF
+5826 46626 MT
+(M)SH
+12993 XM
+(M)SH
+9 /Times-Roman AF
+31140 47499 MT
+(specify several parameters in the LMS adaptive estimate,)
+40 W( namely)41 W
+7 /Times-Italic AF
+10734 47549 MT
+(T)SH
+13945 XM
+(T)SH
+9 SS 
+8784 47876 MT
+(E)SH
+/Times-Roman SF
+({)SH
+/Times-Bold SF
+(a)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+11123 XM
+(}=)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+({)SH
+/Times-Bold SF
+(aa)SH
+/Times-Roman SF
+14334 XM
+(})SH
+/Times-Bold SF
+(H)SH
+/Times-Roman SF
+31140 48604 MT
+(the step size)
+56 W( parameter)55 W
+/Symbol SF
+39812 XM
+(b)SH
+/Times-Roman SF
+(, desired signal)55 W
+/Times-Bold SF
+46121 XM
+(d)SH
+/Times-Roman SF
+(, and initial coefficient)55 W
+7 SS 
+12518 49126 MT
+(T)SH
+9 SS 
+5184 49453 MT
+(Defining)SH
+/Symbol SF
+8741 XM
+(F)SH
+/Times-Roman SF
+10128 XM
+(=E{)SH
+/Times-Bold SF
+(aa)SH
+/Times-Roman SF
+12946 XM
+(} and)132 W
+/Symbol SF
+15392 XM
+(F)SH
+/Times-Roman SF
+16832 XM
+(=E{)SH
+/Times-Bold SF
+(a)SH
+/Symbol SF
+(m)SH
+/Times-Roman SF
+(}, the optimal)132 W
+/Times-Bold SF
+24868 XM
+(H)SH
+/Times-Roman SF
+25924 XM
+(is easily)131 W
+31140 49709 MT
+(matrix)SH
+/Times-Bold SF
+33720 XM
+(H)SH
+/Times-Roman SF
+34770 XM
+(. A)
+235 W( constant step size was)
+5 W( found to be sufficient.  Since)6 W
+7 /Times-Bold AF
+9428 49776 MT
+(aa)SH
+16079 XM
+(a)SH
+/Symbol SF
+(m)SH
+/Times-Bold SF
+34420 50032 MT
+(0)SH
+8 /Times-Roman AF
+12184 50472 MT
+(-1)SH
+7 /Symbol AF
+10639 50707 MT
+(*)SH
+9 SS 
+31140 50814 MT
+(F)SH
+/Times-Roman SF
+32833 XM
+(varies with the number of)
+159 W( observations,)158 W
+/Symbol SF
+48260 XM
+(b)SH
+/Times-Roman SF
+49137 XM
+(is chosen to be)158 W
+5184 51034 MT
+(shown to be)60 W
+/Times-Bold SF
+9939 XM
+(H)SH
+/Times-Roman SF
+10989 XM
+(=)SH
+/Symbol SF
+(F F)485 W
+/Times-Roman SF
+14334 XM
+(. The)
+345 W( MMSE)
+60 W( solution is in the form of)61 W
+7 SS 
+31827 51141 MT
+(aa)SH
+/Times-Bold SF
+13581 51361 MT
+(a)SH
+/Symbol SF
+(m)SH
+8 /Times-Roman AF
+12184 51396 MT
+(aa)SH
+9 SS 
+31140 51919 MT
+(inversely proportional to the average)
+174 W( of the sum of the eigen-)175 W
+5184 52188 MT
+(the traditional)
+161 W( Wiener-Hopf equation except that the parameter)160 W
+7 /Symbol AF
+13102 52966 MT
+(*)SH
+9 /Times-Roman AF
+31140 53024 MT
+(values of the initial and final)
+140 W( value of)139 W
+/Symbol SF
+45957 XM
+(F)SH
+/Times-Roman SF
+47630 XM
+(\050)SH
+/Times-Italic SF
+(i.e.)SH
+/Times-Roman SF
+49394 XM
+(the sum of the)139 W
+/Symbol SF
+5184 53293 MT
+(F)SH
+/Times-Roman SF
+6846 XM
+(\050and therefore)128 W
+/Times-Bold SF
+12402 XM
+(H)SH
+/Times-Roman SF
+13452 XM
+(\051 varies with the number of data samples)129 W
+7 SS 
+46644 53351 MT
+(aa)SH
+5871 53620 MT
+(aa)SH
+9 SS 
+31140 54129 MT
+(traces of these matrices\051.)SH
+5184 54398 MT
+(obtained, as will)
+138 W( be seen.  It is this dependence of the optimal)137 W
+5184 55503 MT
+(coefficients on sample counts \050)209 W
+/Times-Bold SF
+(N)SH
+/Times-Roman SF
+(\051 that forms the basis of the)210 W
+31140 55897 MT
+(The true mean vector is)
+164 W( the appropriate choice for the desired)165 W
+5184 56608 MT
+(differences between standard)
+18 W( adaptive filtering and our parameter)17 W
+31140 57002 MT
+(signal, but it is obviously unavailable.)
+145 W( Substitution)
+514 W( of the ML)144 W
+5184 57713 MT
+(estimation techniques.)SH
+31140 58107 MT
+(estimate for the true mean)
+19 W( allows the LMS estimate to asymptoti-)20 W
+31140 59212 MT
+(cally converge to the sample mean, as)
+130 W( does the MAP estimate,)129 W
+5184 59481 MT
+(The MMSE)
+76 W( estimate is the mean of the)77 W
+/Times-Italic SF
+20149 XM
+(a posteriori)77 W
+/Times-Roman SF
+24753 XM
+(density, the)77 W
+31140 60317 MT
+(but the error is often)
+99 W( larger than what is desirable.  To obtain a)100 W
+5184 60586 MT
+(conditional mean)
+74 W( of p\050)73 W
+/Symbol SF
+(m)SH
+/Times-Roman SF
+(|)SH
+/Symbol SF
+(c)SH
+/Times-Roman SF
+(\051. The)
+371 W( EMAP estimate is the value of)73 W
+31140 61422 MT
+(value for)53 W
+/Times-Bold SF
+34696 XM
+(d)SH
+/Times-Roman SF
+35474 XM
+(which reduces this error without excessive additional)52 W
+5184 61691 MT
+(the parameter at which the)37 W
+/Times-Italic SF
+15144 XM
+(a posteriori)37 W
+/Times-Roman SF
+19668 XM
+(density has its)
+37 W( maximum.)38 W
+31140 62527 MT
+(computation,)SH
+/Times-Bold SF
+36225 XM
+(d)SH
+/Times-Roman SF
+37085 XM
+(is chosen to be a weighted sum of the)135 W
+/Times-Italic SF
+52025 XM
+(a priori)136 W
+/Times-Roman SF
+5184 62796 MT
+(If the)39 W
+/Times-Italic SF
+7412 XM
+(a posteriori)39 W
+/Times-Roman SF
+11939 XM
+(pdf is a unimodal function which is symmetric)38 W
+31140 63632 MT
+(mean and the)
+192 W( sample mean with the constant weights derived)191 W
+5184 63901 MT
+(about the conditional mean, as is the case with the)
+117 W( multivariate)118 W
+31140 64737 MT
+(from the EMAP procedure:)SH
+5184 65006 MT
+(normal density, then these two)
+557 W( estimates are equivalent)556 W
+7 /Symbol AF
+40155 65987 MT
+(-)SH
+/Times-Roman SF
+(1)SH
+/Symbol SF
+46633 XM
+(-)SH
+/Times-Roman SF
+(1)SH
+9 /Times-Bold AF
+34740 66314 MT
+(d)SH
+/Times-Roman SF
+35629 XM
+(=)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Times-Bold SF
+(N)SH
+/Symbol SF
+38972 XM
+(S)SH
+/Times-Roman SF
+39855 XM
+(\051)SH
+/Symbol SF
+40889 XM
+(m)SH
+/Times-Roman SF
+41757 XM
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+43148 XM
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Times-Bold SF
+(N)SH
+/Symbol SF
+45450 XM
+(S)SH
+/Times-Roman SF
+46333 XM
+(\051)SH
+/Times-Bold SF
+47367 XM
+(N)SH
+48328 XM
+(a)SH
+7 SS 
+35240 66637 MT
+(k)SH
+38661 XM
+(c)SH
+45139 XM
+(c)SH
+48017 XM
+(c)SH
+48778 XM
+(k)SH
+/Times-Italic SF
+39505 66641 MT
+(o)SH
+41407 XM
+(o)SH
+42798 XM
+(o)SH
+45983 XM
+(o)SH
+10800 50 5184 67468 UL
+5 /Times-Roman AF
+5884 68716 MT
+(2)SH
+7 SS 
+6134 69007 MT
+(Dogmatism is defined as the ratio of the within-speaker variance)
+272 W( to the)271 W
+5184 69840 MT
+(between-speaker variance,)SH
+/Symbol SF
+12785 XM
+(s)SH
+/Times-Roman SF
+(/)SH
+/Symbol SF
+(s)SH
+/Times-Roman SF
+14074 XM
+(.)SH
+5 SS 
+13824 70131 MT
+(o)SH
+ES
+%%Page: 2 3
+BS
+0 SI
+7 /Times-Roman AF
+19366 6744 MT
+(3)SH
+9 SS 
+31140 6881 MT
+(dependent on a number of properties of the data,)
+13 W( the most notable)14 W
+5184 7071 MT
+(where)SH
+/Times-Bold SF
+7828 XM
+(N)SH
+/Times-Roman SF
+9233 XM
+(=)SH
+/Symbol SF
+10185 XM
+(h)SH
+/Times-Bold SF
+(I)SH
+/Times-Roman SF
+11522 XM
+(and)SH
+/Symbol SF
+13266 XM
+(h)SH
+/Times-Roman SF
+14253 XM
+(is a constant.)219 W
+20604 XM
+(We refer to the LMS)219 W
+7 /Times-Bold AF
+8478 7394 MT
+(c)SH
+9 /Times-Roman AF
+31140 7986 MT
+(being the degree of correlation and the)
+25 W( dogmatism.  For example,)24 W
+5184 8176 MT
+(estimate using this value for)231 W
+/Times-Bold SF
+16714 XM
+(d)SH
+/Times-Roman SF
+17670 XM
+(as LMS-C.  Using this fixed)232 W
+31140 9091 MT
+(the mean-square error of the MMSE and)
+43 W( small-dogmatism LMS-)44 W
+5184 9281 MT
+(weight estimate for)45 W
+/Times-Bold SF
+12494 XM
+(d)SH
+/Times-Roman SF
+13264 XM
+(introduces a misadjustment)
+45 W( or bias into the)44 W
+7 SS 
+49247 9869 MT
+(-1)SH
+9 SS 
+31140 10196 MT
+(C estimates can be expressed)
+92 W( as)91 W
+/Times-Italic SF
+43390 XM
+(trace)SH
+/Times-Roman SF
+([)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Bold SF
+48297 XM
+(N)SH
+/Times-Roman SF
+(\051)SH
+/Symbol SF
+49830 XM
+(S)SH
+/Times-Roman SF
+50713 XM
+(]. This)
+407 W( ex-)91 W
+5184 10386 MT
+(LMS-C estimate, which can be shown to be equal to:)SH
+7 SS 
+47947 10523 MT
+(o)SH
+50363 XM
+(o)SH
+9 SS 
+31140 11301 MT
+(pression is plotted in Figure 2 for different values of)
+52 W( dogmatism.)53 W
+7 /Symbol AF
+18383 11636 MT
+(-)SH
+/Times-Roman SF
+(1)SH
+/Symbol SF
+23485 XM
+(-)SH
+/Times-Roman SF
+(1)SH
+9 /Times-Italic AF
+8784 11963 MT
+(M)SH
+/Times-Roman SF
+11707 XM
+(=)SH
+/Times-Italic SF
+(trace)SH
+/Times-Roman SF
+([)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Bold SF
+17122 XM
+(N)SH
+/Times-Roman SF
+18083 XM
+(\051)SH
+/Symbol SF
+19117 XM
+(S)SH
+/Times-Roman SF
+20000 XM
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Times-Bold SF
+(N)SH
+/Symbol SF
+22302 XM
+(S)SH
+/Times-Roman SF
+23185 XM
+(\051)SH
+/Symbol SF
+24219 XM
+(S)SH
+/Times-Roman SF
+(])SH
+7 /Times-Bold AF
+17772 12286 MT
+(c)SH
+21991 XM
+(c)SH
+/Times-Italic SF
+9534 12290 MT
+(LMS)SH
+/Symbol SF
+(-)SH
+/Times-Italic SF
+(C)SH
+16772 XM
+(o)SH
+19650 XM
+(o)SH
+22835 XM
+(o)SH
+9 /Times-Roman AF
+31140 12406 MT
+(It can readily be seen)
+98 W( that when the dogmatism is much greater)97 W
+5184 13350 MT
+(Although it has not)
+226 W( been proven, it is believed that it is the)227 W
+31140 13511 MT
+(than 1 these)
+71 W( estimation algorithms are ineffective.  Similar com-)72 W
+5184 14455 MT
+(addition of this misadjustment which allows the LMS-C to obtain)19 W
+31140 14616 MT
+(parisons [Lasry84] have shown that the estimates)
+56 W( converge more)55 W
+5184 15560 MT
+(a mean-square error which is)
+239 W( initially lower than that of the)240 W
+31140 15721 MT
+(rapidly when there is greater correlation among features and/or)137 W
+5184 16665 MT
+(optimal solution.  The parameter)56 W
+/Symbol SF
+17464 XM
+(h)SH
+/Times-Roman SF
+18288 XM
+(controls the tradeoff)
+56 W( between)55 W
+31140 16826 MT
+(decision classes.)SH
+5184 17770 MT
+(this misadjustment and rate of convergence.  As)65 W
+/Symbol SF
+23230 XM
+(h)SH
+/Times-Roman SF
+24064 XM
+(increases, the)66 W
+5184 18875 MT
+(misadjustment decreases, but so does the contribution of)48 W
+/Symbol SF
+26143 XM
+(m)SH
+/Times-Roman SF
+27283 XM
+(in)SH
+/Times-Bold SF
+28255 XM
+(d)SH
+/Times-Roman SF
+(.)SH
+7 SS 
+26661 19202 MT
+(o)SH
+9 SS 
+5184 19980 MT
+(Since giving more weight to)
+14 W( the sample mean increases the initial)15 W
+5184 21085 MT
+(error, it is necessary to strike a balance between these two effects.)SH
+745 1000 0 31338 32055 GB 
+%%BeginDocument: mse.eps
+%!PS-Adobe-2.0 EPSF-1.2
+%%BoundingBox: 0 0 314 193
+%%Creator: Mathematica
+%%Title: Clipboard
+%%CreationDate: Never Never
+%%EndComments
+50 dict begin
+/Mnodistort true def
+/pageDashArray [4] def
+/nullDashArray [] def
+
+% Compute the minimum of two numbers.
+/Mmin {         % p q Mmin min(p,q)
+        2 copy          % p q p q
+        gt              % p q p>q?
+        { exch } if     % min(p,q) max(p,q)
+        pop             % min(p,q)
+} bind def
+
+
+% Compute the maximum of two numbers.
+/Mmax {         % p q Mmax max(p,q)
+        2 copy          % p q p q
+        lt              % p q p<q?
+        { exch } if     % max(p,q) min(p,q)
+        pop             % max(p,q)
+} bind def
+
+/Mpstart {
+    MathPictureStart
+} bind def
+/Mpend {
+    MathPictureEnd
+} bind def
+/Mscale {
+    0 1 0 1
+    5 -1 roll
+    MathScale
+} bind def
+/Plain
+        /Times-Roman findfont
+def
+/Bold
+        /Courier-Bold findfont
+def
+/Italic
+        /Courier-Oblique findfont
+def
+/MathPictureStart {
+        gsave
+        newpath
+        /Mtmatrix
+        matrix currentmatrix
+        def
+        Plain
+        Mfontsize scalefont
+        setfont
+0 setgray 0 setlinewidth
+} bind def
+/MathPictureEnd {
+        grestore
+} bind def
+/Mdot {
+        moveto
+        0 0 rlineto
+        stroke
+} def
+/Mtetra {
+        moveto
+        lineto
+        lineto
+        lineto
+        fill
+} def
+/Metetra {
+        moveto
+        lineto
+        lineto
+        lineto
+        closepath
+        gsave
+        fill
+        grestore
+        0 setgray
+        stroke
+} def
+/Mistroke {
+        flattenpath
+        0 0 0
+        {
+        4 2 roll
+        pop pop
+        }
+        {
+        4 -1 roll
+        2 index
+        sub dup mul
+        4 -1 roll
+        2 index
+        sub dup mul
+        add sqrt
+        4 -1 roll
+        add
+        3 1 roll
+        }
+        {
+        stop
+        }
+        {
+        stop
+        }
+        pathforall
+        pop pop
+        currentpoint
+        stroke
+        moveto
+        currentdash
+        3 -1 roll
+        add
+        setdash
+} def
+/Mfstroke {
+        stroke
+        currentdash
+        pop 0
+        setdash
+} def
+/Msboxa {
+        newpath
+        5 -1 roll
+        Mvboxa
+        pop
+        6 -1 roll
+        5 -1 roll
+        4 -1 roll
+        Msboxa1
+        5 -3 roll
+        Msboxa1
+        [
+        7 -2 roll
+        [ 2 index 2 index
+        10 -1 roll
+        9 -1 roll
+        ]
+        6 1 roll
+        5 -2 roll
+        ]
+} bind def
+        
+/Msboxa1 {
+        sub
+        2 div
+        dup
+        2 index
+        1 add
+        mul
+        3 -1 roll
+        -1 add
+        3 -1 roll
+        mul
+} bind def
+/Mvboxa {
+        gsave
+        newpath
+        [ true
+        3 -1 roll
+        {
+        Mbbox
+        5 -1 roll
+        {
+        0
+        5 1 roll
+        }
+        {
+        7 -1 roll
+        exch sub
+        (m) stringwidth pop
+        .3 mul
+        sub
+        7 1 roll
+        6 -1 roll
+        4 -1 roll
+        Mmin
+        3 -1 roll
+        5 index
+        add
+        5 -1 roll
+        4 -1 roll
+        Mmax
+        4 -1 roll
+        }
+        ifelse
+        false
+        }
+        forall
+        { stop } if
+        counttomark
+        1 add
+        4 roll
+        ]
+        grestore
+} bind def
+/Mbbox {
+        0 0 moveto
+        false charpath
+        flattenpath
+        pathbbox
+        newpath
+} bind def
+/Mmin {
+        2 copy
+        gt
+        { exch } if
+        pop
+} bind def
+/Mmax {
+        2 copy
+        lt
+        { exch } if
+        pop
+} bind def
+/Mshowa {
+        4 -2 roll
+        moveto
+        2 index
+        Mtmatrix setmatrix
+        Mvboxa
+        7 1 roll
+        6 -1 roll
+        5 -1 roll
+        4 -1 roll
+        Mshowa1
+        4 1 roll
+        Mshowa1
+        rmoveto
+        currentpoint
+        0 1
+        4 index length
+        -1 add
+        {
+        2 index
+        4 index
+        2 index
+        get
+        3 index
+        add
+        moveto
+        4 index
+        exch get
+        show
+        } for
+        pop pop pop pop
+        Mgmatrix setmatrix
+} bind def
+/Mshowa1 {
+        2 copy
+        add
+        4 1 roll
+        sub
+        mul
+        sub
+        -2 div
+} bind def
+/MathScale {
+        Mwidth
+        Mheight
+        Mlp
+        translate
+        scale
+        /Mgmatrix
+        matrix currentmatrix
+        def
+        /Msaveaa exch def
+        /Msavebb exch def
+        /Msavecc exch def
+        /Msavedd exch def
+} bind def
+/Mlp {
+        3 copy
+        Mlpfirst
+        {
+        Mnodistort
+        {
+        Mmin
+        dup
+        } if
+        4 index
+        2 index
+        2 index
+        Mlprun
+        11 index
+        11 -1 roll
+        10 -4 roll
+        Mlp1
+        8 index
+        9 -5 roll
+        Mlp1
+        4 -1 roll
+        and
+        { exit } if
+        3 -1 roll
+        pop pop
+        } loop
+        exch
+        3 1 roll
+        7 -3 roll
+        pop pop pop
+} bind def
+/Mlpfirst {
+        3 -1 roll
+        dup length
+        2 copy
+        -2 add
+        get
+        aload
+        pop pop pop
+        4 -2 roll
+        -1 add
+        get
+        aload
+        pop pop pop
+        6 -1 roll
+        3 -1 roll
+        5 -1 roll
+        sub
+        dup /MsaveAx exch def
+        div
+        4 1 roll
+        exch sub
+        dup /MsaveAy exch def
+        div
+} bind def
+/Mlprun {
+        2 copy
+        4 index
+        0 get
+        dup
+        4 1 roll
+        Mlprun1
+        3 copy
+        8 -2 roll
+        9 -1 roll
+        {
+        3 copy
+        Mlprun1
+        3 copy
+        11 -3 roll
+        /gt Mlpminmax
+        8 3 roll
+        11 -3 roll
+        /lt Mlpminmax
+        8 3 roll
+        } forall
+        pop pop pop pop
+        3 1 roll
+        pop pop
+        aload pop
+        5 -1 roll
+        aload pop
+        exch
+        6 -1 roll
+        Mlprun2
+        8 2 roll
+        4 -1 roll
+        Mlprun2
+        6 2 roll
+        3 -1 roll
+        Mlprun2
+        4 2 roll
+        exch
+        Mlprun2
+        6 2 roll
+} bind def
+/Mlprun1 {
+        aload pop
+        exch
+        6 -1 roll
+        5 -1 roll
+        mul add
+        4 -2 roll
+        mul
+        3 -1 roll
+        add
+} bind def
+/Mlprun2 {
+        2 copy
+        add 2 div
+        3 1 roll
+        exch sub
+} bind def
+/Mlpminmax {
+        cvx
+        2 index
+        6 index
+        2 index
+        exec
+        {
+        7 -3 roll
+        4 -1 roll
+        } if
+        1 index
+        5 index
+        3 -1 roll
+        exec
+        {
+        4 1 roll
+        pop
+        5 -1 roll
+        aload
+        pop pop
+        4 -1 roll
+        aload pop
+        [
+        8 -2 roll
+        pop
+        5 -2 roll
+        pop
+        6 -2 roll
+        pop
+        5 -1 roll
+        ]
+        4 1 roll
+        pop
+        }
+        {
+        pop pop pop
+        } ifelse
+} bind def
+/Mlp1 {
+        5 index
+        3 index sub
+        5 index
+        2 index mul
+        1 index
+        le
+        1 index
+        0 le
+        or
+        dup
+        not
+        {
+        1 index
+        3 index div
+        .99999 mul
+        8 -1 roll
+        pop
+        7 1 roll
+        }
+        if
+        8 -1 roll
+        2 div
+        7 -2 roll
+        pop sub
+        5 index
+        6 -3 roll
+        pop pop
+        mul sub
+        exch
+} bind def
+/Mfontsize      12 def
+/Mleft          0.000000 def
+/Mbottom        193.000000 def
+/Mwidth         314.000000 def
+/Mheight        193.000000 def
+/Courier findfont 12 scalefont setfont
+%!
+%%Creator: Mathematica
+%%AspectRatio: 0.61803 
+MathPictureStart
+% Scaling calculations
+0.02381 0.01905 0.01472 0.5886 [
+[(10)] 0.21429 0.00222 0 1 Msboxa
+[(20)] 0.40476 0.00222 0 1 Msboxa
+[(30)] 0.59524 0.00222 0 1 Msboxa
+[(40)] 0.78571 0.00222 0 1 Msboxa
+[(50)] 0.97619 0.00222 0 1 Msboxa
+[(0.2)] 0.01131 0.13244 1 0 Msboxa
+[(0.4)] 0.01131 0.25016 1 0 Msboxa
+[(0.6)] 0.01131 0.36788 1 0 Msboxa
+[(0.8)] 0.01131 0.4856 1 0 Msboxa
+[(1)] 0.01131 0.60332 1 0 Msboxa
+[ -0.001 -0.001 0 0 ]
+[ 1.001 0.61903 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+%%Object: Graphics
+[ ] 0 setdash
+0 setgray
+gsave
+gsave
+% x-axis
+0.002 setlinewidth
+0.027 0.01472 moveto
+0.945 0.01472 lineto
+% WAR: added to make box
+0.027 0.6051472 moveto
+0.976 0.6051472 lineto
+stroke
+0.21429 0.00847 moveto
+0.21429 0.02097 lineto
+stroke
+0 setgray
+[(10)] 0.21429 0.00222 0 1 Mshowa
+0.40476 0.00847 moveto
+0.40476 0.02097 lineto
+stroke
+0 setgray
+[(20)] 0.40476 0.00222 0 1 Mshowa
+0.59524 0.00847 moveto
+0.59524 0.02097 lineto
+stroke
+0 setgray
+[(30)] 0.59524 0.00222 0 1 Mshowa
+0.78571 0.00847 moveto
+0.78571 0.02097 lineto
+stroke
+0 setgray
+[(40)] 0.78571 0.00222 0 1 Mshowa
+0.97619 0.00847 moveto
+0.97619 0.02097 lineto
+stroke
+0 setgray
+[(50)] 0.97619 0.00222 0 1 Mshowa
+% y-axis
+0.0238 0.027 0.015 moveto
+0.02381 0.6 lineto
+% WAR: added to make box
+0.0238 0.976 0.015 moveto
+0.0238 0.976 0.605 lineto
+stroke
+0.01756 0.13244 moveto
+0.03006 0.13244 lineto
+stroke
+
+% WAR: legend
+[(0.25)] 0.772 0.4 1 0 Mshowa
+0.008 setlinewidth
+0.8 0.4 moveto
+0.872 0.4 lineto
+stroke
+[(1.0)] 0.75 0.45 1 0 Mshowa
+0.004 setlinewidth
+0.8 0.45 moveto
+0.872 0.45 lineto
+stroke
+[(4.0)] 0.75 0.5 1 0 Mshowa
+0.002 setlinewidth
+0.8 0.5 moveto
+0.872 0.5 lineto
+stroke
+
+0 setgray
+[(0.2)] 0.01131 0.13244 1 0 Mshowa
+0.01756 0.25016 moveto
+0.03006 0.25016 lineto
+stroke
+0 setgray
+[(0.4)] 0.01131 0.25016 1 0 Mshowa
+0.01756 0.36788 moveto
+0.03006 0.36788 lineto
+stroke
+0 setgray
+[(0.6)] 0.01131 0.36788 1 0 Mshowa
+0.01756 0.4856 moveto
+0.03006 0.4856 lineto
+stroke
+0 setgray
+[(0.8)] 0.01131 0.4856 1 0 Mshowa
+0.01756 0.60332 moveto
+0.03006 0.60332 lineto
+stroke
+0 setgray
+[(1.0)] 0.01131 0.60332 1 0 Mshowa
+grestore
+grestore
+0 0 moveto
+1 0 lineto
+1 0.618034 lineto
+0 0.618034 lineto
+closepath
+clip
+newpath
+0 setgray
+gsave
+gsave
+gsave
+0.008 setlinewidth
+0.02381 0.60332 moveto
+0.02505 0.22906 lineto
+0.02629 0.15185 lineto
+0.02753 0.11774 lineto
+0.02877 0.0982 lineto
+0.03001 0.08539 lineto
+0.03125 0.07626 lineto
+0.03249 0.06938 lineto
+0.03373 0.06399 lineto
+0.03621 0.05602 lineto
+0.03869 0.05039 lineto
+0.04117 0.04616 lineto
+0.04365 0.04287 lineto
+0.04613 0.04022 lineto
+0.04861 0.03804 lineto
+0.05357 0.03465 lineto
+0.05853 0.03214 lineto
+0.06349 0.0302 lineto
+0.06845 0.02865 lineto
+0.07341 0.02739 lineto
+0.08333 0.02544 lineto
+0.09325 0.02402 lineto
+0.10317 0.02293 lineto
+0.1131 0.02207 lineto
+0.12302 0.02138 lineto
+0.14286 0.02032 lineto
+0.1627 0.01955 lineto
+0.18254 0.01897 lineto
+0.20238 0.01851 lineto
+0.22222 0.01814 lineto
+0.2619 0.01758 lineto
+0.30159 0.01718 lineto
+0.34127 0.01688 lineto
+0.38095 0.01664 lineto
+0.42063 0.01645 lineto
+0.46032 0.0163 lineto
+0.5 0.01617 lineto
+0.53968 0.01606 lineto
+0.57937 0.01596 lineto
+0.61905 0.01588 lineto
+0.65873 0.01581 lineto
+0.69841 0.01574 lineto
+0.7381 0.01569 lineto
+0.77778 0.01564 lineto
+0.81746 0.01559 lineto
+0.85714 0.01555 lineto
+0.89683 0.01551 lineto
+0.93651 0.01548 lineto
+0.97619 0.01545 lineto
+stroke
+grestore
+grestore
+gsave
+gsave
+0.004 setlinewidth
+0.02381 0.60332 moveto
+0.02505 0.54157 lineto
+0.02629 0.49204 lineto
+0.02877 0.41748 lineto
+0.03125 0.364 lineto
+0.03373 0.32374 lineto
+0.03621 0.29231 lineto
+0.03869 0.26709 lineto
+0.04365 0.22906 lineto
+0.04861 0.20172 lineto
+0.05357 0.18106 lineto
+0.05853 0.16488 lineto
+0.06349 0.15185 lineto
+0.07341 0.13208 lineto
+0.08333 0.11774 lineto
+0.09325 0.10682 lineto
+0.10317 0.0982 lineto
+0.12302 0.08539 lineto
+0.14286 0.07626 lineto
+0.1627 0.06938 lineto
+0.18254 0.06399 lineto
+0.22222 0.05602 lineto
+0.2619 0.05039 lineto
+0.30159 0.04616 lineto
+0.34127 0.04287 lineto
+0.38095 0.04022 lineto
+0.42063 0.03804 lineto
+0.46032 0.03621 lineto
+0.5 0.03465 lineto
+0.53968 0.03331 lineto
+0.57937 0.03214 lineto
+0.61905 0.03111 lineto
+0.65873 0.0302 lineto
+0.69841 0.02938 lineto
+0.7381 0.02865 lineto
+0.77778 0.02799 lineto
+0.81746 0.02739 lineto
+0.85714 0.02684 lineto
+0.89683 0.02633 lineto
+0.93651 0.02587 lineto
+0.97619 0.02544 lineto
+stroke
+grestore
+grestore
+gsave
+gsave
+0.002 setlinewidth
+0.02381 0.60332 moveto
+0.04365 0.54157 lineto
+0.06349 0.49204 lineto
+0.10317 0.41748 lineto
+0.14286 0.364 lineto
+0.18254 0.32374 lineto
+0.22222 0.29231 lineto
+0.2619 0.26709 lineto
+0.30159 0.24638 lineto
+0.34127 0.22906 lineto
+0.38095 0.21436 lineto
+0.42063 0.20172 lineto
+0.46032 0.19072 lineto
+0.5 0.18106 lineto
+0.53968 0.17251 lineto
+0.57937 0.16488 lineto
+0.61905 0.15803 lineto
+0.65873 0.15185 lineto
+0.69841 0.14623 lineto
+0.7381 0.1411 lineto
+0.77778 0.1364 lineto
+0.81746 0.13208 lineto
+0.85714 0.12808 lineto
+0.89683 0.12438 lineto
+0.93651 0.12094 lineto
+0.97619 0.11774 lineto
+stroke
+grestore
+grestore
+grestore
+% End of Graphics
+MathPictureEnd
+%%EPS Trailer
+end
+
+
+%%EndDocument
+ GE /Times-Bold SF
+31140 33523 MT
+(Figure 2)3 W
+/Times-Roman SF
+(. Normalized)
+229 W( expected mean square error of LMS-C and)2 W
+31140 34628 MT
+(MMSE estimates for dogmatism values)
+84 W( of 0.25, 1.0, and 4.0 vs.)85 W
+31140 35733 MT
+(number of samples for a 2 class, 1 feature case.)SH
+850 1000 0 5382 36811 GB 
+%%BeginDocument: fig1s.eps
+%!PS-Adobe-2.0 EPSF-1.2
+%%Creator:Rozzi
+%%Title:f1.ps
+%%Origin:0 720
+%%BoundingBox: 0.000 0.000 275.000 175.000
+%%EndComments
+
+gsave
+
+%some definitions necessary for Macintosh graphs
+/gm{exch moveto} def
+/gr{setgray} def
+/lin {exch lineto}def   % y x
+/myashow{1. -1. scale ashow 1. -1. scale} def
+/myshow{1. -1. scale show 1. -1. scale} def
+
+% flip the coordinate system
+%-100.  490.000 translate
+%1. -1. scale
+-100.  240.000 translate
+0.92 -0.92 scale
+/Times-Roman findfont  10.0 scalefont setfont
+
+%the first box
+0 gr
+1.0 setlinewidth
+240 132 gm
+240 408 lin
+90 408 lin
+90 132 lin
+240 132 lin
+243 123 gm
+(0)myshow
+210 132 gm
+0 gr
+210 135 lin
+210 405 gm
+210 408 lin
+213 113 gm
+0.5 0.(0.1)myashow
+180 132 gm
+0 gr
+180 135 lin
+180 405 gm
+180 408 lin
+183 113 gm
+0.5 0.(0.2)myashow
+150 132 gm
+0 gr
+150 135 lin
+150 405 gm
+150 408 lin
+153 113 gm
+0.5 0.(0.3)myashow
+120 132 gm
+0 gr
+120 135 lin
+120 405 gm
+120 408 lin
+123 113 gm
+0.5 0.(0.4)myashow
+93 113 gm
+0.5 0.(0.5)myashow
+253 129 gm
+(0)myshow
+240 187 gm
+0 gr
+239 187 lin
+92 187 gm
+90 187 lin
+253 181 gm
+(10)myshow
+240 242 gm
+0 gr
+239 242 lin
+92 242 gm
+90 242 lin
+253 236 gm
+(20)myshow
+240 298 gm
+0 gr
+239 298 lin
+92 298 gm
+90 298 lin
+253 292 gm
+(30)myshow
+240 353 gm
+0 gr
+239 353 lin
+92 353 gm
+90 353 lin
+253 347 gm
+(40)myshow
+253 402 gm
+(50)myshow
+%253 430 gm
+%({a})myshow
+stroke
+
+% legend
+110 292 gm
+(ML) myshow
+1.2 setlinewidth
+105 338 gm
+355 105 lineto
+stroke
+120 292 gm
+(EMAP) myshow
+115 338 gm
+355 115 lineto
+1.8 setlinewidth
+stroke
+130 292 gm
+(LMS-C) myshow
+0.6 setlinewidth
+125 338 gm
+355 125 lineto
+stroke
+
+%first graph
+0 gr
+%LMS-C
+0.6 setlinewidth
+143 138 gm
+148 143 lin
+156 149 lin
+175 154 lin
+180 160 lin
+188 165 lin
+188 171 lin
+184 176 lin
+194 182 lin
+202 187 lin
+209 193 lin
+211 198 lin
+215 204 lin
+211 209 lin
+214 215 lin
+221 220 lin
+229 226 lin
+232 231 lin
+232 237 lin
+233 242 lin
+231 248 lin
+228 253 lin
+227 259 lin
+229 264 lin
+229 270 lin
+229 276 lin
+232 281 lin
+231 287 lin
+229 292 lin
+231 298 lin
+231 303 lin
+229 309 lin
+229 314 lin
+227 320 lin
+227 325 lin
+226 331 lin
+227 336 lin
+225 342 lin
+227 347 lin
+227 353 lin
+226 358 lin
+224 364 lin
+224 369 lin
+225 375 lin
+225 380 lin
+224 386 lin
+222 391 lin
+220 397 lin
+222 402 lin
+217 408 lin
+stroke
+
+%EMAP
+1.8 setlinewidth
+145 138 gm
+149 141 lin
+150 145 lin
+147 149 lin
+147 149 lin
+151 150 lin
+155 152 lin
+159 153 lin
+163 154 lin
+163 154 lin
+167 158 lin
+169 160 lin
+169 162 lin
+169 166 lin
+171 170 lin
+172 174 lin
+173 176 lin
+175 179 lin
+178 182 lin
+183 185 lin
+188 187 lin
+187 191 lin
+184 195 lin
+182 198 lin
+182 200 lin
+182 204 lin
+177 206 lin
+172 209 lin
+171 209 lin
+170 213 lin
+172 216 lin
+176 217 lin
+180 219 lin
+184 220 lin
+184 220 lin
+189 222 lin
+194 224 lin
+199 225 lin
+201 226 lin
+204 228 lin
+208 230 lin
+209 231 lin
+208 234 lin
+208 238 lin
+210 242 lin
+211 243 lin
+213 247 lin
+213 248 lin
+210 251 lin
+207 254 lin
+207 258 lin
+210 262 lin
+212 264 lin
+210 267 lin
+208 271 lin
+206 275 lin
+208 278 lin
+213 280 lin
+210 285 lin
+208 287 lin
+208 289 lin
+208 293 lin
+212 297 lin
+214 301 lin
+215 303 lin
+214 306 lin
+214 310 lin
+214 314 lin
+214 314 lin
+213 318 lin
+212 320 lin
+213 322 lin
+213 327 lin
+212 331 lin
+212 331 lin
+214 336 lin
+211 340 lin
+212 344 lin
+215 347 lin
+215 349 lin
+216 353 lin
+215 357 lin
+214 361 lin
+213 364 lin
+213 365 lin
+213 369 lin
+215 373 lin
+216 377 lin
+217 380 lin
+217 381 lin
+216 385 lin
+216 386 lin
+215 389 lin
+212 394 lin
+211 397 lin
+212 398 lin
+214 403 lin
+210 407 lin
+stroke
+
+%ML
+1.2 setlinewidth
+114 138 gm
+114 138 lin
+118 140 lin
+118 140 lin
+122 142 lin
+122 142 lin
+122 144 lin
+122 144 lin
+117 148 lin
+117 148 lin
+118 150 lin
+118 150 lin
+122 151 lin
+122 151 lin
+126 152 lin
+126 152 lin
+130 152 lin
+130 152 lin
+134 153 lin
+134 153 lin
+138 155 lin
+138 155 lin
+143 158 lin
+143 158 lin
+146 162 lin
+146 162 lin
+146 166 lin
+146 166 lin
+150 170 lin
+150 170 lin
+153 174 lin
+153 174 lin
+154 179 lin
+154 179 lin
+155 182 lin
+155 182 lin
+160 184 lin
+160 184 lin
+165 186 lin
+165 186 lin
+165 190 lin
+165 190 lin
+162 194 lin
+162 194 lin
+159 199 lin
+159 199 lin
+160 203 lin
+160 203 lin
+157 205 lin
+157 205 lin
+152 207 lin
+152 207 lin
+147 209 lin
+147 209 lin
+146 213 lin
+146 213 lin
+147 216 lin
+147 216 lin
+151 217 lin
+151 217 lin
+155 218 lin
+155 218 lin
+159 219 lin
+159 219 lin
+163 220 lin
+163 220 lin
+168 222 lin
+168 222 lin
+173 223 lin
+173 223 lin
+178 225 lin
+178 225 lin
+183 227 lin
+183 227 lin
+188 229 lin
+188 229 lin
+191 233 lin
+191 233 lin
+191 237 lin
+191 237 lin
+195 242 lin
+195 242 lin
+198 246 lin
+198 246 lin
+197 249 lin
+197 249 lin
+192 253 lin
+192 253 lin
+193 257 lin
+193 257 lin
+195 261 lin
+195 261 lin
+199 264 lin
+199 264 lin
+196 268 lin
+196 268 lin
+193 272 lin
+193 272 lin
+190 276 lin
+190 276 lin
+195 278 lin
+195 278 lin
+200 281 lin
+200 281 lin
+197 284 lin
+197 284 lin
+194 289 lin
+194 289 lin
+194 293 lin
+194 293 lin
+198 296 lin
+198 296 lin
+202 299 lin
+202 299 lin
+204 304 lin
+204 304 lin
+202 308 lin
+202 308 lin
+202 312 lin
+202 312 lin
+201 316 lin
+201 316 lin
+200 320 lin
+200 320 lin
+202 325 lin
+202 325 lin
+201 329 lin
+201 329 lin
+201 333 lin
+201 333 lin
+201 338 lin
+201 338 lin
+198 342 lin
+198 342 lin
+203 346 lin
+203 346 lin
+205 350 lin
+205 350 lin
+205 354 lin
+205 354 lin
+204 358 lin
+204 358 lin
+203 362 lin
+203 362 lin
+202 366 lin
+202 366 lin
+204 370 lin
+204 370 lin
+206 374 lin
+206 374 lin
+207 378 lin
+207 378 lin
+207 382 lin
+207 382 lin
+207 386 lin
+207 386 lin
+205 391 lin
+205 391 lin
+203 395 lin
+203 395 lin
+204 399 lin
+204 399 lin
+204 404 lin
+204 404 lin
+stroke
+
+grestore
+
+%%EOF
+
+%%EndDocument
+ GE 11 /Times-Bold AF
+31140 38054 MT
+(3. Application to Stochastic Model-Based)SH
+9 SS 
+5184 38279 MT
+(Figure 1)168 W
+/Times-Roman SF
+(. Normalized)
+559 W( mean square error of ML, EMAP, and)167 W
+11 /Times-Bold AF
+32240 39159 MT
+(Recognition Systems)SH
+9 /Times-Roman AF
+5184 39384 MT
+(LMS-C estimation)
+232 W( algorithms vs. number of samples for a 2)233 W
+5184 40489 MT
+(class, 1 feature case.)SH
+31140 40568 MT
+(The original CMU SPHINX system [KFLee90])
+139 W( demonstrated a)138 W
+31140 41673 MT
+(speaker-independent word accuracy of better)
+274 W( than 94% on a)275 W
+5184 42257 MT
+(Appropriate choices for initialization of)
+75 W( the coefficient matrix)74 W
+/Times-Bold SF
+28280 XM
+(H)SH
+/Times-Roman SF
+31140 42778 MT
+(1000-word task with)
+205 W( a perplexity of 60.  This system used a)204 W
+5184 43362 MT
+(can be determined from)
+135 W( an analysis of the expected coefficient)136 W
+31140 43883 MT
+(hidden Markov model with discrete state output)
+68 W( probability den-)69 W
+5184 44467 MT
+(error. Define)
+1369 W( the)
+572 W( expected coefficient error matrix as)571 W
+31140 44988 MT
+(sities and)
+156 W( a vector quantization \050VQ\051 codebook.  Other resear-)155 W
+8 /Symbol AF
+9864 45304 MT
+(*)SH
+9 /Times-Bold AF
+5184 45866 MT
+(V)SH
+/Times-Roman SF
+6223 XM
+(=)SH
+/Times-Italic SF
+(E)SH
+/Times-Roman SF
+([)SH
+/Times-Bold SF
+(H)SH
+/Symbol SF
+8670 XM
+(-)SH
+/Times-Bold SF
+(H)SH
+/Times-Roman SF
+10309 XM
+(]. From)
+1923 W( Equation \0503\051,)
+849 W( we can write)850 W
+31140 46093 MT
+(chers have investigated the use)
+99 W( of continuous gaussian mixtures)100 W
+7 /Times-Bold AF
+5834 46189 MT
+(k)SH
+8281 XM
+(k)SH
+8 SS 
+9864 46228 MT
+(k)SH
+/Symbol SF
+13788 47036 MT
+(*)SH
+16283 XM
+(*)SH
+9 /Times-Roman AF
+31140 47198 MT
+(as the output probability distributions, eliminating)
+153 W( the need for)152 W
+/Times-Bold SF
+5184 47598 MT
+(V)SH
+/Times-Roman SF
+6972 XM
+(=\050)SH
+/Times-Bold SF
+(I)SH
+/Symbol SF
+(-)SH
+/Times-Roman SF
+(2)SH
+/Symbol SF
+(bF)SH
+/Times-Roman SF
+10955 XM
+(\051)SH
+/Times-Bold SF
+(V)SH
+/Symbol SF
+12294 XM
+(-)SH
+/Times-Roman SF
+(\050)SH
+/Times-Bold SF
+(H)SH
+/Symbol SF
+15089 XM
+(-)SH
+/Times-Bold SF
+(H)SH
+/Times-Roman SF
+16728 XM
+(\051. We)
+741 W( can)
+258 W( show that in cases)257 W
+7 /Times-Bold AF
+5834 47921 MT
+(k+1)SH
+11905 XM
+(k)SH
+10255 47925 MT
+(aa)SH
+8 SS 
+13788 47960 MT
+(k+1)SH
+16283 XM
+(k)SH
+9 /Times-Roman AF
+31140 48303 MT
+(quantization of the)
+288 W( speech frame data [Huang89, CHLee90].)289 W
+5184 48745 MT
+(where the dogmatism is small the last term can be ignored)
+120 W( and)121 W
+31140 49408 MT
+(Huang has investigated an approach)
+275 W( in which VQ codebook)274 W
+/Symbol SF
+5184 49850 MT
+(F)SH
+/Times-Roman SF
+6493 XM
+(\050k\051 may be assumed)
+70 W( to be constant.  Therefore, we can write)69 W
+7 SS 
+5871 50177 MT
+(aa)SH
+9 SS 
+31140 50513 MT
+(entries become the mean)
+52 W( vectors of mixture density components,)53 W
+7 SS 
+19821 50810 MT
+(k)SH
+9 SS 
+5184 51137 MT
+(the coefficient error as)33 W
+/Times-Bold SF
+13666 XM
+(V)SH
+/Times-Roman SF
+14924 XM
+(= \050I-)33 W
+/Symbol SF
+(bF)SH
+/Times-Roman SF
+18471 XM
+(\050k\051\051)SH
+/Times-Bold SF
+20171 XM
+(V)SH
+/Times-Roman SF
+21171 XM
+(. Obviously)
+291 W( we want)34 W
+7 SS 
+14316 51464 MT
+(k)SH
+/Times-Bold SF
+17771 XM
+(aa)SH
+/Times-Roman SF
+20821 XM
+(0)SH
+9 SS 
+31140 51618 MT
+(and each state's discrete output probabilities become)
+56 W( the mixture)55 W
+5184 52242 MT
+(to choose)127 W
+/Times-Bold SF
+9088 XM
+(H)SH
+/Times-Roman SF
+10490 XM
+(to make)127 W
+/Times-Bold SF
+13844 XM
+(V)SH
+/Times-Roman SF
+15196 XM
+(as small)
+127 W( as possible.  We do this by)126 W
+7 /Times-Bold AF
+9788 52565 MT
+(0)SH
+14494 XM
+(0)SH
+9 /Times-Roman AF
+31140 52723 MT
+(coefficients. This)
+281 W( semi-continuous HMM \050SCHMM\051 reduces the)28 W
+5184 53347 MT
+(setting)SH
+/Times-Bold SF
+7878 XM
+(H)SH
+/Times-Roman SF
+9222 XM
+(equal to the)
+69 W( coefficients which would be specified by)70 W
+7 /Times-Bold AF
+8578 53670 MT
+(0)SH
+9 /Times-Roman AF
+31140 53828 MT
+(number of parameters to be estimated)
+375 W( with respect to the)374 W
+5184 54452 MT
+(the optimal)
+148 W( estimate after a single sample from each class,)147 W
+/Times-Italic SF
+27880 XM
+(i.e.)SH
+/Times-Roman SF
+31140 54933 MT
+(continuous-density HMM systems.  We attempted to)
+135 W( determine)136 W
+7 SS 
+10549 55230 MT
+(-1)SH
+16037 XM
+(-1)SH
+9 /Times-Bold AF
+5184 55557 MT
+(H)SH
+/Times-Roman SF
+6459 XM
+(= [)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+10249 XM
+(\051)SH
+/Symbol SF
+11132 XM
+(m)SH
+/Times-Roman SF
+12225 XM
+(|)SH
+/Symbol SF
+12630 XM
+(S)SH
+/Times-Roman SF
+13513 XM
+(\050)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+(+)SH
+/Symbol SF
+(S)SH
+/Times-Roman SF
+15737 XM
+(\051)SH
+16620 XM
+(]. This)
+409 W( choice incorporates more)92 W
+7 /Times-Bold AF
+5884 55880 MT
+(0)SH
+/Times-Roman SF
+9899 55884 MT
+(o)SH
+11650 XM
+(o)SH
+13163 XM
+(o)SH
+15387 XM
+(o)SH
+9 SS 
+31140 56038 MT
+(how effective the above estimation techniques were)
+106 W( in reducing)105 W
+5184 56662 MT
+(knowledge of the structure of the data)
+100 W( into the LMS-C estimate)99 W
+31140 57143 MT
+(SCHMM word)
+133 W( error rates through codebook adaptation, and to)134 W
+5184 57767 MT
+(than initializing)245 W
+/Times-Bold SF
+11574 XM
+(H)SH
+/Times-Roman SF
+13094 XM
+(to zero or an identity matrix.  We)
+245 W( have)246 W
+7 /Times-Bold AF
+12274 58090 MT
+(0)SH
+9 /Times-Roman AF
+31140 58248 MT
+(demonstrate that LMS-C)
+19 W( estimation performs as well as Bayesian)18 W
+5184 58872 MT
+(observed in empirical simulations that this choice often reduces)112 W
+31140 59353 MT
+(techniques in an HMM framework.)SH
+5184 59977 MT
+(the initial mean square error)
+224 W( to levels lower than that of the)225 W
+7 SS 
+52780 60794 MT
+(4)SH
+9 SS 
+5184 61082 MT
+(EMAP \050see Figure)
+105 W( 1\051.  We also have observed in simulations a)104 W
+31140 61121 MT
+(An early version of a semi-continuous form of SPHINX)180 W
+53536 XM
+(was)SH
+5184 62187 MT
+(tendency for the LMS-C estimate)
+79 W( to diverge when the data dog-)80 W
+31140 62226 MT
+(modified to allow ML,)
+3 W( EMAP, or LMS-C adaptation of codebook)2 W
+5184 63292 MT
+(matism is large and the above assumptions are invalid.)SH
+31140 63331 MT
+(mean vectors after observation of a set of)
+141 W( adaptation sentences)142 W
+31140 64436 MT
+(from a given)
+90 W( speaker.)89 W
+7 SS 
+39837 XM
+(SPHINX-SC)SH
+9 SS 
+43766 XM
+(uses a set of three codebooks:)89 W
+5184 65060 MT
+(The success of the EMAP and LMS-C procedures is highly)269 W
+10800 50 31140 66635 UL
+10800 50 5184 67420 UL
+5 SS 
+31840 67883 MT
+(4)SH
+7 SS 
+32090 68174 MT
+(There are a number of)
+142 W( differences between the)143 W
+5 SS 
+46450 XM
+(SPHINX-SC)SH
+7 SS 
+49353 XM
+(system used in the)143 W
+5 SS 
+5884 68668 MT
+(3)SH
+7 SS 
+6134 68959 MT
+(The weights for)8 W
+/Symbol SF
+10766 XM
+(m)SH
+/Times-Roman SF
+11602 XM
+(and)SH
+/Times-Bold SF
+12796 XM
+(a)SH
+/Times-Roman SF
+13607 XM
+(in)SH
+/Times-Bold SF
+14335 XM
+(d)SH
+/Times-Roman SF
+15185 XM
+(are those which would be specified)
+8 W( in the EMAP)9 W
+31140 69007 MT
+(present evaluation and other semi-continuous)
+282 W( versions of SPHINX described)281 W
+5 /Times-Bold AF
+13146 69247 MT
+(k)SH
+14724 XM
+(k)SH
+/Times-Roman SF
+11169 69250 MT
+(o)SH
+7 SS 
+5184 69840 MT
+(procedure if)SH
+/Symbol SF
+8761 XM
+(h)SH
+/Times-Roman SF
+9358 XM
+(samples had been obtained from each class.)SH
+31140 XM
+(elsewhere in these proceedings.)SH
+ES
+%%Page: 3 4
+BS
+0 SI
+9 /Times-Roman AF
+5184 6881 MT
+(cepstral, differenced cepstral, and)
+102 W( power cepstral data, with 256)103 W
+/Times-Bold SF
+32145 7227 MT
+(Adaptation)SH
+39793 XM
+(C / I / M)SH
+46761 XM
+(Word Error Rate)SH
+/Times-Roman SF
+5184 7986 MT
+(codewords each.  Each)
+53 W( codeword has an associated mean vector,)52 W
+/Times-Bold SF
+33345 8241 MT
+(Type)SH
+46248 XM
+(A / U / % Reduction)SH
+22914 50 31581 8790 LH BX1
+-2526 50 37059 8790 LV BX1
+-2526 50 45777 8790 LV BX1
+/Times-Roman SF
+5184 9091 MT
+(covariance matrix, and determinant for use in output)
+90 W( probability)91 W
+31980 9767 MT
+(ML)SH
+40043 XM
+(3 / 3 / 3)SH
+46398 XM
+(4.99%/5.96%/16.2%)SH
+5184 10196 MT
+(calculations. The)
+569 W( cepstral)
+172 W( and differenced cepstral vectors are)171 W
+22914 50 31581 10324 LH BX1
+5184 11301 MT
+(12-dimensional, and power cepstral vectors have)
+267 W( 2 elements.)268 W
+31980 XM
+(EMAP)SH
+40043 XM
+(4 / 3 / 2)SH
+46398 XM
+(4.26%/5.01%/15.0%)SH
+22914 50 31581 11858 LH BX1
+5184 12406 MT
+(Since the dimension of the)90 W
+/Times-Italic SF
+15459 XM
+(a priori)90 W
+/Times-Roman SF
+18638 XM
+(adaptation statistics is equal)89 W
+31980 12835 MT
+(LMS-C)SH
+40043 XM
+(3 / 3 / 2)SH
+46398 XM
+(5.15%/5.96%/13.6%)SH
+22914 7128 50 31581 13392 BX BX1
+-4602 50 37059 13392 LV BX1
+-4602 50 45777 13392 LV BX1
+5184 13511 MT
+(to the product of the number)
+90 W( of classes and dimensions, at least)91 W
+5184 14616 MT
+(3072 training)
+81 W( set speakers would have been required to estimate)80 W
+/Times-Bold SF
+31140 14860 MT
+(Table 2:)SH
+/Times-Roman SF
+34765 XM
+(Recognition results for automatically selected speakers.)SH
+5184 15721 MT
+(these parameters.)
+82 W( Because)
+391 W( of the limited availability of training)83 W
+5184 16826 MT
+(data it was necessary to)
+17 W( reduce this estimation problem to a set of)16 W
+31140 17793 MT
+(significantly different from each other.  The fact that the)
+77 W( EMAP)78 W
+5184 17931 MT
+(parallel problems by)
+105 W( considering only the correlation between a)106 W
+31140 18898 MT
+(and LMS-C error rates are not significantly)
+125 W( lower than the ML)124 W
+5184 19036 MT
+(given codeword's features.)SH
+31140 20003 MT
+(error rate is not suprising)
+244 W( when the following facts are con-)245 W
+/Times-Bold SF
+9069 21104 MT
+(Adaptation)SH
+14719 XM
+(Word Error)SH
+21445 XM
+(Percent)SH
+/Times-Roman SF
+31140 21108 MT
+(sidered. First,)
+235 W( the average dogmatism was)
+5 W( estimated to be around)4 W
+/Times-Bold SF
+10269 22118 MT
+(Type)SH
+16182 XM
+(Rate)SH
+20945 XM
+(Reduction)SH
+/Times-Roman SF
+31140 22213 MT
+(2.0 for the cepstral codebook)
+49 W( and 3.0 for the differenced cepstral)50 W
+17514 50 8325 22667 LH BX1
+-2526 50 14163 22667 LV BX1
+-2526 50 20001 22667 LV BX1
+31140 23318 MT
+(codebook. Second,)
+275 W( only the)
+25 W( within-codeword correlation and not)24 W
+8724 23644 MT
+(Unadapted)SH
+15919 XM
+(6.46%)SH
+22320 XM
+(----)SH
+17514 50 8325 24201 LH BX1
+31140 24423 MT
+(the between-codeword correlation)
+107 W( information was available for)108 W
+8724 25178 MT
+(ML)SH
+15919 XM
+(6.33%)SH
+21982 XM
+(2.0%)SH
+31140 25528 MT
+(use in)
+213 W( the EMAP and LMS-C procedures.  Under these con-)212 W
+17514 50 8325 25735 LH BX1
+31140 26633 MT
+(ditions, much more adaptation data is necessary to provide better)44 W
+8724 26712 MT
+(EMAP)SH
+15919 XM
+(6.24%)SH
+21982 XM
+(3.4%)SH
+17514 50 8325 27269 LH BX1
+31140 27738 MT
+(adaptation performance.)SH
+8724 28246 MT
+(LMS-C)SH
+15919 XM
+(6.33%)SH
+21982 XM
+(2.0%)SH
+17514 8662 50 8325 28803 BX BX1
+-6136 50 14163 28803 LV BX1
+-6136 50 20001 28803 LV BX1
+11 /Times-Bold AF
+31140 30059 MT
+(Acknowledgements)SH
+9 SS 
+5184 30271 MT
+(Table 1:)SH
+/Times-Roman SF
+8809 XM
+(Recognition results)
+290 W( for SPHINX-SC with codeword)289 W
+5184 31285 MT
+(adaptation.)SH
+31140 31468 MT
+(This research was sponsored by the Defense)
+56 W( Advanced Research)55 W
+31140 32573 MT
+(Projects Agency \050DOD\051, ARPA Order No. 5167, under)
+90 W( contract)91 W
+31140 33678 MT
+(number N00039-85-C-0163,)
+211 W( and by Ameritech Services.  The)210 W
+5184 34158 MT
+(Training data for the generation)
+74 W( of models and adaptation statis-)75 W
+31140 34783 MT
+(views and conclusions)
+146 W( contained in this document are those of)147 W
+5184 35263 MT
+(tics were 40 sentences from approximately 100)
+136 W( speakers in the)135 W
+31140 35888 MT
+(the authors and should not be interpreted)
+236 W( as representing the)235 W
+5184 36368 MT
+(TIRM database.  The adaptation data were 40 sentences from)
+57 W( 11)58 W
+31140 36993 MT
+(official policies, either expressed or implied, of the Defense Ad-)69 W
+5184 37473 MT
+(additional speakers in)
+117 W( the TIRM database.  Evaluation test data)116 W
+31140 38098 MT
+(vanced Research Projects Agency or the US Government.)
+122 W( The)467 W
+5184 38578 MT
+(were another 25 sentences from)
+99 W( these 11 speakers.  Evaluations)100 W
+31140 39203 MT
+(authors wish to thank Xuedong)
+59 W( Huang for his guidance and help)60 W
+5184 39683 MT
+(were based on)
+169 W( comparisons of word recognition rates between)168 W
+31140 40308 MT
+(with the semi-continuous)153 W
+7 SS 
+40924 XM
+(SPHINX)SH
+9 SS 
+43828 XM
+(system, and Robert)
+153 W( Wohlford)152 W
+5184 40788 MT
+(systems using speaker independent codebooks)
+424 W( and adapted)425 W
+31140 41413 MT
+(and Ameritech Services for their support of portions of this work.)SH
+5184 41893 MT
+(codebooks, as shown in Table 1.)
+25 W( Although)
+273 W( significant reductions)24 W
+5184 42998 MT
+(\050on the order)
+242 W( of 25%\051 in error rate were observed for some)243 W
+11 /Times-Bold AF
+31140 43734 MT
+(References)SH
+9 /Times-Roman AF
+5184 44103 MT
+(speakers, the aggregate results are much lower.)
+95 W( In)
+413 W( each experi-)94 W
+8 SS 
+31140 45075 MT
+([Lasry84] M. J. Lasry and R. M. Stern)
+12 W( \0501984\051.  A Posteriori Estimation of)13 W
+9 SS 
+5184 45208 MT
+(ment, about half of the speakers showed improvement due)
+205 W( to)206 W
+8 SS 
+31140 46180 MT
+(Correlated Jointly)
+299 W( Gaussian Mean Vectors, IEEE Trans. on Pattern)298 W
+9 SS 
+5184 46313 MT
+(adaptation while the remainder showed no change or an)
+8 W( increased)7 W
+8 SS 
+31140 47285 MT
+(Analysis and Machine Intelligence PAMI-6, 530-535.)SH
+9 SS 
+5184 47418 MT
+(error rate.  Results may)
+99 W( be improved if an automatic method of)100 W
+5184 48523 MT
+(identifying speakers)
+211 W( which are good candidates for adaptation)210 W
+8 SS 
+31140 49053 MT
+([Stern87] R. M. Stern and M. J.)
+91 W( Lasry \0501987\051. Dynamic Speaker Adap-)92 W
+9 SS 
+5184 49628 MT
+(could be found.)SH
+8 SS 
+31140 50158 MT
+(tation for Feature-Based Isolated Letter Recognition, IEEE Trans. on)215 W
+31140 51263 MT
+(Acoustics, Speech, and Signal Processing 35, 751-763.)SH
+9 SS 
+5184 51396 MT
+(We attempted to)
+55 W( automatically identify those speakers that could)56 W
+5184 52501 MT
+(most benefit from)
+192 W( adaptation by calculating the change in the)191 W
+8 SS 
+31140 53031 MT
+([VanTrees68] H. L.)
+279 W( Van Trees \0501968\051.  Detection, Estimation, and)280 W
+9 SS 
+5184 53606 MT
+(sum of the pairwise Euclidean distances between all codewords)112 W
+8 SS 
+31140 54136 MT
+(Modulation Theory, Part I, Wiley, New York.)SH
+9 SS 
+5184 54711 MT
+(for the)
+73 W( adapted and unadapted codebooks.  Reasoning that if the)72 W
+5184 55816 MT
+(codebook expands the decision classes)
+99 W( should become less con-)100 W
+8 SS 
+31140 55904 MT
+([KFLee90] K. F. Lee, H. W.)
+15 W( Hon, and R. Reddy \0501990\051.  An Overview of)14 W
+9 SS 
+5184 56921 MT
+(fusable, we)
+266 W( chose to use the speaker-adapted codebook only)265 W
+8 SS 
+31140 57009 MT
+(the SPHINX Speech)
+205 W( Recognition System, IEEE Trans. on Acoustics,)206 W
+9 SS 
+5184 58026 MT
+(when this distance metric)
+227 W( was positive.  Experimental results)228 W
+8 SS 
+31140 58114 MT
+(Speech, and Signal Processing 38, No. 1, January 1990.)SH
+9 SS 
+5184 59131 MT
+(when this decision criterion is applied are given)
+25 W( in Table 2 which)24 W
+8 SS 
+31140 59882 MT
+([Huang89] X. D. Huang, H. W. Hon, and K. F. Lee \0501989\051.)
+265 W( On)729 W
+9 SS 
+5184 60236 MT
+(lists the number of adaptation)
+19 W( candidates \050out of 11\051 identified by)20 W
+8 SS 
+31140 60987 MT
+(Semi-Continuous Hidden Markov Modeling, Proc. of)
+459 W( ICASSP89,)460 W
+9 SS 
+5184 61341 MT
+(this method \050C\051, the number of)
+150 W( those identified which actually)149 W
+8 SS 
+31140 62092 MT
+(689-692.)SH
+9 SS 
+5184 62446 MT
+(showed improvement \050I\051, the number of)
+342 W( improved speakers)343 W
+5184 63551 MT
+(which were)
+78 W( missed \050M\051, and the adapted \050A\051 and unadapted \050U\051)77 W
+8 SS 
+31140 63860 MT
+([CHLee90] C. H. Lee, C.)
+88 W( H. Lin, and B. H. Juang \0501990\051.  A Study on)87 W
+9 SS 
+5184 64656 MT
+(error rates when only the adapted speakers are included.)SH
+8 SS 
+31140 64965 MT
+(Speaker Adaptation of Continuous Density HMM)
+142 W( Parameters, Proc. of)143 W
+31140 66070 MT
+(ICASSP90, 145-148.)SH
+9 SS 
+5184 66424 MT
+(Standard statistical analysis [Gillick89] of)
+449 W( the experiments)450 W
+5184 67529 MT
+(reported in Table 2 showed that while)
+30 W( the adapted speaker recog-)29 W
+8 SS 
+31140 67838 MT
+([Gillick89] L. Gillick and S. J. Cox \0501989\051.)
+18 W( Some)
+234 W( Statistical Issues in the)17 W
+9 SS 
+5184 68634 MT
+(nition scores were significantly different from the)
+18 W( unadapted with)19 W
+8 SS 
+31140 68943 MT
+(Comparison of Speech Recognition)
+244 W( Algorithms, Proc. of ICASSP89,)245 W
+9 SS 
+5184 69739 MT
+(a confidence)
+258 W( of 90% to 95%, the adapted systems were not)257 W
+8 SS 
+31140 70048 MT
+(532-535.)SH
+ES
+%%Trailer
+%%Pages: 4
+%%DocumentFonts: Times-Roman Times-Bold Times-Italic Symbol Times-BoldItalic
